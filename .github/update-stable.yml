@@ -1,0 +1,52 @@
+# Automatically fetch and merge latest tag to mamolinux/stable for new stable releases
+name: Update mamolinux/stable branch
+
+# Controls when the action will run. 
+on:
+  schedule:
+    # scheduled every day at 00:00
+    - cron: '0 0 */1 * *'
+  
+  workflow_dispatch: # on button click
+    inputs:
+      branch:
+        description: 'Branch to merge to'
+        required: true
+        default: 'mamolinux/stable'         # set the branch to merge to
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "sync-new-release"
+  sync-new-release:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    permissions: write-all
+    
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      
+      # Set default branches when run as scheduled job
+      - name: Set the branches
+        env:
+          DEFAULT_UPSTREAM_BRANCH: 'master'           # set the upstream branch to merge from
+          DEFAULT_BRANCH: 'mamolinux/stable'                    # set the branch to merge to
+        run: |
+          git checkout ${{ env.DEFAULT_UPSTREAM_BRANCH }}
+          echo "latest-tag=`git describe --abbrev=0 --tags`" >> $GITHUB_ENV
+          echo "branch=${{ github.event.inputs.branch || env.DEFAULT_BRANCH }}" >> $GITHUB_ENV
+      
+      - name: Set Git config
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "Github Actions"
+      
+      - name: Update mamolinux/stable for new release
+        run: |
+          git checkout ${{ env.branch }}
+          git merge --ff-only ${{ env.latest-tag }}
+          git push -f
