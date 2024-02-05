@@ -378,8 +378,8 @@ class System:
         system_packages_grid.attach(self.system_packages_spinner_label, 1, 0, 1, 1)
 
         # Label (Flatpak)
-        label = Common.static_information_label(_tr("Flatpak") + ":")
-        label.set_tooltip_text(_tr("Number of installed Flatpak applications and runtimes"))
+        label = Common.static_information_label(_tr("Flatpak/Snap") + ":")
+        label.set_tooltip_text(_tr("Number of installed Flatpak/Snap applications and runtimes"))
         grid_packages.attach(label, 0, 2, 1, 1)
         # Grid (Flatpak)
         flatpak_packages_grid = Gtk.Grid()
@@ -590,8 +590,9 @@ class System:
 
     def flatpak_packages_count_func(self):
         flatpak_packages_count = Libsysmon.get_installed_flatpak_packages()
+        snap_packages_count = Libsysmon.get_installed_snap_packages()
         # Stop and hide spinner and set label text.
-        GLib.idle_add(Common.set_label_spinner, self.flatpak_packages_label, self.flatpak_packages_spinner_label, flatpak_packages_count)
+        GLib.idle_add(Common.set_label_spinner, self.flatpak_packages_label, self.flatpak_packages_spinner_label, "%s/%s" % (flatpak_packages_count, snap_packages_count))
 
 
 System = System()
