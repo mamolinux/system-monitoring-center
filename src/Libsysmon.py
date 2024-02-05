@@ -5277,6 +5277,26 @@ def get_installed_flatpak_packages():
     return flatpak_packages_count
 
 
+def get_installed_snap_packages():
+    """
+    Get number of installed snap packages (and runtimes).
+    """
+
+    snap_packages_count = "-"
+
+    command_list = ["snap", "list"]
+    if get_environment_type() == "flatpak":
+        command_list = ["flatpak-spawn", "--host"] + command_list
+    try:
+        snap_packages_available = (subprocess.check_output(command_list, shell=False)).decode().strip().split("\n")
+        # Differentiate empty line count
+        snap_packages_count = len(snap_packages_available) - snap_packages_available.count("")
+    except (FileNotFoundError, subprocess.CalledProcessError) as me:
+        snap_packages_count = "-"
+
+    return snap_packages_count
+
+
 def get_desktop_environment_and_version_windowing_system_window_manager_display_manager():
     """
     Get current desktop environment, windowing_system, window_manager, current_display_manager.
