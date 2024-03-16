@@ -434,11 +434,11 @@ class MainWindow():
 
             messagedialog = Gtk.MessageDialog(transient_for=MainWindow.main_window,
                                               modal=True,
-                                              title=_tr("Information") + " (31.10.2023)",
+                                              title=_tr("Information") + " (16.03.2024)",
                                               message_type=Gtk.MessageType.INFO,
                                               buttons=Gtk.ButtonsType.CLOSE,
                                               text=_tr("Information"),
-                                              secondary_text=_tr("End of support for System Monitoring Center v2.x.x.\nThere will not be new versions for new features, bug fixes, etc.\nThe project is ended.")
+                                              secondary_text=_tr("This project has been picked up by Mamolinux. We intend to provide minor fixes for now.\nThere will not be any major feature upgrades. This message will be removed in upcoming releases.")
                                               )
             messagedialog.connect("response", on_messagedialog_response)
             messagedialog.present()
