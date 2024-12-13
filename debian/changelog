@@ -1,3 +1,22 @@
+system-monitoring-center (2.26.1) stable; urgency=medium
+
+  [ Hakan Dündar ]
+  * Changes for new version (v2.26.0)
+
+  [ Himadri Sekhar Basu ]
+  * Add workflow to update stable branch (#1)
+  * Add support to count snap applications (#2)
+  * Reviving the now-archived project (#3)
+    - There never been a more detailed
+      system monitor app based on gtk
+      like this before. So, it'd be really
+      an waste for an app like this to get
+      discontinued. We at MamoLinux have
+      decided to continue this project as
+      it has been our default system monitor.
+
+ -- Himadri Sekhar Basu <mamolinux@mamolinux.org>  Fri, 13 Dec 2024 15:00:05 +0530
+
 system-monitoring-center (2.26.0) unstable; urgency=medium
 
   * New: Portage package count (System tab)
