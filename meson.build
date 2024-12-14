@@ -1,6 +1,6 @@
 project('system-monitoring-center',
-    version: files('src/__version__'),
-    meson_version: '>= 0.59.0',
+    version: run_command('head', '-1', 'debian/changelog', check: true).stdout().split(' ')[1].strip('(').strip(')'),
+    meson_version: '>= 1.3.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
 
