@@ -1,7 +1,7 @@
-# System Monitoring Center
+# [System Monitoring Center](https://hsbasu.github.io/system-monitoring-center)
 
 <p align="center">
-    <img src="https://github.com/hakandundar34coding/system-monitoring-center/blob/master/data/icons/hicolor/scalable/apps/system-monitoring-center.svg" width="100">
+    <img src="https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/data/icons/hicolor/scalable/apps/system-monitoring-center.svg?sanitize=true" width="128">
 </p>
 
 
@@ -13,14 +13,14 @@
 
 
 <p align="center">
-    <a href="https://github.com/hakandundar34coding/system-monitoring-center/tags">
+    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
         <img alt="Platform (GNU/Linux)" src="https://img.shields.io/badge/platform-GNU/Linux-blue.svg"/>
     </a>
-    <a href="https://github.com/hakandundar34coding/system-monitoring-center/tags">
-        <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/hakandundar34coding/system-monitoring-center?sort=semver">
+    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
+        <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/mamolinux/system-monitoring-center?sort=semver">
     </a>
-    <a href="https://github.com/hakandundar34coding/system-monitoring-center/tags">
-        <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/hakandundar34coding/system-monitoring-center/total">
+    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
+        <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/mamolinux/system-monitoring-center/total">
     </a>
     <a href="https://pypi.org/project/system-monitoring-center/">
         <img src="https://static.pepy.tech/personalized-badge/system-monitoring-center?period=total&units=international_system&left_color=grey&right_color=green&left_text=downloads"/>
@@ -28,17 +28,14 @@
     <a href="https://flathub.org/apps/details/io.github.hakandundar34coding.system-monitoring-center">
         <img alt="Flathub" src="https://img.shields.io/flathub/downloads/io.github.hakandundar34coding.system-monitoring-center">
     </a>
-    <a href="https://github.com/hakandundar34coding/system-monitoring-center/blob/master/Changes.md">
-        <img src="https://img.shields.io/badge/View-Changelog-b37840">
-    </a>
 </p>
 
 
 <p align="center">
-    <a href="https://github.com/hakandundar34coding/system-monitoring-center/tags">
+    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
         <img src="https://img.shields.io/badge/Code-Python3-52a381">
     </a>
-    <a href="https://github.com/hakandundar34coding/system-monitoring-center/tags">
+    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
         <img src="https://img.shields.io/badge/GUI-GTK4-52a381">
     </a>
 </p>
