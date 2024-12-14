@@ -1,0 +1,69 @@
+# This is a basic workflow to publish debian packages for new releases
+
+name: Build and publish .deb for latest release
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push events but only for new tags
+  push:
+    tags:
+      - "*.*.*"
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build-and-release"
+  build-and-release:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        language: [ 'python' ]
+    
+    permissions:
+      contents: write
+      packages: write
+      discussions: write
+    
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repository
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      
+      # Runs a single command using the runners shell
+      - name: install-deps
+        run: |
+          sudo apt-get update -qq
+          sudo apt install -y build-essential debhelper devscripts dh-python \
+          desktop-file-utils gettext libglib2.0-bin libgtk-4-bin meson python3 \
+          pybuild-plugin-pyproject python3-sphinx python3-sphinx-argparse \
+          appstream-util itstool pkg-config gtk-update-icon-cache libglib2.0-dev-bin \
+          python3-cairo python3-gi
+      
+      - name: build-deb
+        run: |
+          dpkg-buildpackage -b -nc -tc
+          ls ../*.deb
+          ls ../*.changes
+      
+      - name: get latest tag
+        id: gettag
+        run: echo "latesttag=$(git describe --tags --abbrev=0 || git rev-list --max-parents=0 ${{github.ref}})" >> $GITHUB_OUTPUT
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.gettag.outputs.latesttag }}
+          generate_release_notes: true
+          make_latest: true
+          draft: false
+          prerelease: false
+          discussion_category_name: Announcements
+          files: |
+            ../*.deb
+            ../*.changes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
