@@ -527,6 +527,12 @@ class MainWindow():
                             "zh_CN": "yuzh496",
                             "zh_TW": "csc-chicken"
                             }
+        authors = ['Hakan Dündar']
+        copyrights = "Copyright \xa9 2023 Hakan Dündar\n \
+        Copyright \xa9 2024-2025 Himadri Sekhar Basu"
+        mainatainers = [
+        'Himadri Sekhar Basu <https://hsbasu.github.io>'
+        ]
 
         # Get GUI language for getting translator name
         application_language = Config.language
@@ -551,10 +557,12 @@ class MainWindow():
         self.about_dialog.set_program_name(_tr("System Monitoring Center"))
         self.about_dialog.set_logo_icon_name("system-monitoring-center")
         self.about_dialog.set_comments(_tr("Multi-featured system monitor"))
-        self.about_dialog.set_authors(["Hakan Dündar"])
+        self.about_dialog.set_authors(authors)
+        self.about_dialog.add_credit_section(_tr('Maintainer'), mainatainers)
         self.about_dialog.set_version(software_version)
-        self.about_dialog.set_copyright("© 2023 Hakan Dündar")
-        self.about_dialog.set_website("https://github.com/hakandundar34coding/system-monitoring-center")
+        self.about_dialog.set_copyright(copyrights)
+        self.about_dialog.set_website_label(_tr('Official Website'))
+        self.about_dialog.set_website("https://hsbasu.github.io/system-monitoring-center/")
         self.about_dialog.set_license_type(Gtk.License.GPL_3_0)
         self.about_dialog.set_translator_credits(translators)
         # Hide the window/dialog when it is closed. Otherwise, it is deleted.
