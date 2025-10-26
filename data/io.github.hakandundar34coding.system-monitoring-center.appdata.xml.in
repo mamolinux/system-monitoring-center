@@ -8,13 +8,12 @@
   <developer_name>Hakan Dündar</developer_name>
   <project_license>GPL-3.0</project_license>
   <summary>Multi-featured system monitor</summary>
-  <url type="homepage">https://github.com/hakandundar34coding/system-monitoring-center</url>
-  <url type="bugtracker">https://github.com/hakandundar34coding/system-monitoring-center/issues</url>
-  <url type="translate">https://github.com/hakandundar34coding/system-monitoring-center/blob/master/docs/translations.md</url>
+  <url type="homepage">https://github.com/mamolinux/system-monitoring-center</url>
+  <url type="bugtracker">https://github.com/mamolinux/system-monitoring-center/issues</url>
+  <url type="translate">https://github.com/mamolinux/system-monitoring-center/blob/master/docs/translations.md</url>
   <content_rating type="oars-1.1"/>
   <description>
     <p>Multi-featured system monitor</p>
-    <p>*** Announcement (31.10.2023): End of support for System Monitoring Center ***</p>
     <p>Features:</p>
     <ul>
       <li>Detailed system performance and usage usage monitoring/managing features</li>
@@ -47,58 +46,67 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/summary_tab_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/summary_tab_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/summary_tab_white_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/summary_tab_white_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/cpu_tab_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/cpu_tab_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/cpu_tab_white_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/cpu_tab_white_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/cpu_tab_per_core_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/cpu_tab_per_core_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/memory_tab_white_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/memory_tab_white_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/disk_tab_menu_white_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/disk_tab_menu_white_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/network_tab_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/network_tab_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/gpu_tab_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/gpu_tab_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/sensors_tab_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/sensors_tab_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/processes_list_view_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/processes_list_view_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/processes_tree_view_white_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/processes_tree_view_white_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/services_tab_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/services_tab_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/system_tab_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/system_tab_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/settings_dark_system_theme.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/settings_dark_system_theme.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/process_details__dark_system_theme_1.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/process_details__dark_system_theme_1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hakandundar34coding/system-monitoring-center/master/screenshots/process_details__dark_system_theme_2.png</image>
+      <image>https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/screenshots/process_details__dark_system_theme_2.png</image>
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2.26.1" date="2023-10-31">
+      <description>
+        <ul>
+          <li>Add workflow to update stable branch</li>
+          <li>Add support to count snap applications</li>
+          <li>Reviving the now-archived project</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.26.0" date="2023-10-31">
       <description>
         <ul>

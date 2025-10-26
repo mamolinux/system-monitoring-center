@@ -32,12 +32,12 @@ install_data('io.github.hakandundar34coding.system-monitoring-center.gschema.xml
 compile_schemas = find_program('glib-compile-schemas', required: false)
 if compile_schemas.found()
   test('Validate schema file',
-       compile_schemas,
-       args: ['--strict', '--dry-run', meson.current_source_dir()])
+    compile_schemas,
+    args: ['--strict', '--dry-run', meson.current_source_dir()])
 endif'''
 
 install_man(
-    'system-monitoring-center.1',
+  'system-monitoring-center.1',
 )
 
 subdir('icons')

@@ -33,40 +33,10 @@ version_file = configure_file(
   }
 )
 
-system_monitoring_center_sources = [
-	'__init__.py',
-	'Common.py',
-	'Config.py',
-	'Cpu.py',
-	'CpuMenu.py',
-	'Disk.py',
-	'DiskMenu.py',
-	'Gpu.py',
-	'GpuMenu.py',
-	'Libsysmon.py',
-	'Main.py',
-	'MainWindow.py',
-	'Memory.py',
-	'MemoryMenu.py',
-	'Network.py',
-	'NetworkMenu.py',
-	'Performance.py',
-	'Processes.py',
-	'ProcessesDetails.py',
-	'ProcessesMenu.py',
-	'run_from_source.py',
-	'Sensors.py',
-	'SensorsMenu.py',
-	'Services.py',
-	'ServicesDetails.py',
-	'ServicesMenu.py',
-	'SettingsWindow.py',
-	'Summary.py',
-	'SummaryMenu.py',
-	'System.py',
-	'Users.py',
-	'UsersDetails.py',
-	'UsersMenu.py',
-]
+system_monitoring_center_sources = files(
+  run_command(
+    'find', '.', '-name', '*.py', check: true
+  ).stdout().strip().split('\n')
+)
 
 install_data(system_monitoring_center_sources, version_file, install_dir: moduledir)
