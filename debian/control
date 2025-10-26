@@ -1,11 +1,11 @@
 Source: system-monitoring-center
 Section: utils
 Priority: optional
-Maintainer: Hakan Dündar <hakandundar34coding@gmail.com>
-Build-Depends: debhelper-compat (= 12),
+Maintainer: Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
+Build-Depends: debhelper-compat (= 13),
                desktop-file-utils,
                gtk-update-icon-cache,
-               meson (>=0.59),
+               meson (>=1.3.0),
                appstream-util (>=0.7.14),
                libglib2.0-dev-bin (>=2.58.3),
                itstool,
@@ -13,7 +13,7 @@ Build-Depends: debhelper-compat (= 12),
                python3-cairo,
                python3-gi (>=3.30.0)
 Standards-Version: 4.6.0
-Homepage: https://github.com/hakandundar34coding/system-monitoring-center
+Homepage: https://github.com/mamolinux/system-monitoring-center
 
 Package: system-monitoring-center
 Architecture: all
