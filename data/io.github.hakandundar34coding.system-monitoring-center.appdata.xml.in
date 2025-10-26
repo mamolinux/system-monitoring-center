@@ -98,6 +98,17 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2.26.2" date="2023-10-26">
+      <description>
+        <ul>
+          <li>Add and update workflows and README</li>
+          <li>Add new maintainer</li>
+          <li>Get version from debian/changelog</li>
+          <li>Update appdata and meson build system</li>
+          <li>Update debian build</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.26.1" date="2023-10-31">
       <description>
         <ul>
