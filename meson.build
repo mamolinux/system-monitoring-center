@@ -1,5 +1,5 @@
 project('system-monitoring-center',
-    version: run_command('head', '-1', 'debian/changelog', check: true).stdout().split(' ')[1].strip('(').strip(')'),
+          version: run_command('head', '-1', 'debian/changelog', check: true).stdout().split(' ')[1].strip('(').strip(')'),
     meson_version: '>= 1.3.0',
   default_options: [ 'warning_level=2', 'werror=false', ],
 )
@@ -13,6 +13,7 @@ subdir('src')
 subdir('po')
 
 gnome.post_install(
+     glib_compile_schemas: true,
     gtk_update_icon_cache: true,
   update_desktop_database: true,
 )
