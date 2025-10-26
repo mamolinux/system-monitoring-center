@@ -1,7 +1,7 @@
 # [System Monitoring Center](https://hsbasu.github.io/system-monitoring-center)
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/data/icons/hicolor/scalable/apps/system-monitoring-center.svg?sanitize=true" width="128">
+    <img src="https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/data/icons/apps/system-monitoring-center.svg?sanitize=true" width="128">
 </p>
 
 
@@ -49,7 +49,7 @@
 </p>
 
 
-<p align="center">
+<!-- <p align="center">
     <a href='https://flathub.org/apps/details/io.github.hakandundar34coding.system-monitoring-center'>
         <img width='240' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-en.svg'/>
     </a>
@@ -59,7 +59,7 @@
     <a href='https://github.com/Botspot/pi-apps'>
         <img width='240' alt='Install From Pi-Apps' src='https://github.com/Botspot/pi-apps/blob/master/icons/badge.png?raw=true'/>
     </a>
-</p>
+</p> -->
 
 
 <p align="center">
@@ -67,14 +67,14 @@
         <img src="https://repology.org/badge/vertical-allrepos/system-monitoring-center.svg" alt="Packaging status">
     </a>
 </p>
-<p align="center">
+<!-- <p align="center">
     <a href="https://flathub.org/apps/details/io.github.hakandundar34coding.system-monitoring-center">
         <img alt="Flathub" src="https://img.shields.io/flathub/v/io.github.hakandundar34coding.system-monitoring-center">
     </a>
     <a href="https://github.com/Botspot/pi-apps">
         <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Pi-Apps&query=%24..%5B%3F%28%40.Name%3D%3D%22System%20Monitoring%20Center%22%29%5D.Version&url=https%3A%2F%2Fraw.githubusercontent.com%2FBotspot%2Fpi-apps-analytics%2Fmain%2Fpackage_data.json" alt="Pi-Apps Packaging Status">
     </a>
-</p>
+</p> -->
 
 
 ### Features:
