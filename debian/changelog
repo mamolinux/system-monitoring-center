@@ -1,3 +1,27 @@
+system-monitoring-center (2.26.2) stable; urgency=medium
+
+  * Add and update workflows and README (#6)
+    - Add workflow to create new debian
+      release on github
+    - Activate workflow to update stable branch
+    - Add test script
+    - Update README with informations from
+      local fork
+  * Add new maintainer (#7)
+  * Get version from debian/changelog (#8)
+    - Create version file during installation
+    - Make the binary script executable
+      during installation
+  * Update appdata and meson build system (#9)
+    - Update appstream data file
+    - Dynamically select icons and python sources
+      while installing using meson build system
+  * Update debian build (#10)
+    - Add myself as maintainer
+    - Update debian install scripts
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Sun, 26 Oct 2025 21:17:19 +0530
+
 system-monitoring-center (2.26.1) stable; urgency=medium
 
   [ Hakan Dündar ]
