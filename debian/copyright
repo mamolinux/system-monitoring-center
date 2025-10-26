@@ -1,11 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: system-monitoring-center
-Source: https://github.com/hakandundar34coding/system-monitoring-center
+Upstream-Contact: Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
+Source: https://github.com/mamolinux/system-monitoring-center
 
 
 
 Files: *
-Copyright: 2022 Hakan Dündar <hakandundar34coding@gmail.com>
+Copyright: 2022-2023 Hakan Dündar <hakandundar34coding@gmail.com>
+		   2024-2025 Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
 License: GPL-3.0+
 
 License: GPL-3.0+
@@ -24,5 +26,3 @@ License: GPL-3.0+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
-
-
