@@ -2,26 +2,27 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Pavel Borecki <pavel.borecki@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-31 10:00+0300\n"
-"PO-Revision-Date: 2023-10-31 10:07+0300\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2025-10-27 21:11+0100\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 3.2.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Gtranslator 49.0\n"
 
 #: data/io.github.hakandundar34coding.system-monitoring-center.desktop.in:3
 #: src/MainWindow.py:66 src/MainWindow.py:551
 msgid "System Monitoring Center"
-msgstr "Centrum monitorování systému"
+msgstr "Středisko dohledování systému"
 
 #: data/io.github.hakandundar34coding.system-monitoring-center.desktop.in:4
 #: src/SettingsWindow.py:34
@@ -31,13 +32,15 @@ msgstr "Sledování systému"
 #: data/io.github.hakandundar34coding.system-monitoring-center.desktop.in:5
 #: src/MainWindow.py:553
 msgid "Multi-featured system monitor"
-msgstr "Multifunkční systémový monitor"
+msgstr "Multifunkční dohledování systému"
 
 #: data/io.github.hakandundar34coding.system-monitoring-center.desktop.in:6
 msgid ""
-"System Monitor;Task Manager;Performance;CPU;RAM;Swap;Memory;Disk;Network;GPU;"
-"Processes;Users;Services;"
+"System Monitor;Task "
+"Manager;Performance;CPU;RAM;Swap;Memory;Disk;Network;GPU;Processes;Users;Services;"
 msgstr ""
+"Dohledování systému;Správce "
+"úloh;Výkon,Procesor;RAM;Swap;Paměť;Disk;Síť;GPU;Procesy;Uživatelé;Služby;"
 
 #: src/Common.py:197
 msgid "Reset"
@@ -45,7 +48,7 @@ msgstr "Resetovat"
 
 #: src/Common.py:209
 msgid "Refresh the data on this tab"
-msgstr "Obnovit data na této záložce"
+msgstr "Znovu načíst data na této záložce"
 
 #: src/Common.py:226 src/Common.py:244
 msgid "Graph Color"
@@ -53,7 +56,7 @@ msgstr "Barva grafu"
 
 #: src/Common.py:832 src/Common.py:898 src/Processes.py:317
 msgid "Search..."
-msgstr "Hledat..."
+msgstr "Hledat…"
 
 #: src/Cpu.py:49 src/CpuMenu.py:37 src/CpuMenu.py:83 src/MainWindow.py:139
 #: src/MainWindow.py:288 src/Processes.py:1221 src/Processes.py:1238
@@ -63,7 +66,7 @@ msgstr "Hledat..."
 #: src/SettingsWindow.py:31 src/Summary.py:911 src/System.py:204
 #: src/Users.py:240 src/UsersDetails.py:165 src/UsersMenu.py:127
 msgid "CPU"
-msgstr "CPU"
+msgstr "Procesor"
 
 #: src/Cpu.py:54 src/Disk.py:57 src/Disk.py:305 src/Gpu.py:63 src/Gpu.py:309
 #: src/Network.py:54 src/System.py:241
@@ -77,11 +80,11 @@ msgstr "Model"
 
 #: src/Cpu.py:59 src/Disk.py:62 src/Gpu.py:68 src/Network.py:59
 msgid "Device Name In Kernel"
-msgstr "Jméno zařízení v jádře"
+msgstr "Název zařízení v jádře"
 
 #: src/Cpu.py:75 src/Cpu.py:180 src/CpuMenu.py:45 src/ProcessesDetails.py:266
 msgid "CPU Usage (Average)"
-msgstr "Využití CPU (Průměr)"
+msgstr "Využití procesoru (průměr)"
 
 #: src/Cpu.py:102
 msgid "Average Usage"
@@ -89,7 +92,7 @@ msgstr "Průměrné využití"
 
 #: src/Cpu.py:102
 msgid "Average CPU usage of all cores"
-msgstr "Průměrné využití všech jader CPU"
+msgstr "Průměrné využití všech jader procesoru"
 
 #: src/Cpu.py:102 src/Gpu.py:214 src/Gpu.py:379
 msgid "Frequency"
@@ -109,27 +112,27 @@ msgstr "Vlákna"
 
 #: src/Cpu.py:107
 msgid "Up Time"
-msgstr "Doba provozu"
+msgstr "Doba chodu od zapnutí"
 
 #: src/Cpu.py:116 src/Gpu.py:222 src/Gpu.py:389
 msgid "Min-Max Frequency"
-msgstr "Min-Max Frekvence"
+msgstr "Min-max frekvence"
 
 #: src/Cpu.py:123 src/Cpu.py:130 src/CpuMenu.py:97
 msgid "Cache"
-msgstr "Cache"
+msgstr "Mezipaměť"
 
 #: src/Cpu.py:137
 msgid "CPU Sockets"
-msgstr "CPU Sockety"
+msgstr "Patic procesorů"
 
 #: src/Cpu.py:144
 msgid "Cores (Physical-Logical)"
-msgstr "Jáadra (Fyzická-Logická)"
+msgstr "Jádra (fyzická-logická)"
 
 #: src/Cpu.py:145
 msgid "Number of online physical and logical CPU cores"
-msgstr "Počet fyzických a logických procesorových jader"
+msgstr "Počet aktivních fyzických a logických procesorových jader"
 
 #: src/Cpu.py:152 src/System.py:269
 msgid "Architecture"
@@ -137,24 +140,24 @@ msgstr "Architektura"
 
 #: src/Cpu.py:182 src/CpuMenu.py:49
 msgid "CPU Usage (Per Core)"
-msgstr "Využití CPU (jednotlivá jádra)"
+msgstr "Využití procesoru (jednotlivá jádra)"
 
 #: src/CpuMenu.py:41 src/DiskMenu.py:41 src/MemoryMenu.py:41
 #: src/NetworkMenu.py:41 src/SummaryMenu.py:38
 msgid "Graph - Show"
-msgstr ""
+msgstr "Graf – zobrazit"
 
 #: src/CpuMenu.py:57
 msgid "Show processes using max CPU"
-msgstr ""
+msgstr "Zobrazit procesy pomocí max procesoru"
 
 #: src/CpuMenu.py:61 src/SummaryMenu.py:46
 msgid "This increases CPU usage."
-msgstr ""
+msgstr "Toto zvýší vytížení procesoru."
 
 #: src/CpuMenu.py:61
 msgid "for all tabs"
-msgstr ""
+msgstr "pro všechny záložky"
 
 #: src/CpuMenu.py:78 src/DiskMenu.py:73 src/MemoryMenu.py:65
 #: src/NetworkMenu.py:73 src/ProcessesMenu.py:299
@@ -163,11 +166,11 @@ msgstr "Preciznost"
 
 #: src/CpuMenu.py:101
 msgid "CPU Socket"
-msgstr ""
+msgstr "Patice procesoru"
 
 #: src/CpuMenu.py:105
 msgid "Selected CPU Core"
-msgstr ""
+msgstr "Vybrané jádro procesoru"
 
 #: src/Disk.py:52 src/Disk.py:195 src/Disk.py:215 src/Disk.py:361
 #: src/DiskMenu.py:37 src/DiskMenu.py:112 src/Libsysmon.py:2095
@@ -193,7 +196,7 @@ msgstr "Rychlost zápisu"
 #: src/Disk.py:110 src/Processes.py:1225 src/Processes.py:1246
 #: src/ProcessesDetails.py:510 src/ProcessesMenu.py:203
 msgid "Read Data"
-msgstr "Disk - čtení dat"
+msgstr "Přečteno dat"
 
 #: src/Disk.py:110 src/Network.py:107
 msgid "Measured value since last system start"
@@ -202,7 +205,7 @@ msgstr "Změřená hodnota od posledního spuštění systému"
 #: src/Disk.py:110 src/Processes.py:1226 src/Processes.py:1247
 #: src/ProcessesDetails.py:520 src/ProcessesMenu.py:207
 msgid "Written Data"
-msgstr ""
+msgstr "Zapsáno dat"
 
 #: src/Disk.py:120 src/Disk.py:235
 msgid "System Disk"
@@ -226,15 +229,15 @@ msgstr "Kapacita"
 #: src/Disk.py:163 src/Gpu.py:257 src/Memory.py:193 src/Processes.py:281
 #: src/Services.py:299 src/Users.py:128
 msgid "Details"
-msgstr "Detaily"
+msgstr "Podrobnosti"
 
 #: src/Disk.py:166 src/Gpu.py:260 src/Memory.py:143 src/Memory.py:196
 msgid "Show..."
-msgstr "Zobrazit..."
+msgstr "Zobrazit…"
 
 #: src/Disk.py:225
 msgid "Parent Name"
-msgstr "Jméno rodiče"
+msgstr "Název nadřazeného"
 
 #: src/Disk.py:245 src/Libsysmon.py:1973 src/Libsysmon.py:1993
 #: src/Libsysmon.py:2037 src/ServicesDetails.py:210
@@ -251,7 +254,7 @@ msgstr "Mass Storage"
 
 #: src/Disk.py:315
 msgid "Label (File System)"
-msgstr "Štítek (Souborový systém)"
+msgstr "Štítek (souborový systém)"
 
 #: src/Disk.py:325
 msgid "Mount Point"
@@ -297,15 +300,15 @@ msgstr "Využití GPU"
 #: src/Gpu.py:126 src/Gpu.py:209 src/Gpu.py:369 src/Processes.py:1242
 #: src/ProcessesMenu.py:269
 msgid "GPU Memory"
-msgstr ""
+msgstr "Paměť GPU"
 
 #: src/Gpu.py:154 src/Gpu.py:699 src/Gpu.py:703
 msgid "Video Encoder"
-msgstr ""
+msgstr "Kodér videa"
 
 #: src/Gpu.py:182 src/Gpu.py:699
 msgid "Video Decoder"
-msgstr ""
+msgstr "Dekodér videa"
 
 #: src/Gpu.py:214 src/Gpu.py:409 src/SensorsMenu.py:43
 msgid "Temperature"
@@ -313,7 +316,7 @@ msgstr "Teplota"
 
 #: src/Gpu.py:229 src/Gpu.py:399
 msgid "Memory Frequency"
-msgstr ""
+msgstr "Frekvence paměti"
 
 #: src/Gpu.py:236 src/Gpu.py:419
 msgid "Power Usage"
@@ -329,19 +332,19 @@ msgstr "Ovladač"
 
 #: src/Gpu.py:329
 msgid "PCIe Address"
-msgstr ""
+msgstr "PCIe adresa"
 
 #: src/Gpu.py:339
 msgid "GPU Interface"
-msgstr ""
+msgstr "Rozhraní GPU"
 
 #: src/Gpu.py:349
 msgid "Link Speed"
-msgstr ""
+msgstr "Rychlost linky"
 
 #: src/Gpu.py:449
 msgid "Connections"
-msgstr ""
+msgstr "Spojení"
 
 #: src/Gpu.py:459
 msgid "Refresh Rate"
@@ -356,42 +359,42 @@ msgstr "Rozlišení"
 #: src/Libsysmon.py:2434 src/Libsysmon.py:2528 src/Libsysmon.py:2548
 #: src/Libsysmon.py:2768 src/Libsysmon.py:2770
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámé"
 
 #: src/Libsysmon.py:1931
 msgid "Maximum Capacity"
-msgstr ""
+msgstr "Nejvyšší kapacita"
 
 #: src/Libsysmon.py:1932
 msgid "Number Of Devices"
-msgstr ""
+msgstr "Počet zařízení"
 
 #: src/Libsysmon.py:1974 src/Libsysmon.py:1994
 msgid "Speed"
-msgstr ""
+msgstr "Rychlost"
 
 #: src/Libsysmon.py:1975 src/Libsysmon.py:1995
 msgid "Manufacturer"
-msgstr ""
+msgstr "Výrobce"
 
 #: src/Libsysmon.py:1976 src/Libsysmon.py:1996
 msgid "Form Factor"
-msgstr ""
+msgstr "Fyzická podoba"
 
 #: src/Libsysmon.py:1977 src/Libsysmon.py:1997
 msgid "Locator"
-msgstr ""
+msgstr "Umístění"
 
 #: src/Libsysmon.py:1978 src/Libsysmon.py:1998
 msgid "Bank Locator"
-msgstr ""
+msgstr "Umístění banky"
 
 #: src/Libsysmon.py:2036 src/Processes.py:325 src/Processes.py:1217
 #: src/ProcessesDetails.py:107 src/ProcessesMenu.py:163 src/Sensors.py:113
 #: src/Services.py:512 src/ServicesDetails.py:88 src/ServicesMenu.py:85
 #: src/System.py:262 src/System.py:287
 msgid "Name"
-msgstr "Jméno"
+msgstr "Název"
 
 #: src/Libsysmon.py:2040 src/Processes.py:1229 src/ProcessesDetails.py:147
 #: src/ProcessesMenu.py:219
@@ -424,23 +427,23 @@ msgstr "Ne"
 
 #: src/Libsysmon.py:2443
 msgid "Virtual Network Interface"
-msgstr ""
+msgstr "Virtuální síťové rozhraní"
 
 #: src/Libsysmon.py:2454
 msgid "Ethernet"
-msgstr ""
+msgstr "Ethernet"
 
 #: src/Libsysmon.py:2456
 msgid "Wi-Fi"
-msgstr ""
+msgstr "Wi-Fi"
 
 #: src/Libsysmon.py:5099
 msgid "Virtual Machine"
-msgstr ""
+msgstr "Virtuální stroj"
 
 #: src/MainWindow.py:108
 msgid "Customization menu for the current tab"
-msgstr ""
+msgstr "Nabídka přizpůsobení pro stávající záložku"
 
 #: src/MainWindow.py:143 src/MainWindow.py:880 src/Memory.py:102
 #: src/Memory.py:347 src/MemoryMenu.py:45 src/Performance.py:186
@@ -501,39 +504,43 @@ msgid ""
 "There will not be new versions for new features, bug fixes, etc.\n"
 "The project is ended."
 msgstr ""
+"Konec podpory pro Středisko dohledování systému v2.x.x.\n"
+"Nebudou zde nové verze pro nové funkce, opravy chyb, atp.\n"
+"Projekt je ukončen."
 
 #: src/MainWindow.py:472
 msgid "Refresh"
-msgstr ""
+msgstr "Načíst znovu"
 
 #: src/MainWindow.py:473 src/SettingsWindow.py:50
 msgid "General Settings"
-msgstr "Obecné nastavení"
+msgstr "Obecná nastavení"
 
 #: src/MainWindow.py:474
 msgid "About"
-msgstr "O programu"
+msgstr "O aplikaci"
 
 #: src/MainWindow.py:876
 msgid "CPU core selection affects only frequency and cache memory information."
-msgstr "Výběr CPU jádra ovlivňuje pouze informace o frekvenci a paměti cache."
+msgstr ""
+"Výběr jádra procesoru ovlivňuje pouze informace o frekvenci a mezipaměti."
 
 #: src/MainWindow.py:880 src/Memory.py:147 src/Memory.py:278 src/Memory.py:384
 #: src/ProcessesDetails.py:443 src/System.py:533
 msgid "Swap Memory"
-msgstr "SWAP paměť"
+msgstr "Odkládací prostor (swap)"
 
 #: src/MainWindow.py:1093
 msgid ""
 "Warning! The application has been run with root privileges, you may harm "
 "your system."
 msgstr ""
-"Varování! Aplikace musí být spuštěna s právy roota a může poškodit váš "
-"systém."
+"Varování! Je třeba, aby aplikace byla spuštěná s právy správce systému "
+"(root) – buďte opatrní a nepoškoďte si z ní systém."
 
 #: src/Memory.py:74
 msgid "RAM Usage"
-msgstr "Využití RAM"
+msgstr "Využití paměti"
 
 #: src/Memory.py:107
 msgid "Available"
@@ -541,7 +548,7 @@ msgstr "K dispozici"
 
 #: src/Memory.py:133 src/Memory.py:186
 msgid "Cached"
-msgstr ""
+msgstr "V mezipaměti"
 
 #: src/Memory.py:140
 msgid "Hardware"
@@ -549,7 +556,7 @@ msgstr "Hardware"
 
 #: src/Memory.py:239 src/Memory.py:343
 msgid "Physical RAM"
-msgstr "Fyzická RAM"
+msgstr "Fyzická operační paměť"
 
 #: src/Memory.py:336 src/ProcessesDetails.py:80
 msgid "File"
@@ -558,20 +565,20 @@ msgstr "Soubor"
 #: src/Network.py:75 src/Network.py:102 src/NetworkMenu.py:45
 #: src/Summary.py:1157
 msgid "Download Speed"
-msgstr "Rychlost stahování"
+msgstr "Rychlost příjmu"
 
 #: src/Network.py:75 src/Network.py:102 src/NetworkMenu.py:49
 #: src/Summary.py:1177
 msgid "Upload Speed"
-msgstr "Rychlost nahrávání"
+msgstr "Rychlost odesílání"
 
 #: src/Network.py:107
 msgid "Downloaded Data"
-msgstr ""
+msgstr "Přijatá data"
 
 #: src/Network.py:107
 msgid "Uploaded Data"
-msgstr ""
+msgstr "Odeslaná data"
 
 #: src/Network.py:116
 msgid "Connection Type"
@@ -587,7 +594,7 @@ msgstr "SSID"
 
 #: src/Network.py:130
 msgid "Link Quality"
-msgstr ""
+msgstr "Kvalita linky"
 
 #: src/Network.py:137
 msgid "IPv4 Address"
@@ -603,11 +610,11 @@ msgstr "MAC Adresa"
 
 #: src/Performance.py:956
 msgid "Max"
-msgstr ""
+msgstr "Nejvýše"
 
 #: src/Processes.py:225
 msgid "Pause Process"
-msgstr ""
+msgstr "Pozastavit proces"
 
 #: src/Processes.py:226
 msgid "Continue Process"
@@ -615,11 +622,11 @@ msgstr "Pokračovat v procesu"
 
 #: src/Processes.py:227
 msgid "End Process"
-msgstr ""
+msgstr "Ukončit proces"
 
 #: src/Processes.py:228
 msgid "End Process Immediately"
-msgstr ""
+msgstr "Ukončit proces okamžitě"
 
 #: src/Processes.py:234
 msgid "Very High"
@@ -643,7 +650,7 @@ msgstr "Velmi nízko"
 
 #: src/Processes.py:262
 msgid "Custom Value..."
-msgstr "Vlastní hodnota..."
+msgstr "Uživatelsky určená hodnota…"
 
 #: src/Processes.py:271 src/Processes.py:382 src/Processes.py:460
 msgid "Change Priority"
@@ -651,11 +658,11 @@ msgstr "Změnit prioritu"
 
 #: src/Processes.py:276 src/Processes.py:491 src/Processes.py:588
 msgid "Set CPU Affinity"
-msgstr ""
+msgstr "Nastavit afinitu procesoru"
 
 #: src/Processes.py:321
 msgid "All"
-msgstr ""
+msgstr "Vše"
 
 #: src/Processes.py:329 src/Processes.py:1235 src/ProcessesDetails.py:584
 #: src/ProcessesMenu.py:243
@@ -669,7 +676,7 @@ msgstr "PID"
 
 #: src/Processes.py:400
 msgid "Change priority of these processes"
-msgstr ""
+msgstr "Změnit prioritu těchto procesů"
 
 #: src/Processes.py:400
 msgid "Smaller value means higher process priority"
@@ -681,27 +688,27 @@ msgstr "Zrušit"
 
 #: src/Processes.py:556
 msgid "Select All"
-msgstr ""
+msgstr "Vybrat vše"
 
 #: src/Processes.py:561
 msgid "Select None"
-msgstr ""
+msgstr "Nevybrat nic"
 
 #: src/Processes.py:683
 msgid "Do you want to pause these processes?"
-msgstr ""
+msgstr "Chcete tyto procesy pozastavit?"
 
 #: src/Processes.py:688
 msgid "Do you want to end these processes?"
-msgstr ""
+msgstr "Chcete tyto procesy ukončit?"
 
 #: src/Processes.py:691
 msgid "Do you want to end these processes immediately?"
-msgstr ""
+msgstr "Chcete tyto procesy okamžitě ukončit?"
 
 #: src/Processes.py:1060
 msgid "Total"
-msgstr ""
+msgstr "Celkem"
 
 #: src/Processes.py:1219 src/ProcessesDetails.py:137 src/ProcessesMenu.py:175
 #: src/Users.py:230 src/UsersDetails.py:36 src/UsersDetails.py:65
@@ -729,7 +736,7 @@ msgstr "Paměť (VMS)"
 #: src/Processes.py:1224 src/Processes.py:1246 src/ProcessesDetails.py:423
 #: src/ProcessesMenu.py:199
 msgid "Memory (Shared)"
-msgstr "Paměť (Sdílená)"
+msgstr "Paměť (sdílená)"
 
 #: src/Processes.py:1231 src/ProcessesDetails.py:217 src/ProcessesMenu.py:227
 msgid "PPID"
@@ -748,20 +755,20 @@ msgstr "GID"
 #: src/Processes.py:1234 src/ProcessesDetails.py:197 src/ProcessesMenu.py:239
 #: src/Users.py:239 src/UsersDetails.py:155 src/UsersMenu.py:123
 msgid "Start Time"
-msgstr "Doba spuštění"
+msgstr "Okamžik spuštění"
 
 #: src/Processes.py:1236 src/ProcessesMenu.py:247
 msgid "CPU Time"
-msgstr ""
+msgstr "Čas procesoru"
 
 #: src/Processes.py:1238 src/Processes.py:1239 src/Processes.py:1240
 #: src/ProcessesMenu.py:251 src/ProcessesMenu.py:255 src/ProcessesMenu.py:259
 msgid "Recursive"
-msgstr ""
+msgstr "Rekurzivně"
 
 #: src/Processes.py:1276 src/Services.py:537
 msgid "Running"
-msgstr "Běží"
+msgstr "Spuštěný"
 
 #: src/Processes.py:1276
 msgid "Sleeping"
@@ -785,12 +792,12 @@ msgstr "Zastavený"
 
 #: src/ProcessesDetails.py:37 src/ProcessesDetails.py:726
 msgid "Process Details"
-msgstr "Detail procesu"
+msgstr "Podrobnosti o procesu"
 
 #: src/ProcessesDetails.py:207 src/ProcessesDetails.py:564
 #: src/ServicesDetails.py:148
 msgid "Path"
-msgstr "Cesta"
+msgstr "Popis umístění"
 
 #: src/ProcessesDetails.py:304
 msgid "Threads (TID)"
@@ -798,19 +805,19 @@ msgstr "Vlákna (TID)"
 
 #: src/ProcessesDetails.py:316
 msgid "Used CPU Core(s)"
-msgstr "Využívaná jádra CPU"
+msgstr "Využívaná jádra procesoru"
 
 #: src/ProcessesDetails.py:326
 msgid "CPU Times"
-msgstr "CPU časy"
+msgstr "Časy procesoru"
 
 #: src/ProcessesDetails.py:336
 msgid "Context Switches"
-msgstr "Kontextové přepínače"
+msgstr "Přepínání kontextů"
 
 #: src/ProcessesDetails.py:346
 msgid "CPU Affinity"
-msgstr ""
+msgstr "Afinita procesoru"
 
 #: src/ProcessesDetails.py:433
 msgid "Memory (USS)"
@@ -826,7 +833,7 @@ msgstr "Počet zápisu disku"
 
 #: src/ProcessesDetails.py:574
 msgid "Current Working Directory"
-msgstr "Aktuální pracovní adresář"
+msgstr "Stávající pracovní složka"
 
 #: src/ProcessesDetails.py:596
 msgid "Opened Files"
@@ -855,7 +862,7 @@ msgstr "Zobrazit procesy všech uživatelů"
 
 #: src/ProcessesMenu.py:113
 msgid "Hide kernel threads"
-msgstr ""
+msgstr "Skrýt vlákna jádra systému"
 
 #: src/ProcessesMenu.py:118
 msgid "Show processes as tree"
@@ -863,19 +870,19 @@ msgstr "Zobrazit procesy jako strom"
 
 #: src/ProcessesMenu.py:122
 msgid "Show tree lines"
-msgstr "Zobrazit linie stromu"
+msgstr "Zobrazit čáry stromu"
 
 #: src/ProcessesMenu.py:134
 msgid "Expand all"
-msgstr ""
+msgstr "Rozbalit vše"
 
 #: src/ProcessesMenu.py:139
 msgid "Collapse all"
-msgstr ""
+msgstr "Sbalit vše"
 
 #: src/ProcessesMenu.py:352
 msgid "Divide CPU usage by core count"
-msgstr ""
+msgstr "Dělit využití procesoru počtem jader"
 
 #: src/Sensors.py:112
 msgid "Device"
@@ -883,7 +890,7 @@ msgstr "Zařízení"
 
 #: src/Sensors.py:114
 msgid "Current Value"
-msgstr "Současná hodnota"
+msgstr "Stávající hodnota"
 
 #: src/Sensors.py:116
 msgid "Critical"
@@ -893,11 +900,11 @@ msgstr "Kritická hodnota"
 msgid ""
 "Note: This tab is not reloaded automatically. Manually reload for changes."
 msgstr ""
-"Poznámka: Tato záložka není automaticky obnovována. Obnovujte manuálně."
+"Poznámka: Tato záložka není automaticky znovunačítána. Udělejte to ručně."
 
 #: src/Services.py:167 src/Services.py:294
 msgid "Help"
-msgstr ""
+msgstr "Nápověda"
 
 #: src/Services.py:187 src/Services.py:278
 msgid "Start"
@@ -905,11 +912,11 @@ msgstr "Start"
 
 #: src/Services.py:190
 msgid "Starts a service."
-msgstr ""
+msgstr "Spustí službu"
 
 #: src/Services.py:190 src/Services.py:201
 msgid "This action does not affect a service after system reboot."
-msgstr ""
+msgstr "Tato akce nepostihne službu po restartu systému."
 
 #: src/Services.py:198 src/Services.py:279
 msgid "Stop"
@@ -917,7 +924,7 @@ msgstr "Stop"
 
 #: src/Services.py:201
 msgid "Stops a service."
-msgstr ""
+msgstr "Zastaví službu."
 
 #: src/Services.py:209 src/Services.py:280
 msgid "Restart"
@@ -925,7 +932,7 @@ msgstr "Restartovat"
 
 #: src/Services.py:212
 msgid "Restarts a service."
-msgstr ""
+msgstr "Restartuje službu."
 
 #: src/Services.py:220 src/Services.py:281
 msgid "Reload"
@@ -933,15 +940,15 @@ msgstr "Znovu načíst"
 
 #: src/Services.py:223
 msgid "Reloads a service."
-msgstr ""
+msgstr "Znovunačte službu."
 
 #: src/Services.py:223
 msgid "This action is not available for all services."
-msgstr ""
+msgstr "Tato akce není k dispozici u každé služby."
 
 #: src/Services.py:223 src/Services.py:245
 msgid "This action does not affect running process of a service."
-msgstr ""
+msgstr "Tato akce nepostihne spuštěný proces služby."
 
 #: src/Services.py:231 src/Services.py:282
 msgid "Enable"
@@ -949,11 +956,11 @@ msgstr "Povolit"
 
 #: src/Services.py:234
 msgid "Enables a service."
-msgstr ""
+msgstr "Povoluje službu."
 
 #: src/Services.py:234 src/Services.py:245
 msgid "This action affects a service after system reboot."
-msgstr ""
+msgstr "Tato akce služby postihne po restartu systému."
 
 #: src/Services.py:242 src/Services.py:283
 msgid "Disable"
@@ -961,7 +968,7 @@ msgstr "Zakázat"
 
 #: src/Services.py:245
 msgid "Disables a service."
-msgstr ""
+msgstr "Vypne službu."
 
 #: src/Services.py:253 src/Services.py:286
 msgid "Mask"
@@ -969,25 +976,28 @@ msgstr "Maska"
 
 #: src/Services.py:256
 msgid "Disables a service completely."
-msgstr ""
+msgstr "Úplně vypne službu."
 
 #: src/Services.py:256
 msgid "A masked service can not be started, restarted, reloaded or enabled."
 msgstr ""
+"Maskovanou službu není možné spustit, restartovat, znovunačítat nebo povolit."
 
 #: src/Services.py:264
 msgid "Unmask"
-msgstr ""
+msgstr "Odmaskovat"
 
 #: src/Services.py:267
 msgid "Unmasks a service."
-msgstr ""
+msgstr "Zrušit maskování služby"
 
 #: src/Services.py:267
 msgid ""
 "A service can be started, restarted, reloaded (if it is available) or "
 "enabled after unmasking."
 msgstr ""
+"Po odmaskování je službu možné spustit, restartovat, znovunačíst (pokud je "
+"to k dispozici) nebo povolit."
 
 #: src/Services.py:513 src/ServicesMenu.py:91
 msgid "State"
@@ -1003,11 +1013,11 @@ msgstr "Aktivní status"
 
 #: src/Services.py:516 src/ServicesDetails.py:118 src/ServicesMenu.py:103
 msgid "Load State"
-msgstr "Stav zátěže"
+msgstr "Načíst stav"
 
 #: src/Services.py:517 src/ServicesDetails.py:138 src/ServicesMenu.py:107
 msgid "Sub-State"
-msgstr "Sub status"
+msgstr "Dílčí stav"
 
 #: src/Services.py:519 src/ServicesDetails.py:98 src/ServicesMenu.py:115
 msgid "Description"
@@ -1039,7 +1049,7 @@ msgstr "Generovaný"
 
 #: src/Services.py:537
 msgid "Enabled-runtime"
-msgstr "Povolený runtime"
+msgstr "Povoleno za běhu"
 
 #: src/Services.py:537
 msgid "Indirect"
@@ -1067,7 +1077,7 @@ msgstr "Opuštěný"
 
 #: src/ServicesDetails.py:36
 msgid "Service Details"
-msgstr "Detaily služby"
+msgstr "Podrobnosti o službě"
 
 #: src/ServicesDetails.py:64
 msgid "Dependencies"
@@ -1115,11 +1125,11 @@ msgstr "Před"
 
 #: src/SettingsWindow.py:27
 msgid "Light"
-msgstr ""
+msgstr "Světlý"
 
 #: src/SettingsWindow.py:27
 msgid "Dark"
-msgstr ""
+msgstr "Tmavý"
 
 #: src/SettingsWindow.py:34
 msgid "Task Manager"
@@ -1127,15 +1137,15 @@ msgstr "Správce úloh"
 
 #: src/SettingsWindow.py:69
 msgid "Language (Requires restart)"
-msgstr ""
+msgstr "Jazyk (vyžaduje restart)"
 
 #: src/SettingsWindow.py:77
 msgid "Light/Dark theme"
-msgstr ""
+msgstr "Světlý/tmavý vzhled"
 
 #: src/SettingsWindow.py:85
 msgid "Opacity"
-msgstr ""
+msgstr "(Ne)průhlednost"
 
 #: src/SettingsWindow.py:103
 msgid "Update interval (seconds)"
@@ -1143,7 +1153,7 @@ msgstr "Interval aktualizace (sekundy)"
 
 #: src/SettingsWindow.py:111
 msgid "Graph data history"
-msgstr ""
+msgstr "Historie dat grafu"
 
 #: src/SettingsWindow.py:123
 msgid "Show performance summary on the headerbar"
@@ -1155,11 +1165,11 @@ msgstr "Pamatovat poslední otevřenou záložku"
 
 #: src/SettingsWindow.py:140
 msgid "Default main tab and sub-tab"
-msgstr ""
+msgstr "Výchozí hlavní záložku a záložku v něm"
 
 #: src/SettingsWindow.py:156
 msgid "Remember last selected devices"
-msgstr "Pamatovat poslední vybraný hardware"
+msgstr "Pamatovat poslední vybraná zařízení"
 
 #: src/SettingsWindow.py:164
 msgid "Remember window size"
@@ -1167,11 +1177,11 @@ msgstr "Pamatovat velikost okna"
 
 #: src/SettingsWindow.py:182
 msgid "Reset all settings of the application"
-msgstr ""
+msgstr "Resetuje veškerá nastavení aplikace"
 
 #: src/SettingsWindow.py:751
 msgid "Do you want to reset all settings to defaults?"
-msgstr "Chcete resetovat výchozí nastavení?"
+msgstr "Chcete vše vrátit na výchozí nastavení?"
 
 #: src/System.py:55 src/System.py:283
 msgid "Operating System (OS)"
@@ -1195,7 +1205,7 @@ msgstr "Verze"
 
 #: src/System.py:294
 msgid "Code Name"
-msgstr ""
+msgstr "Kódový název"
 
 #: src/System.py:301
 msgid "OS Family"
@@ -1207,11 +1217,11 @@ msgstr "Založeno na"
 
 #: src/System.py:315
 msgid "Kernel Release"
-msgstr "Vydání kernelu"
+msgstr "Vydání jádra systému"
 
 #: src/System.py:322
 msgid "Kernel Version"
-msgstr "Verze kernelu"
+msgstr "Verze jádra systému"
 
 #: src/System.py:329
 msgid "Graphical User Interface (GUI)"
@@ -1239,7 +1249,7 @@ msgstr "Balíčky"
 
 #: src/System.py:375 src/System.py:392
 msgid "Processing"
-msgstr ""
+msgstr "Zpracovávání"
 
 #: src/System.py:381
 msgid "Flatpak"
@@ -1247,7 +1257,7 @@ msgstr "Flatpak"
 
 #: src/System.py:382
 msgid "Number of installed Flatpak applications and runtimes"
-msgstr "Počet nainstalovaných Flatpaků"
+msgstr "Počet nainstalovaných Flatpak aplikací a jejich běhových prostředí"
 
 #: src/System.py:399
 msgid "GTK Version"
@@ -1255,7 +1265,7 @@ msgstr "Verze GTK"
 
 #: src/System.py:400 src/System.py:408
 msgid "Version for the currently running software"
-msgstr ""
+msgstr "Verze v tuto chvíli spuštěného software"
 
 #: src/System.py:407
 msgid "Python Version"
