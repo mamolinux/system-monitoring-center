@@ -12,7 +12,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Gpu:
@@ -55,17 +55,17 @@ class Gpu:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (GPU)
-        label = Common.tab_title_label(_tr("GPU"))
+        label = Common.tab_title_label(_("GPU"))
         grid.attach(label, 0, 0, 1, 2)
 
         # Label (device vendor-model label)
         self.device_vendor_model_label = Common.device_vendor_model_label()
-        self.device_vendor_model_label.set_tooltip_text(_tr("Vendor") + "-" + _tr("Model"))
+        self.device_vendor_model_label.set_tooltip_text(_("Vendor") + "-" + _("Model"))
         grid.attach(self.device_vendor_model_label, 1, 0, 1, 1)
 
         # Label (device kernel name)
         self.device_kernel_name_label = Common.device_kernel_name_label()
-        self.device_kernel_name_label.set_tooltip_text(_tr("Device Name In Kernel"))
+        self.device_kernel_name_label.set_tooltip_text(_("Device Name In Kernel"))
         grid.attach(self.device_kernel_name_label, 1, 1, 1, 1)
 
 
@@ -81,7 +81,7 @@ class Gpu:
         self.tab_grid.attach(grid, 0, 1, 1, 2)
 
         # Label (drawingarea upper-left)
-        self.da_upper_left_label = Common.da_upper_lower_label(_tr("GPU Usage"), Gtk.Align.START)
+        self.da_upper_left_label = Common.da_upper_lower_label(_("GPU Usage"), Gtk.Align.START)
         grid.attach(self.da_upper_left_label, 0, 0, 1, 1)
 
         # Label (drawingarea upper-right)
@@ -123,7 +123,7 @@ class Gpu:
         self.da_gpu_memory_encoder_decoder_load_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (drawingarea upper-left)
-        label = Common.da_upper_lower_label(_tr("GPU Memory"), Gtk.Align.START)
+        label = Common.da_upper_lower_label(_("GPU Memory"), Gtk.Align.START)
         grid.attach(label, 0, 0, 1, 1)
 
         # Label (drawingarea upper-right)
@@ -151,7 +151,7 @@ class Gpu:
         self.da_gpu_memory_encoder_decoder_load_grid.attach(grid, 1, 0, 1, 1)
 
         # Label (drawingarea upper-left)
-        self.label_video_encoder_or_encoder_decoder_load = Common.da_upper_lower_label(_tr("Video Encoder"), Gtk.Align.START)
+        self.label_video_encoder_or_encoder_decoder_load = Common.da_upper_lower_label(_("Video Encoder"), Gtk.Align.START)
         grid.attach(self.label_video_encoder_or_encoder_decoder_load, 0, 0, 1, 1)
 
         # Label (drawingarea upper-right)
@@ -179,7 +179,7 @@ class Gpu:
         self.da_gpu_memory_encoder_decoder_load_grid.attach(self.grid_video_decoder_load, 2, 0, 1, 1)
 
         # Label (drawingarea upper-left)
-        label = Common.da_upper_lower_label(_tr("Video Decoder"), Gtk.Align.START)
+        label = Common.da_upper_lower_label(_("Video Decoder"), Gtk.Align.START)
         self.grid_video_decoder_load.attach(label, 0, 0, 1, 1)
 
         # Label (drawingarea upper-right)
@@ -206,12 +206,12 @@ class Gpu:
 
         # Styled information widgets (GPU Usage and Video Memory)
         # ScrolledWindow (GPU Usage and Video Memory)
-        scrolledwindow, self.gpu_usage_label, self.video_memory_label = Common.styled_information_scrolledwindow(_tr("GPU Usage"), None, _tr("GPU Memory"), None)
+        scrolledwindow, self.gpu_usage_label, self.video_memory_label = Common.styled_information_scrolledwindow(_("GPU Usage"), None, _("GPU Memory"), None)
         performance_info_grid.attach(scrolledwindow, 0, 0, 1, 1)
 
         # Styled information widgets (Frequency and Temperature)
         # ScrolledWindow (Frequency and Temperature)
-        scrolledwindow, self.frequency_label, self.temperature_label = Common.styled_information_scrolledwindow(_tr("Frequency"), None, _tr("Temperature"), None)
+        scrolledwindow, self.frequency_label, self.temperature_label = Common.styled_information_scrolledwindow(_("Frequency"), None, _("Temperature"), None)
         performance_info_grid.attach(scrolledwindow, 0, 1, 1, 1)
 
         # Grid - Right information labels
@@ -219,45 +219,45 @@ class Gpu:
         performance_info_grid.attach(performance_info_right_grid, 1, 0, 1, 2)
 
         # Label (Min-Max Frequency)
-        label = Common.static_information_label(_tr("Min-Max Frequency") + ":")
+        label = Common.static_information_label(_("Min-Max Frequency") + ":")
         performance_info_right_grid.attach(label, 0, 0, 1, 1)
         # Label (Min-Max Frequency)
         self.min_max_frequency_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.min_max_frequency_label, 1, 0, 1, 1)
 
         # Label (Memory Frequency)
-        label = Common.static_information_label(_tr("Memory Frequency") + ":")
+        label = Common.static_information_label(_("Memory Frequency") + ":")
         performance_info_right_grid.attach(label, 0, 1, 1, 1)
         # Label (Memory Frequency)
         self.memory_frequency_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.memory_frequency_label, 1, 1, 1, 1)
 
         # Label (Power Usage)
-        label = Common.static_information_label(_tr("Power Usage") + ":")
+        label = Common.static_information_label(_("Power Usage") + ":")
         performance_info_right_grid.attach(label, 0, 2, 1, 1)
         # Label (Power Usage)
         self.power_usage_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.power_usage_label, 1, 2, 1, 1)
 
         # Label (Boot VGA)
-        label = Common.static_information_label(_tr("Boot VGA") + ":")
+        label = Common.static_information_label(_("Boot VGA") + ":")
         performance_info_right_grid.attach(label, 0, 3, 1, 1)
         # Label (Boot VGA)
         self.boot_vga_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.boot_vga_label, 1, 3, 1, 1)
 
         # Label (Driver)
-        label = Common.static_information_label(_tr("Driver") + ":")
+        label = Common.static_information_label(_("Driver") + ":")
         performance_info_right_grid.attach(label, 0, 4, 1, 1)
         # Label (Driver)
         self.driver_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.driver_label, 1, 4, 1, 1)
 
         # Label (Details...)
-        label = Common.static_information_label(_tr("Details") + ":")
+        label = Common.static_information_label(_("Details") + ":")
         performance_info_right_grid.attach(label, 0, 5, 1, 1)
         # Label (Show...)
-        self.details_label = Common.clickable_label(_tr("Show..."), self.on_details_label_released)
+        self.details_label = Common.clickable_label(_("Show..."), self.on_details_label_released)
         performance_info_right_grid.attach(self.details_label, 1, 5, 1, 1)
 
 
@@ -286,7 +286,7 @@ class Gpu:
         # Window
         self.gpu_details_window = Gtk.Window()
         self.gpu_details_window.set_default_size(420, 490)
-        self.gpu_details_window.set_title(_tr("GPU"))
+        self.gpu_details_window.set_title(_("GPU"))
         self.gpu_details_window.set_icon_name("system-monitoring-center")
         self.gpu_details_window.set_transient_for(MainWindow.main_window)
         self.gpu_details_window.set_modal(True)
@@ -306,7 +306,7 @@ class Gpu:
 
         # Information labels
         # Label (Vendor - Model)
-        label = Common.static_information_label(_tr("Vendor") + " - " + _tr("Model"))
+        label = Common.static_information_label(_("Vendor") + " - " + _("Model"))
         main_grid.attach(label, 0, 0, 1, 1)
         # Label (Vendor - Model)
         label = Common.static_information_label(":")
@@ -316,7 +316,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_vendor_model_label, 2, 0, 1, 1)
 
         # Label (GPU)
-        label = Common.static_information_label(_tr("GPU"))
+        label = Common.static_information_label(_("GPU"))
         main_grid.attach(label, 0, 1, 1, 1)
         # Label (GPU)
         label = Common.static_information_label(":")
@@ -326,7 +326,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_gpu_label, 2, 1, 1, 1)
 
         # Label (PCIe Address)
-        label = Common.static_information_label(_tr("PCIe Address"))
+        label = Common.static_information_label(_("PCIe Address"))
         main_grid.attach(label, 0, 2, 1, 1)
         # Label (PCIe Address)
         label = Common.static_information_label(":")
@@ -336,7 +336,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_pcie_address_label, 2, 2, 1, 1)
 
         # Label (GPU Interface)
-        label = Common.static_information_label(_tr("GPU Interface"))
+        label = Common.static_information_label(_("GPU Interface"))
         main_grid.attach(label, 0, 3, 1, 1)
         # Label (GPU Interface)
         label = Common.static_information_label(":")
@@ -346,7 +346,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_gpu_interface_label, 2, 3, 1, 1)
 
         # Label (Link Speed)
-        label = Common.static_information_label(_tr("Link Speed"))
+        label = Common.static_information_label(_("Link Speed"))
         main_grid.attach(label, 0, 4, 1, 1)
         # Label (Link Speed)
         label = Common.static_information_label(":")
@@ -356,7 +356,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_link_speed_label, 2, 4, 1, 1)
 
         # Label (GPU Usage)
-        label = Common.static_information_label(_tr("GPU Usage"))
+        label = Common.static_information_label(_("GPU Usage"))
         main_grid.attach(label, 0, 5, 1, 1)
         # Label (GPU Usage)
         label = Common.static_information_label(":")
@@ -366,7 +366,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_gpu_usage_label, 2, 5, 1, 1)
 
         # Label (GPU Memory)
-        label = Common.static_information_label(_tr("GPU Memory"))
+        label = Common.static_information_label(_("GPU Memory"))
         main_grid.attach(label, 0, 6, 1, 1)
         # Label (GPU Memory)
         label = Common.static_information_label(":")
@@ -376,7 +376,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_gpu_memory_label, 2, 6, 1, 1)
 
         # Label (Frequency)
-        label = Common.static_information_label(_tr("Frequency"))
+        label = Common.static_information_label(_("Frequency"))
         main_grid.attach(label, 0, 7, 1, 1)
         # Label (Frequency)
         label = Common.static_information_label(":")
@@ -386,7 +386,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_frequency_label, 2, 7, 1, 1)
 
         # Label (Min-Max Frequency)
-        label = Common.static_information_label(_tr("Min-Max Frequency"))
+        label = Common.static_information_label(_("Min-Max Frequency"))
         main_grid.attach(label, 0, 8, 1, 1)
         # Label (Min-Max Frequency)
         label = Common.static_information_label(":")
@@ -396,7 +396,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_min_max_frequency_label, 2, 8, 1, 1)
 
         # Label (Memory Frequency)
-        label = Common.static_information_label(_tr("Memory Frequency"))
+        label = Common.static_information_label(_("Memory Frequency"))
         main_grid.attach(label, 0, 9, 1, 1)
         # Label (Memory Frequency)
         label = Common.static_information_label(":")
@@ -406,7 +406,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_memory_frequency_label, 2, 9, 1, 1)
 
         # Label (Temperature)
-        label = Common.static_information_label(_tr("Temperature"))
+        label = Common.static_information_label(_("Temperature"))
         main_grid.attach(label, 0, 10, 1, 1)
         # Label (Temperature)
         label = Common.static_information_label(":")
@@ -416,7 +416,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_temperature_label, 2, 10, 1, 1)
 
         # Label (Power Usage)
-        label = Common.static_information_label(_tr("Power Usage"))
+        label = Common.static_information_label(_("Power Usage"))
         main_grid.attach(label, 0, 11, 1, 1)
         # Label (Power Usage)
         label = Common.static_information_label(":")
@@ -426,7 +426,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_power_usage_label, 2, 11, 1, 1)
 
         # Label (Boot VGA)
-        label = Common.static_information_label(_tr("Boot VGA"))
+        label = Common.static_information_label(_("Boot VGA"))
         main_grid.attach(label, 0, 12, 1, 1)
         # Label (Boot VGA)
         label = Common.static_information_label(":")
@@ -436,7 +436,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_boot_vga_label, 2, 12, 1, 1)
 
         # Label (Driver)
-        label = Common.static_information_label(_tr("Driver"))
+        label = Common.static_information_label(_("Driver"))
         main_grid.attach(label, 0, 13, 1, 1)
         # Label (Driver)
         label = Common.static_information_label(":")
@@ -446,7 +446,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_driver_label, 2, 13, 1, 1)
 
         # Label (Connections)
-        label = Common.static_information_label(_tr("Connections"))
+        label = Common.static_information_label(_("Connections"))
         main_grid.attach(label, 0, 14, 1, 1)
         # Label (Connections)
         label = Common.static_information_label(":")
@@ -456,7 +456,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_gpu_connections_label, 2, 14, 1, 1)
 
         # Label (Refresh Rate)
-        label = Common.static_information_label(_tr("Refresh Rate"))
+        label = Common.static_information_label(_("Refresh Rate"))
         main_grid.attach(label, 0, 15, 1, 1)
         # Label (Refresh Rate)
         label = Common.static_information_label(":")
@@ -466,7 +466,7 @@ class Gpu:
         main_grid.attach(self.gpu_details_refresh_rate_label, 2, 15, 1, 1)
 
         # Label (Resolution)
-        label = Common.static_information_label(_tr("Resolution"))
+        label = Common.static_information_label(_("Resolution"))
         main_grid.attach(label, 0, 16, 1, 1)
         # Label (Resolution)
         label = Common.static_information_label(":")
@@ -497,7 +497,7 @@ class Gpu:
         gpu_connections = Libsysmon.get_gpu_connections(gpu_device_path, selected_gpu)
 
         # Set GPU Details window title
-        self.gpu_details_window.set_title(_tr("GPU") + ": " + selected_gpu)
+        self.gpu_details_window.set_title(_("GPU") + ": " + selected_gpu)
 
         # Set label text by using GPU data
         self.gpu_details_vendor_model_label.set_label(self.gpu_information_share_dict["gpu_device_model_name"])
@@ -696,11 +696,10 @@ class Gpu:
         if self.gpu_decoder_load_list[-1] == float(-9999):
             if self.grid_video_decoder_load.get_visible() == True:
                 self.grid_video_decoder_load.set_visible(False)
-                self.label_video_encoder_or_encoder_decoder_load.set_text(_tr("Video Encoder") + " + " + _tr("Video Decoder"))
+                self.label_video_encoder_or_encoder_decoder_load.set_text(_("Video Encoder") + " + " + _("Video Decoder"))
         elif self.gpu_decoder_load_list[-1] != float(-9999):
             if self.grid_video_decoder_load.get_visible() == False:
                 self.grid_video_decoder_load.set_visible(True)
-                self.label_video_encoder_or_encoder_decoder_load.set_text(_tr("Video Encoder"))
+                self.label_video_encoder_or_encoder_decoder_load.set_text(_("Video Encoder"))
 
 Gpu = Gpu()
-

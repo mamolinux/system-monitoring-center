@@ -15,7 +15,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class UsersDetails:
@@ -33,7 +33,7 @@ class UsersDetails:
         # Window
         self.user_details_window = Gtk.Window()
         self.user_details_window.set_default_size(350, 345)
-        self.user_details_window.set_title(_tr("User"))
+        self.user_details_window.set_title(_("User"))
         self.user_details_window.set_icon_name("system-monitoring-center")
         self.user_details_window.set_transient_for(MainWindow.main_window)
         self.user_details_window.set_modal(True)
@@ -62,7 +62,7 @@ class UsersDetails:
         scrolledwindow.set_child(grid)
 
         # Label (User)
-        label = Common.static_information_label(_tr("User"))
+        label = Common.static_information_label(_("User"))
         grid.attach(label, 0, 0, 1, 1)
         # Label (User)
         label = Common.static_information_label(":")
@@ -72,7 +72,7 @@ class UsersDetails:
         grid.attach(self.user_label, 2, 0, 1, 1)
 
         # Label (Full Name)
-        label = Common.static_information_label(_tr("Full Name"))
+        label = Common.static_information_label(_("Full Name"))
         grid.attach(label, 0, 1, 1, 1)
         # Label (Full Name)
         label = Common.static_information_label(":")
@@ -82,7 +82,7 @@ class UsersDetails:
         grid.attach(self.full_name_label, 2, 1, 1, 1)
 
         # Label (Logged In)
-        label = Common.static_information_label(_tr("Logged In"))
+        label = Common.static_information_label(_("Logged In"))
         grid.attach(label, 0, 2, 1, 1)
         # Label (Logged In)
         label = Common.static_information_label(":")
@@ -92,7 +92,7 @@ class UsersDetails:
         grid.attach(self.logged_in_label, 2, 2, 1, 1)
 
         # Label (UID)
-        label = Common.static_information_label(_tr("UID"))
+        label = Common.static_information_label(_("UID"))
         grid.attach(label, 0, 3, 1, 1)
         # Label (UID)
         label = Common.static_information_label(":")
@@ -102,7 +102,7 @@ class UsersDetails:
         grid.attach(self.uid_label, 2, 3, 1, 1)
 
         # Label (GID)
-        label = Common.static_information_label(_tr("GID"))
+        label = Common.static_information_label(_("GID"))
         grid.attach(label, 0, 4, 1, 1)
         # Label (GID)
         label = Common.static_information_label(":")
@@ -112,7 +112,7 @@ class UsersDetails:
         grid.attach(self.gid_label, 2, 4, 1, 1)
 
         # Label (Processes)
-        label = Common.static_information_label(_tr("Processes"))
+        label = Common.static_information_label(_("Processes"))
         grid.attach(label, 0, 5, 1, 1)
         # Label (Processes)
         label = Common.static_information_label(":")
@@ -122,7 +122,7 @@ class UsersDetails:
         grid.attach(self.processes_label, 2, 5, 1, 1)
 
         # Label (Home Directory)
-        label = Common.static_information_label(_tr("Home Directory"))
+        label = Common.static_information_label(_("Home Directory"))
         grid.attach(label, 0, 6, 1, 1)
         # Label (Home Directory)
         label = Common.static_information_label(":")
@@ -132,7 +132,7 @@ class UsersDetails:
         grid.attach(self.home_directory_label, 2, 6, 1, 1)
 
         # Label (Group)
-        label = Common.static_information_label(_tr("Group"))
+        label = Common.static_information_label(_("Group"))
         grid.attach(label, 0, 7, 1, 1)
         # Label (Group)
         label = Common.static_information_label(":")
@@ -142,7 +142,7 @@ class UsersDetails:
         grid.attach(self.group_label, 2, 7, 1, 1)
 
         # Label (Terminal)
-        label = Common.static_information_label(_tr("Terminal"))
+        label = Common.static_information_label(_("Terminal"))
         grid.attach(label, 0, 8, 1, 1)
         # Label (Terminal)
         label = Common.static_information_label(":")
@@ -152,7 +152,7 @@ class UsersDetails:
         grid.attach(self.terminal_label, 2, 8, 1, 1)
 
         # Label (Start Time)
-        label = Common.static_information_label(_tr("Start Time"))
+        label = Common.static_information_label(_("Start Time"))
         grid.attach(label, 0, 9, 1, 1)
         # Label (Start Time)
         label = Common.static_information_label(":")
@@ -162,7 +162,7 @@ class UsersDetails:
         grid.attach(self.start_time_label, 2, 9, 1, 1)
 
         # Label (CPU)
-        label = Common.static_information_label(_tr("CPU"))
+        label = Common.static_information_label(_("CPU"))
         grid.attach(label, 0, 10, 1, 1)
         # Label (CPU)
         label = Common.static_information_label(":")
@@ -233,7 +233,7 @@ class UsersDetails:
         users_cpu_precision = Config.users_cpu_precision
 
         # Set window title
-        self.user_details_window.set_title(_tr("User") + ": " + selected_username)
+        self.user_details_window.set_title(_("User") + ": " + selected_username)
 
         # Get user information
         users_data_dict = Libsysmon.get_users_information(self.users_data_dict_prev, self.system_boot_time)
@@ -252,9 +252,9 @@ class UsersDetails:
         self.user_label.set_label(user_data_dict["username"])
         self.full_name_label.set_label(user_data_dict["full_name"])
         if user_data_dict["logged_in"] == True:
-            selected_user_logged_in = _tr("Yes")
+            selected_user_logged_in = _("Yes")
         else:
-            selected_user_logged_in = _tr("No")
+            selected_user_logged_in = _("No")
         self.logged_in_label.set_label(selected_user_logged_in)
         self.uid_label.set_label(str(selected_user_uid))
         self.gid_label.set_label(str(user_data_dict["gid"]))
@@ -298,4 +298,3 @@ class UsersDetails:
 
 
 UsersDetails = UsersDetails()
-

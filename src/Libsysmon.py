@@ -112,7 +112,7 @@ desktop_environment_version_command_dict = {"XFCE":["xfce4-panel", "--version"],
 #                                           Common
 # ***********************************************************************************************
 
-def _tr(text_for_translation):
+def _(text_for_translation):
     """
     This function is used for preventing errors if "set_translation_func" is not run.
     Text is not translated if this function is used.
@@ -126,8 +126,8 @@ def set_translation_func(translation_func):
     Set "locale" translation function for translation text in function outputs.
     """
 
-    global _tr
-    _tr = translation_func
+    global _
+    _ = translation_func
 
 
 def get_environment_type():
@@ -1727,7 +1727,7 @@ def get_number_of_physical_cores_sockets_cpu_name(selected_cpu_core, number_of_l
                     if line.startswith("Processor"):
                         cpu_model_name = line.split(":")[-1].strip()
             if cpu_model_name == "-":
-                cpu_model_name = "[" + _tr("Unknown") + "]"
+                cpu_model_name = "[" + _("Unknown") + "]"
 
     return number_of_physical_cores, number_of_cpu_sockets, cpu_model_name
 
@@ -1928,8 +1928,8 @@ def get_ram_hardware_info():
             if line.startswith("Number Of Devices:"):
                 number_of_devices = line.split(":")[1].strip()
                 continue
-    memory_ram_hardware_info = memory_ram_hardware_info + _tr("Maximum Capacity") + " :    " + maximum_capacity
-    memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Number Of Devices") + " :    " + number_of_devices + "\n"
+    memory_ram_hardware_info = memory_ram_hardware_info + _("Maximum Capacity") + " :    " + maximum_capacity
+    memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Number Of Devices") + " :    " + number_of_devices + "\n"
 
     # Perform the following operations if "Memory Device" is found in "dmidecode_output" output. This information may not be available on some systems.
     if "Memory Device" in dmidecode_output:
@@ -1969,13 +1969,13 @@ def get_ram_hardware_info():
                     memory_manufacturer = line.split(":")[1].strip()
                     continue
             memory_ram_hardware_info = memory_ram_hardware_info + "\n" + "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" + "\n"
-            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Capacity") + " :    " + memory_size
-            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Type") + " :    " + memory_type
-            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Speed") + " :    " + memory_speed
-            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Manufacturer") + " :    " + memory_manufacturer
-            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Form Factor") + " :    " + memory_form_factor
-            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Locator") + " :    " + memory_locator
-            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Bank Locator") + " :    " + memory_bank_locator
+            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Capacity") + " :    " + memory_size
+            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Type") + " :    " + memory_type
+            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Speed") + " :    " + memory_speed
+            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Manufacturer") + " :    " + memory_manufacturer
+            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Form Factor") + " :    " + memory_form_factor
+            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Locator") + " :    " + memory_locator
+            memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Bank Locator") + " :    " + memory_bank_locator
             memory_ram_hardware_info = memory_ram_hardware_info + "\n"
 
     # Perform the following operations if "Memory Device" is not found in "dmidecode_output" output. This information may not be available on some systems.
@@ -1989,13 +1989,13 @@ def get_ram_hardware_info():
         memory_manufacturer = "-"
 
         memory_ram_hardware_info = memory_ram_hardware_info + "\n" + "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" + "\n"
-        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Capacity") + " :    " + memory_size
-        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Type") + " :    " + memory_type
-        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Speed") + " :    " + memory_speed
-        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Manufacturer") + " :    " + memory_manufacturer
-        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Form Factor") + " :    " + memory_form_factor
-        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Locator") + " :    " + memory_locator
-        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _tr("Bank Locator") + " :    " + memory_bank_locator
+        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Capacity") + " :    " + memory_size
+        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Type") + " :    " + memory_type
+        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Speed") + " :    " + memory_speed
+        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Manufacturer") + " :    " + memory_manufacturer
+        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Form Factor") + " :    " + memory_form_factor
+        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Locator") + " :    " + memory_locator
+        memory_ram_hardware_info = memory_ram_hardware_info + "\n" + _("Bank Locator") + " :    " + memory_bank_locator
 
     return memory_ram_hardware_info
 
@@ -2033,11 +2033,11 @@ def get_swap_details_info(performance_memory_data_precision=1, performance_memor
         swap_used = int(line_split[3].strip()) * 1024
         swap_used = f'{data_unit_converter("data", "none", swap_used, performance_memory_data_unit, performance_memory_data_precision)}'
         swap_priority = line_split[4].strip()
-        memory_swap_details_info = memory_swap_details_info + "\n" + _tr("Name") + " :    " + swap_name
-        memory_swap_details_info = memory_swap_details_info + "\n" + _tr("Type") + " :    " + _tr(swap_type)
-        memory_swap_details_info = memory_swap_details_info + "\n" + _tr("Capacity") + " :    " + swap_size
-        memory_swap_details_info = memory_swap_details_info + "\n" + _tr("Used") + " :    " + swap_used
-        memory_swap_details_info = memory_swap_details_info + "\n" + _tr("Priority") + " :    " + swap_priority
+        memory_swap_details_info = memory_swap_details_info + "\n" + _("Name") + " :    " + swap_name
+        memory_swap_details_info = memory_swap_details_info + "\n" + _("Type") + " :    " + _(swap_type)
+        memory_swap_details_info = memory_swap_details_info + "\n" + _("Capacity") + " :    " + swap_size
+        memory_swap_details_info = memory_swap_details_info + "\n" + _("Used") + " :    " + swap_used
+        memory_swap_details_info = memory_swap_details_info + "\n" + _("Priority") + " :    " + swap_priority
         memory_swap_details_info = memory_swap_details_info + "\n"
         memory_swap_details_info = memory_swap_details_info + "\n" + "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -" + "\n"
 
@@ -2067,7 +2067,7 @@ def get_disk_type(selected_disk):
 
     for line in sys_class_block_disk_uevent_lines:
         if "DEVTYPE" in line:
-            disk_type = _tr(line.split("=")[1].capitalize())
+            disk_type = _(line.split("=")[1].capitalize())
             break
 
     return disk_type
@@ -2079,7 +2079,7 @@ def get_disk_parent_name(selected_disk, disk_type, disk_list):
     """
 
     disk_parent_name = "-"
-    if disk_type == _tr("Partition"):
+    if disk_type == _("Partition"):
         for check_disk_dir in disk_list:
             if os.path.isdir("/sys/class/block/" + check_disk_dir + "/" + selected_disk) == True:
                 disk_parent_name = check_disk_dir
@@ -2092,9 +2092,9 @@ def get_disk_device_model_name(selected_disk, disk_type, disk_parent_name):
     Get disk vendor and model.
     """
 
-    if disk_type == _tr("Disk"):
+    if disk_type == _("Disk"):
         disk_or_parent_disk_name = selected_disk
-    if disk_type == _tr("Partition"):
+    if disk_type == _("Partition"):
         disk_or_parent_disk_name = disk_parent_name
 
     # Get disk vendor and model.
@@ -2108,7 +2108,7 @@ def get_disk_device_model_name(selected_disk, disk_type, disk_parent_name):
         try:
             with open("/sys/class/block/" + disk_or_parent_disk_name + "/device/device/modalias") as reader:
                 modalias_output = reader.read().strip()
-            device_vendor_name, device_model_name, _, _ = get_device_vendor_model(modalias_output)
+            device_vendor_name, device_model_name, device_vendor_id, device_model_id = get_device_vendor_model(modalias_output)
         except (FileNotFoundError, NotADirectoryError) as me:
             pass
 
@@ -2128,8 +2128,8 @@ def get_disk_device_model_name(selected_disk, disk_type, disk_parent_name):
             if device_model_name != "-":
                 disk_device_model_name = device_model_name
             else:
-                device_vendor_name = "[" + _tr("Unknown") + "]"
-                device_model_name = "[" + _tr("Unknown") + "]"
+                device_vendor_name = "[" + _("Unknown") + "]"
+                device_model_name = "[" + _("Unknown") + "]"
                 disk_device_model_name = f'{device_vendor_name} - {device_model_name}'
 
     # Get device vendor model if this is a SCSI, IDE or virtio device (on QEMU virtual machines).
@@ -2137,7 +2137,7 @@ def get_disk_device_model_name(selected_disk, disk_type, disk_parent_name):
         try:
             with open("/sys/class/block/" + disk_or_parent_disk_name + "/device/modalias") as reader:
                 modalias_output = reader.read().strip()
-            device_vendor_name, device_model_name, _, _ = get_device_vendor_model(modalias_output)
+            device_vendor_name, device_model_name, device_vendor_id, device_model_id = get_device_vendor_model(modalias_output)
         except (FileNotFoundError, NotADirectoryError) as me:
             pass
 
@@ -2155,9 +2155,9 @@ def get_disk_device_model_name(selected_disk, disk_type, disk_parent_name):
                 device_model_name = "Unknown"
 
         if device_vendor_name == "Unknown":
-            device_vendor_name = "[" + _tr("Unknown") + "]"
+            device_vendor_name = "[" + _("Unknown") + "]"
         if device_model_name == "Unknown":
-            device_model_name = "[" + _tr("Unknown") + "]"
+            device_model_name = "[" + _("Unknown") + "]"
         disk_device_model_name = f'{device_vendor_name} - {device_model_name}'
 
     # Get disk vendor and model if disk is loop device or swap disk.
@@ -2173,7 +2173,7 @@ def get_disk_device_model_name(selected_disk, disk_type, disk_parent_name):
         del proc_swaps_lines[0]
         for line in proc_swaps_lines:
             if line.split()[0].split("/")[-1] == selected_disk:
-                disk_device_model_name = "[" + "zram - " + _tr("Swap").upper() + "]"
+                disk_device_model_name = "[" + "zram - " + _("Swap").upper() + "]"
                 break
     if selected_disk.startswith("ram"):
         disk_device_model_name = "[Ramdisk]"
@@ -2264,12 +2264,12 @@ def get_disk_file_system_information(disk_list):
             disk_mount_point = encrypted_disk_filesystem_information_dict[disk]["disk_mount_point"]
             encrypted_disk_name = encrypted_disk_filesystem_information_dict[disk]["encrypted_disk_name"]
         else:
-            disk_file_system = "[" + _tr("Not mounted") + "]"
-            disk_capacity = "[" + _tr("Not mounted") + "]"
-            disk_used = "[" + _tr("Not mounted") + "]"
-            disk_free = "[" + _tr("Not mounted") + "]"
+            disk_file_system = "[" + _("Not mounted") + "]"
+            disk_capacity = "[" + _("Not mounted") + "]"
+            disk_used = "[" + _("Not mounted") + "]"
+            disk_free = "[" + _("Not mounted") + "]"
             disk_used_percentage = 0
-            disk_mount_point = "[" + _tr("Not mounted") + "]"
+            disk_mount_point = "[" + _("Not mounted") + "]"
             encrypted_disk_name = ""
         disk_filesystem_information_list.append([disk, disk_file_system, disk_capacity, disk_used, disk_free, disk_used_percentage, disk_mount_point, encrypted_disk_name])
 
@@ -2359,9 +2359,9 @@ def get_disk_if_system_disk(selected_disk, system_disk_list):
     """
 
     if selected_disk in system_disk_list:
-        if_system_disk = _tr("Yes")
+        if_system_disk = _("Yes")
     else:
-        if_system_disk = _tr("No")
+        if_system_disk = _("No")
 
     return if_system_disk
 
@@ -2427,11 +2427,11 @@ def get_network_card_device_model_name(selected_network_card):
             # Read device vendor and model ids by reading "modalias" file.
             with open("/sys/class/net/" + selected_network_card + "/device/modalias") as reader:
                 modalias_output = reader.read().strip()
-            device_vendor_name, device_model_name, _, _ = get_device_vendor_model(modalias_output)
+            device_vendor_name, device_model_name, device_vendor_id, device_model_id = get_device_vendor_model(modalias_output)
             if device_vendor_name == "Unknown":
-                device_vendor_name = "[" + _tr("Unknown") + "]"
+                device_vendor_name = "[" + _("Unknown") + "]"
             if device_model_name == "Unknown":
-                device_model_name = "[" + _tr("Unknown") + "]"
+                device_model_name = "[" + _("Unknown") + "]"
         network_card_device_model_name = f'{device_vendor_name} - {device_model_name}'
 
     # Get device vendor and model names if it is a virtual device.
@@ -2440,7 +2440,7 @@ def get_network_card_device_model_name(selected_network_card):
         if selected_network_card == "lo":
             network_card_device_model_name = "[" + "Loopback Device" + "]"
         else:
-            network_card_device_model_name = "[" + _tr("Virtual Network Interface") + "]"
+            network_card_device_model_name = "[" + _("Virtual Network Interface") + "]"
 
     return network_card_device_model_name
 
@@ -2451,9 +2451,9 @@ def get_connection_type(selected_network_card):
     """
 
     if selected_network_card.startswith("en"):
-        connection_type = _tr("Ethernet")
+        connection_type = _("Ethernet")
     elif selected_network_card.startswith("wl"):
-        connection_type = _tr("Wi-Fi")
+        connection_type = _("Wi-Fi")
     else:
         connection_type = "-"
 
@@ -2521,11 +2521,11 @@ def get_network_card_connected(selected_network_card):
         network_info = reader.read().strip()
 
     if network_info == "up":
-        network_card_connected = _tr("Yes")
+        network_card_connected = _("Yes")
     elif network_info == "down":
-        network_card_connected = _tr("No")
+        network_card_connected = _("No")
     elif network_info == "unknown":
-        network_card_connected = "[" + _tr("Unknown") + "]"
+        network_card_connected = "[" + _("Unknown") + "]"
     else:
         network_card_connected = network_info
 
@@ -2545,7 +2545,7 @@ def get_network_ssid(selected_network_card):
     # Avoid errors because Network Manager (required "nmcli" command) may not be installed (very rare).
     except (FileNotFoundError, subprocess.CalledProcessError) as me:
         nmcli_output_lines = "-"
-        network_ssid = "[" + _tr("Unknown") + "]"
+        network_ssid = "[" + _("Unknown") + "]"
 
     # Check if "nmcli_output_lines" value is get.
     if nmcli_output_lines != "-":
@@ -2569,7 +2569,7 @@ def get_network_link_quality(selected_network_card, network_card_connected):
 
     network_link_quality = "-"
     # Translated value have to be used by using gettext constant. Not "Yes".
-    if selected_network_card.startswith("wl") == True and network_card_connected == _tr("Yes"):
+    if selected_network_card.startswith("wl") == True and network_card_connected == _("Yes"):
         with open("/proc/net/wireless") as reader:
             proc_net_wireless_output_lines = reader.read().strip().split("\n")
         for line in proc_net_wireless_output_lines:
@@ -2666,12 +2666,12 @@ def get_default_gpu(selected_gpu_number, gpu_list, default_gpu):
     # Set default GPU if there is only 1 GPU on the system and
     # there is not "boot_vga" file (such as ARM devices) which means default_gpu = "".
     if len(gpu_list) == 1:
-        if_default_gpu = _tr("Yes")
+        if_default_gpu = _("Yes")
     else:
         if gpu_list[selected_gpu_number] == default_gpu:
-            if_default_gpu = _tr("Yes")
+            if_default_gpu = _("Yes")
         else:
-            if_default_gpu = _tr("No")
+            if_default_gpu = _("No")
 
     return if_default_gpu
 
@@ -2765,9 +2765,9 @@ def get_device_model_name_vendor_id(selected_gpu_number, gpu_list, gpu_device_pa
     device_subtype, device_alias = modalias_output.split(":", 1)
     device_vendor_name, device_model_name, device_vendor_id, device_model_id = get_device_vendor_model(modalias_output)
     if device_vendor_name == "Unknown":
-        device_vendor_name = "[" + _tr("Unknown") + "]"
+        device_vendor_name = "[" + _("Unknown") + "]"
     if device_model_name == "Unknown":
-        device_model_name = "[" + _tr("Unknown") + "]"
+        device_model_name = "[" + _("Unknown") + "]"
     gpu_device_model_name = f'{device_vendor_name} - {device_model_name}'
 
     return gpu_device_model_name, device_vendor_id
@@ -4618,15 +4618,15 @@ def get_services_information():
         systemctl_show_command_lines_split = systemctl_show_command_lines[i]
         # Get service "loaded/not loaded" status
         load_state = "-"
-        load_state = _tr(systemctl_show_command_lines_split.split("LoadState=", 1)[1].split("\n", 1)[0].capitalize())
+        load_state = _(systemctl_show_command_lines_split.split("LoadState=", 1)[1].split("\n", 1)[0].capitalize())
         # Get service unit file state
-        unit_file_state = _tr(systemctl_show_command_lines_split.split("UnitFileState=", 1)[1].split("\n", 1)[0].capitalize())
+        unit_file_state = _(systemctl_show_command_lines_split.split("UnitFileState=", 1)[1].split("\n", 1)[0].capitalize())
         # Get service main PID
         main_pid = int(systemctl_show_command_lines_split.split("MainPID=", 1)[1].split("\n", 1)[0].capitalize())
         # Get service active state
-        active_state = _tr(systemctl_show_command_lines_split.split("ActiveState=", 1)[1].split("\n", 1)[0].capitalize())
+        active_state = _(systemctl_show_command_lines_split.split("ActiveState=", 1)[1].split("\n", 1)[0].capitalize())
         # Get service substate
-        sub_state = _tr(systemctl_show_command_lines_split.split("SubState=", 1)[1].split("\n", 1)[0].capitalize())
+        sub_state = _(systemctl_show_command_lines_split.split("SubState=", 1)[1].split("\n", 1)[0].capitalize())
         # Get service current memory
         memory_current = systemctl_show_command_lines_split.split("MemoryCurrent=", 1)[1].split("\n", 1)[0].capitalize()
         # "-1" value is used as "memory_current" value if memory value is get as "[not set]".
@@ -4806,7 +4806,7 @@ def get_service_detailed_information(service_name):
 
     for line in systemctl_show_lines:
         if "Type=" in line:
-            service_type = _tr(line.split("=", 1)[1].capitalize())
+            service_type = _(line.split("=", 1)[1].capitalize())
             # Skip to next loop if searched line ("Type=") is found in order to avoid redundant line search.
             continue
         if "MainPID=" in line:
@@ -4865,22 +4865,22 @@ def get_service_detailed_information(service_name):
             description = line.split("=", 1)[1]
             continue
         if "ActiveState=" in line:
-            active_state = _tr(line.split("=", 1)[1].capitalize())
+            active_state = _(line.split("=", 1)[1].capitalize())
             continue
         if "LoadState=" in line:
-            load_state = _tr(line.split("=", 1)[1].capitalize())
+            load_state = _(line.split("=", 1)[1].capitalize())
             continue
         if "SubState=" in line:
-            sub_state = _tr(line.split("=", 1)[1].capitalize())
+            sub_state = _(line.split("=", 1)[1].capitalize())
             continue
         if "FragmentPath=" in line:
             fragment_path = line.split("=", 1)[1]
             continue
         if "UnitFileState=" in line:
-            unit_file_state = _tr(line.split("=", 1)[1].capitalize())
+            unit_file_state = _(line.split("=", 1)[1].capitalize())
             continue
         if "UnitFilePreset=" in line:
-            unit_file_preset = _tr(line.split("=", 1)[1].capitalize())
+            unit_file_preset = _(line.split("=", 1)[1].capitalize())
             continue
 
     # Add service data to a dictionary
@@ -5096,7 +5096,7 @@ def get_computer_vendor_model_chassis_type():
     # computer vendor is one of the known virtual machine vendors.
     if computer_chassis_type == "Other":
         if computer_vendor in ["QEMU", "innotek GmbH", "VMware, Inc."]:
-            computer_chassis_type = computer_chassis_type + " (" + _tr("Virtual Machine") + ")"
+            computer_chassis_type = computer_chassis_type + " (" + _("Virtual Machine") + ")"
 
     return computer_vendor, computer_model, computer_chassis_type
 
@@ -5464,4 +5464,3 @@ def get_desktop_environment_version(current_desktop_environment):
         current_desktop_environment_version = desktop_environment_version_output.split("\n")[0].strip().split(" ")[-1]
 
     return current_desktop_environment_version
-

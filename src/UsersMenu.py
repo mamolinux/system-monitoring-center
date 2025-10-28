@@ -7,7 +7,7 @@ from .Users import Users
 from .MainWindow import MainWindow
 from . import Common
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class UsersMenu:
@@ -30,7 +30,7 @@ class UsersMenu:
         self.menu_po.set_child(main_grid)
 
         # Label - menu title (Users)
-        label = Common.menu_title_label(_tr("Users"))
+        label = Common.menu_title_label(_("Users"))
         main_grid.attach(label, 0, 0, 1, 1)
 
         # Notebook
@@ -42,7 +42,7 @@ class UsersMenu:
         # Tab pages and ScrolledWindow
         # "Add/Remove Columns" tab
         label = Gtk.Label()
-        label.set_label(_tr("Add/Remove Columns"))
+        label.set_label(_("Add/Remove Columns"))
         self.grid_add_remove_columns_tab = Gtk.Grid()
         self.grid_add_remove_columns_tab.set_margin_top(15)
         self.grid_add_remove_columns_tab.set_margin_bottom(5)
@@ -78,53 +78,53 @@ class UsersMenu:
         self.grid_add_remove_columns_tab.attach(grid, 0, 0, 1, 1)
 
         # Label - tab title (Add/Remove Columns)
-        label = Common.title_label(_tr("Add/Remove Columns"))
+        label = Common.title_label(_("Add/Remove Columns"))
         grid.attach(label, 0, 0, 2, 1)
 
         # CheckButton (User)
-        self.user_cb = Common.checkbutton(_tr("User"), None)
+        self.user_cb = Common.checkbutton(_("User"), None)
         self.user_cb.set_active(True)
         self.user_cb.set_sensitive(False)
         grid.attach(self.user_cb, 0, 1, 1, 1)
 
         # CheckButton (Full Name)
-        self.full_name_cb = Common.checkbutton(_tr("Full Name"), None)
+        self.full_name_cb = Common.checkbutton(_("Full Name"), None)
         grid.attach(self.full_name_cb, 0, 2, 1, 1)
 
         # CheckButton (Logged In)
-        self.logged_in_cb = Common.checkbutton(_tr("Logged In"), None)
+        self.logged_in_cb = Common.checkbutton(_("Logged In"), None)
         grid.attach(self.logged_in_cb, 0, 3, 1, 1)
 
         # CheckButton (UID)
-        self.uid_cb = Common.checkbutton(_tr("UID"), None)
+        self.uid_cb = Common.checkbutton(_("UID"), None)
         grid.attach(self.uid_cb, 0, 4, 1, 1)
 
         # CheckButton (GID)
-        self.gid_cb = Common.checkbutton(_tr("GID"), None)
+        self.gid_cb = Common.checkbutton(_("GID"), None)
         grid.attach(self.gid_cb, 0, 5, 1, 1)
 
         # CheckButton (Processes)
-        self.processes_cb = Common.checkbutton(_tr("Processes"), None)
+        self.processes_cb = Common.checkbutton(_("Processes"), None)
         grid.attach(self.processes_cb, 0, 6, 1, 1)
 
         # CheckButton (Home Directory)
-        self.home_directory_cb = Common.checkbutton(_tr("Home Directory"), None)
+        self.home_directory_cb = Common.checkbutton(_("Home Directory"), None)
         grid.attach(self.home_directory_cb, 1, 1, 1, 1)
 
         # CheckButton (Group)
-        self.group_cb = Common.checkbutton(_tr("Group"), None)
+        self.group_cb = Common.checkbutton(_("Group"), None)
         grid.attach(self.group_cb, 1, 2, 1, 1)
 
         # CheckButton (Terminal)
-        self.terminal_cb = Common.checkbutton(_tr("Terminal"), None)
+        self.terminal_cb = Common.checkbutton(_("Terminal"), None)
         grid.attach(self.terminal_cb, 1, 3, 1, 1)
 
         # CheckButton (Start Time)
-        self.start_time_cb = Common.checkbutton(_tr("Start Time"), None)
+        self.start_time_cb = Common.checkbutton(_("Start Time"), None)
         grid.attach(self.start_time_cb, 1, 4, 1, 1)
 
         # CheckButton (CPU)
-        self.cpu_cb = Common.checkbutton(_tr("CPU"), None)
+        self.cpu_cb = Common.checkbutton(_("CPU"), None)
         grid.attach(self.cpu_cb, 1, 5, 1, 1)
 
 
@@ -295,4 +295,3 @@ class UsersMenu:
 
 
 UsersMenu = UsersMenu()
-

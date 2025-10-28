@@ -5,7 +5,7 @@ from math import sqrt, ceil
 from .Config import Config
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Performance:
@@ -183,11 +183,11 @@ class Performance:
 
             # Get performance data and device list for current device or all devices.
             if Config.show_memory_usage_per_memory == 0:
-                performance_data1 = {_tr("RAM"): self.ram_usage_percent}
+                performance_data1 = {_("RAM"): self.ram_usage_percent}
                 device_name_list = list(performance_data1.keys())
                 selected_device = ""
             else:
-                performance_data1 = {_tr("RAM"): self.ram_usage_percent, _tr("Swap"): self.swap_usage_percent}
+                performance_data1 = {_("RAM"): self.ram_usage_percent, _("Swap"): self.swap_usage_percent}
                 device_name_list = list(performance_data1.keys())
                 selected_device = ""
 
@@ -953,7 +953,7 @@ class Performance:
                     max_cpu_usage_process_name_at_point = self.max_cpu_usage_process_name_list[chart_point_highlight]
                     max_cpu_usage_process_pid_at_point = self.max_cpu_usage_process_pid_list[chart_point_highlight]
 
-                    max_text = _tr("Max")
+                    max_text = _("Max")
 
                     if max_cpu_usage_process_pid_at_point == "-":
                         performance_data_at_point_text = f'{max_text}: -'
@@ -1120,4 +1120,3 @@ class Performance:
 
 
 Performance = Performance()
-

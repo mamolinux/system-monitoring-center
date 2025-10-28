@@ -11,7 +11,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Disk:
@@ -49,17 +49,17 @@ class Disk:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (Disk)
-        label = Common.tab_title_label(_tr("Disk"))
+        label = Common.tab_title_label(_("Disk"))
         grid.attach(label, 0, 0, 1, 2)
 
         # Label (device vendor-model label)
         self.device_vendor_model_label = Common.device_vendor_model_label()
-        self.device_vendor_model_label.set_tooltip_text(_tr("Vendor") + "-" + _tr("Model"))
+        self.device_vendor_model_label.set_tooltip_text(_("Vendor") + "-" + _("Model"))
         grid.attach(self.device_vendor_model_label, 1, 0, 1, 1)
 
         # Label (device kernel name)
         self.device_kernel_name_label = Common.device_kernel_name_label()
-        self.device_kernel_name_label.set_tooltip_text(_tr("Device Name In Kernel"))
+        self.device_kernel_name_label.set_tooltip_text(_("Device Name In Kernel"))
         grid.attach(self.device_kernel_name_label, 1, 1, 1, 1)
 
 
@@ -75,7 +75,7 @@ class Disk:
         self.tab_grid.attach(grid, 0, 1, 1, 1)
 
         # Label (drawingarea upper-left)
-        label = Common.da_upper_lower_label(_tr("Read Speed") + " (-) & " + _tr("Write Speed") + " (-  -)", Gtk.Align.START)
+        label = Common.da_upper_lower_label(_("Read Speed") + " (-) & " + _("Write Speed") + " (-  -)", Gtk.Align.START)
         grid.attach(label, 0, 0, 1, 1)
 
         # Label (drawingarea upper-right)
@@ -102,12 +102,12 @@ class Disk:
 
         # Styled information widgets (Read Speed and Write Speed)
         # ScrolledWindow (Read Speed and Write Speed)
-        scrolledwindow, self.read_speed_label, self.write_speed_label = Common.styled_information_scrolledwindow(_tr("Read Speed"), None, _tr("Write Speed"), None)
+        scrolledwindow, self.read_speed_label, self.write_speed_label = Common.styled_information_scrolledwindow(_("Read Speed"), None, _("Write Speed"), None)
         performance_info_grid.attach(scrolledwindow, 0, 0, 1, 1)
 
         # Styled information widgets (Read Data and Written Data)
         # ScrolledWindow (Read Data and Written Data)
-        scrolledwindow, self.read_data_label, self.write_data_label = Common.styled_information_scrolledwindow(_tr("Read Data"), _tr("Measured value since last system start"), _tr("Written Data"), _tr("Measured value since last system start"))
+        scrolledwindow, self.read_data_label, self.write_data_label = Common.styled_information_scrolledwindow(_("Read Data"), _("Measured value since last system start"), _("Written Data"), _("Measured value since last system start"))
         performance_info_grid.attach(scrolledwindow, 0, 1, 1, 1)
 
         # Grid - Right information labels
@@ -117,14 +117,14 @@ class Disk:
 
         # Labels - Right information labels
         # Label (System Disk)
-        label = Common.static_information_label(_tr("System Disk") + ":")
+        label = Common.static_information_label(_("System Disk") + ":")
         performance_info_right_grid.attach(label, 0, 0, 1, 1)
         # Label (System Disk)
         self.system_disk_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.system_disk_label, 1, 0, 1, 1)
 
         # Label (Used)
-        label = Common.static_information_label(_tr("Used") + ":")
+        label = Common.static_information_label(_("Used") + ":")
         performance_info_right_grid.attach(label, 0, 2, 1, 1)
         # Label and DrawingArea (Used)
         grid_label_and_da = Gtk.Grid()
@@ -139,31 +139,31 @@ class Disk:
         grid_label_and_da.attach(self.used_percent_label, 1, 0, 1, 1)
 
         # Label (Free)
-        label = Common.static_information_label(_tr("Free") + ":")
+        label = Common.static_information_label(_("Free") + ":")
         performance_info_right_grid.attach(label, 0, 3, 1, 1)
         # Label (Free)
         self.free_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.free_label, 1, 3, 1, 1)
 
         # Label (Used)
-        label = Common.static_information_label(_tr("Used") + ":")
+        label = Common.static_information_label(_("Used") + ":")
         performance_info_right_grid.attach(label, 0, 4, 1, 1)
         # Label (Used)
         self.used_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.used_label, 1, 4, 1, 1)
 
         # Label (Capacity)
-        label = Common.static_information_label(_tr("Capacity") + ":")
+        label = Common.static_information_label(_("Capacity") + ":")
         performance_info_right_grid.attach(label, 0, 5, 1, 1)
         # Label (Capacity)
         self.capacity_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.capacity_label, 1, 5, 1, 1)
 
         # Label (Details...)
-        label = Common.static_information_label(_tr("Details") + ":")
+        label = Common.static_information_label(_("Details") + ":")
         performance_info_right_grid.attach(label, 0, 6, 1, 1)
         # Label (Show...)
-        self.details_label = Common.clickable_label(_tr("Show..."), self.on_details_label_released)
+        self.details_label = Common.clickable_label(_("Show..."), self.on_details_label_released)
         performance_info_right_grid.attach(self.details_label, 1, 6, 1, 1)
 
 
@@ -192,7 +192,7 @@ class Disk:
         # Window
         self.disk_details_window = Gtk.Window()
         self.disk_details_window.set_default_size(400, 380)
-        self.disk_details_window.set_title(_tr("Disk"))
+        self.disk_details_window.set_title(_("Disk"))
         self.disk_details_window.set_icon_name("system-monitoring-center")
         self.disk_details_window.set_transient_for(MainWindow.main_window)
         self.disk_details_window.set_modal(True)
@@ -212,7 +212,7 @@ class Disk:
 
         # Information labels
         # Label (Disk)
-        label = Common.static_information_label(_tr("Disk"))
+        label = Common.static_information_label(_("Disk"))
         main_grid.attach(label, 0, 0, 1, 1)
         # Label (Disk)
         label = Common.static_information_label(":")
@@ -222,7 +222,7 @@ class Disk:
         main_grid.attach(self.disk_details_disk_label, 2, 0, 1, 1)
 
         # Label (Parent Name)
-        label = Common.static_information_label(_tr("Parent Name"))
+        label = Common.static_information_label(_("Parent Name"))
         main_grid.attach(label, 0, 1, 1, 1)
         # Label (Parent Name)
         label = Common.static_information_label(":")
@@ -232,7 +232,7 @@ class Disk:
         main_grid.attach(self.disk_details_parent_disk_label, 2, 1, 1, 1)
 
         # Label (System Disk)
-        label = Common.static_information_label(_tr("System Disk"))
+        label = Common.static_information_label(_("System Disk"))
         main_grid.attach(label, 0, 2, 1, 1)
         # Label (System Disk)
         label = Common.static_information_label(":")
@@ -242,7 +242,7 @@ class Disk:
         main_grid.attach(self.disk_details_system_disk_label, 2, 2, 1, 1)
 
         # Label (Type)
-        label = Common.static_information_label(_tr("Type"))
+        label = Common.static_information_label(_("Type"))
         main_grid.attach(label, 0, 3, 1, 1)
         # Label (Type)
         label = Common.static_information_label(":")
@@ -252,7 +252,7 @@ class Disk:
         main_grid.attach(self.disk_details_disk_type_label, 2, 3, 1, 1)
 
         # Label (File System)
-        label = Common.static_information_label(_tr("File System"))
+        label = Common.static_information_label(_("File System"))
         main_grid.attach(label, 0, 4, 1, 1)
         # Label (File System)
         label = Common.static_information_label(":")
@@ -262,7 +262,7 @@ class Disk:
         main_grid.attach(self.disk_details_file_system_label, 2, 4, 1, 1)
 
         # Label (Capacity)
-        label = Common.static_information_label(_tr("Capacity"))
+        label = Common.static_information_label(_("Capacity"))
         main_grid.attach(label, 0, 5, 1, 1)
         # Label (Capacity)
         label = Common.static_information_label(":")
@@ -272,7 +272,7 @@ class Disk:
         main_grid.attach(self.disk_details_capacity_label, 2, 5, 1, 1)
 
         # Label (Capacity (Mass Storage))
-        label = Common.static_information_label(_tr("Capacity") + "\n" + "(" + _tr("Mass Storage") + ")")
+        label = Common.static_information_label(_("Capacity") + "\n" + "(" + _("Mass Storage") + ")")
         main_grid.attach(label, 0, 6, 1, 1)
         # Label (Capacity (Mass Storage))
         label = Common.static_information_label(":")
@@ -282,7 +282,7 @@ class Disk:
         main_grid.attach(self.disk_details_capacity_mass_label, 2, 6, 1, 1)
 
         # Label (Free)
-        label = Common.static_information_label(_tr("Free"))
+        label = Common.static_information_label(_("Free"))
         main_grid.attach(label, 0, 7, 1, 1)
         # Label (Free)
         label = Common.static_information_label(":")
@@ -292,7 +292,7 @@ class Disk:
         main_grid.attach(self.disk_details_free_label, 2, 7, 1, 1)
 
         # Label (Used)
-        label = Common.static_information_label(_tr("Used"))
+        label = Common.static_information_label(_("Used"))
         main_grid.attach(label, 0, 8, 1, 1)
         # Label (Used)
         label = Common.static_information_label(":")
@@ -302,7 +302,7 @@ class Disk:
         main_grid.attach(self.disk_details_used_label, 2, 8, 1, 1)
 
         # Label (Vendor-Model)
-        label = Common.static_information_label(_tr("Vendor") + "-" + _tr("Model"))
+        label = Common.static_information_label(_("Vendor") + "-" + _("Model"))
         main_grid.attach(label, 0, 9, 1, 1)
         # Label (Vendor-Model)
         label = Common.static_information_label(":")
@@ -312,7 +312,7 @@ class Disk:
         main_grid.attach(self.disk_details_vendor_model_label, 2, 9, 1, 1)
 
         # Label (Label (File System))
-        label = Common.static_information_label(_tr("Label (File System)"))
+        label = Common.static_information_label(_("Label (File System)"))
         main_grid.attach(label, 0, 10, 1, 1)
         # Label (Label (File System))
         label = Common.static_information_label(":")
@@ -322,7 +322,7 @@ class Disk:
         main_grid.attach(self.details_label_fs_label, 2, 10, 1, 1)
 
         # Label (Mount Point)
-        label = Common.static_information_label(_tr("Mount Point"))
+        label = Common.static_information_label(_("Mount Point"))
         main_grid.attach(label, 0, 11, 1, 1)
         # Label (Mount Point)
         label = Common.static_information_label(":")
@@ -358,7 +358,7 @@ class Disk:
         disk_label = Libsysmon.get_disk_label(selected_disk)
 
         # Set Disk Details window title
-        self.disk_details_window.set_title(_tr("Disk") + ": " + selected_disk)
+        self.disk_details_window.set_title(_("Disk") + ": " + selected_disk)
 
         # Set label text by using storage/disk data
         if encrypted_disk_name != "":
@@ -520,7 +520,7 @@ class Disk:
         disk_usage_percentage_list = []
         disk_filesystem_information_list = Libsysmon.get_disk_file_system_information(device_list)
         for device in device_list:
-            _, _, _, _, disk_usage_percentage, disk_mount_point, _ = Libsysmon.get_disk_file_system_capacity_used_free_used_percent_mount_point(disk_filesystem_information_list, device_list, device)
+            disk_file_system, disk_capacity, disk_used, disk_free, disk_usage_percentage, disk_mount_point, encrypted_disk_name = Libsysmon.get_disk_file_system_capacity_used_free_used_percent_mount_point(disk_filesystem_information_list, device_list, device)
             # Append percentage number with no fractions in order to avoid updating the list very frequently.
             disk_usage_percentage_list.append(f'{disk_usage_percentage:.0f}')
 
@@ -535,4 +535,3 @@ class Disk:
 
 
 Disk = Disk()
-

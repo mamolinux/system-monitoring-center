@@ -13,7 +13,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class ProcessesDetails:
@@ -34,7 +34,7 @@ class ProcessesDetails:
         # Window
         self.process_details_window = Gtk.Window()
         self.process_details_window.set_default_size(500, 485)
-        self.process_details_window.set_title(_tr("Process Details"))
+        self.process_details_window.set_title(_("Process Details"))
         self.process_details_window.set_icon_name("system-monitoring-center")
         self.process_details_window.set_transient_for(MainWindow.main_window)
         #self.process_details_window.set_modal(True)
@@ -57,27 +57,27 @@ class ProcessesDetails:
         # Tab pages and ScrolledWindow
         # "Summary" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("Summary"))
+        tab_title_label.set_label(_("Summary"))
         self.scrolledwindow_summary_tab = Gtk.ScrolledWindow()
         notebook.append_page(self.scrolledwindow_summary_tab, tab_title_label)
         # "CPU" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("CPU"))
+        tab_title_label.set_label(_("CPU"))
         self.scrolledwindow_cpu_tab = Gtk.ScrolledWindow()
         notebook.append_page(self.scrolledwindow_cpu_tab, tab_title_label)
         # "Memory" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("Memory"))
+        tab_title_label.set_label(_("Memory"))
         self.scrolledwindow_memory_tab = Gtk.ScrolledWindow()
         notebook.append_page(self.scrolledwindow_memory_tab, tab_title_label)
         # "Disk" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("Disk"))
+        tab_title_label.set_label(_("Disk"))
         self.scrolledwindow_disk_tab = Gtk.ScrolledWindow()
         notebook.append_page(self.scrolledwindow_disk_tab, tab_title_label)
         # "File" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("File"))
+        tab_title_label.set_label(_("File"))
         self.scrolledwindow_file_tab = Gtk.ScrolledWindow()
         notebook.append_page(self.scrolledwindow_file_tab, tab_title_label)
 
@@ -104,7 +104,7 @@ class ProcessesDetails:
         viewport.set_child(grid)
 
         # Label (Name)
-        label = Common.static_information_label(_tr("Name"))
+        label = Common.static_information_label(_("Name"))
         grid.attach(label, 0, 0, 1, 1)
         # Label (Name)
         label = Common.static_information_label(":")
@@ -114,7 +114,7 @@ class ProcessesDetails:
         grid.attach(self.name_label, 2, 0, 1, 1)
 
         # Label (PID)
-        label = Common.static_information_label(_tr("PID"))
+        label = Common.static_information_label(_("PID"))
         grid.attach(label, 0, 1, 1, 1)
         # Label (PID)
         label = Common.static_information_label(":")
@@ -124,7 +124,7 @@ class ProcessesDetails:
         grid.attach(self.pid_label, 2, 1, 1, 1)
 
         # Label (Status)
-        label = Common.static_information_label(_tr("Status"))
+        label = Common.static_information_label(_("Status"))
         grid.attach(label, 0, 2, 1, 1)
         # Label (Status)
         label = Common.static_information_label(":")
@@ -134,7 +134,7 @@ class ProcessesDetails:
         grid.attach(self.status_label, 2, 2, 1, 1)
 
         # Label (User)
-        label = Common.static_information_label(_tr("User"))
+        label = Common.static_information_label(_("User"))
         grid.attach(label, 0, 3, 1, 1)
         # Label (User)
         label = Common.static_information_label(":")
@@ -144,7 +144,7 @@ class ProcessesDetails:
         grid.attach(self.user_label, 2, 3, 1, 1)
 
         # Label (Priority)
-        label = Common.static_information_label(_tr("Priority"))
+        label = Common.static_information_label(_("Priority"))
         grid.attach(label, 0, 4, 1, 1)
         # Label (Priority)
         label = Common.static_information_label(":")
@@ -154,7 +154,7 @@ class ProcessesDetails:
         grid.attach(self.priority_label, 2, 4, 1, 1)
 
         # Label (CPU)
-        label = Common.static_information_label(_tr("CPU"))
+        label = Common.static_information_label(_("CPU"))
         grid.attach(label, 0, 5, 1, 1)
         # Label (CPU)
         label = Common.static_information_label(":")
@@ -164,7 +164,7 @@ class ProcessesDetails:
         grid.attach(self.cpu_label, 2, 5, 1, 1)
 
         # Label (Memory (RSS))
-        label = Common.static_information_label(_tr("Memory (RSS)"))
+        label = Common.static_information_label(_("Memory (RSS)"))
         grid.attach(label, 0, 6, 1, 1)
         # Label (Memory (RSS))
         label = Common.static_information_label(":")
@@ -174,7 +174,7 @@ class ProcessesDetails:
         grid.attach(self.memory_rss_label, 2, 6, 1, 1)
 
         # Label (Read Speed)
-        label = Common.static_information_label(_tr("Read Speed"))
+        label = Common.static_information_label(_("Read Speed"))
         grid.attach(label, 0, 7, 1, 1)
         # Label (Read Speed)
         label = Common.static_information_label(":")
@@ -184,7 +184,7 @@ class ProcessesDetails:
         grid.attach(self.read_speed_label, 2, 7, 1, 1)
 
         # Label (Write Speed)
-        label = Common.static_information_label(_tr("Write Speed"))
+        label = Common.static_information_label(_("Write Speed"))
         grid.attach(label, 0, 8, 1, 1)
         # Label (Write Speed)
         label = Common.static_information_label(":")
@@ -194,7 +194,7 @@ class ProcessesDetails:
         grid.attach(self.write_speed_label, 2, 8, 1, 1)
 
         # Label (Start Time)
-        label = Common.static_information_label(_tr("Start Time"))
+        label = Common.static_information_label(_("Start Time"))
         grid.attach(label, 0, 9, 1, 1)
         # Label (Start Time)
         label = Common.static_information_label(":")
@@ -204,7 +204,7 @@ class ProcessesDetails:
         grid.attach(self.start_time_label, 2, 9, 1, 1)
 
         # Label (Path)
-        label = Common.static_information_label(_tr("Path"))
+        label = Common.static_information_label(_("Path"))
         grid.attach(label, 0, 10, 1, 1)
         # Label (Path)
         label = Common.static_information_label(":")
@@ -214,7 +214,7 @@ class ProcessesDetails:
         grid.attach(self.path_label, 2, 10, 1, 1)
 
         # Label (PPID)
-        label = Common.static_information_label(_tr("PPID"))
+        label = Common.static_information_label(_("PPID"))
         grid.attach(label, 0, 11, 1, 1)
         # Label (PPID)
         label = Common.static_information_label(":")
@@ -224,7 +224,7 @@ class ProcessesDetails:
         grid.attach(self.ppid_label, 2, 11, 1, 1)
 
         # Label (UID)
-        label = Common.static_information_label(_tr("UID"))
+        label = Common.static_information_label(_("UID"))
         grid.attach(label, 0, 12, 1, 1)
         # Label (UID)
         label = Common.static_information_label(":")
@@ -234,7 +234,7 @@ class ProcessesDetails:
         grid.attach(self.uid_label, 2, 12, 1, 1)
 
         # Label (GID)
-        label = Common.static_information_label(_tr("GID"))
+        label = Common.static_information_label(_("GID"))
         grid.attach(label, 0, 13, 1, 1)
         # Label (GID)
         label = Common.static_information_label(":")
@@ -263,7 +263,7 @@ class ProcessesDetails:
         grid.attach(drawingarea_grid, 0, 0, 3, 1)
 
         # Label (CPU Usage (Average))
-        label = Common.da_upper_lower_label(_tr("CPU Usage (Average)"), Gtk.Align.START)
+        label = Common.da_upper_lower_label(_("CPU Usage (Average)"), Gtk.Align.START)
         drawingarea_grid.attach(label, 0, 0, 1, 1)
 
         # Label (graphic limit)
@@ -281,7 +281,7 @@ class ProcessesDetails:
         drawingarea_grid.attach(label, 0, 2, 2, 1)
 
         # Label (CPU)
-        label = Common.static_information_label(_tr("CPU"))
+        label = Common.static_information_label(_("CPU"))
         grid.attach(label, 0, 1, 1, 1)
         # Label (CPU)
         label = Common.static_information_label(":")
@@ -291,7 +291,7 @@ class ProcessesDetails:
         grid.attach(self.cpu_label2, 2, 1, 1, 1)
 
         # Label (Threads)
-        label = Common.static_information_label(_tr("Threads"))
+        label = Common.static_information_label(_("Threads"))
         grid.attach(label, 0, 2, 1, 1)
         # Label (Threads)
         label = Common.static_information_label(":")
@@ -301,7 +301,7 @@ class ProcessesDetails:
         grid.attach(self.threads_label, 2, 2, 1, 1)
 
         # Label (Threads (TID))
-        label = Common.static_information_label(_tr("Threads (TID)"))
+        label = Common.static_information_label(_("Threads (TID)"))
         label.set_valign(Gtk.Align.START)
         grid.attach(label, 0, 3, 1, 1)
         # Label (Threads (TID))
@@ -313,7 +313,7 @@ class ProcessesDetails:
         grid.attach(self.tid_label, 2, 3, 1, 1)
 
         # Label (Used CPU Core(s))
-        label = Common.static_information_label(_tr("Used CPU Core(s)"))
+        label = Common.static_information_label(_("Used CPU Core(s)"))
         grid.attach(label, 0, 4, 1, 1)
         # Label (Used CPU Core(s))
         label = Common.static_information_label(":")
@@ -323,7 +323,7 @@ class ProcessesDetails:
         grid.attach(self.used_cpu_cores_label, 2, 4, 1, 1)
 
         # Label (CPU Times)
-        label = Common.static_information_label(_tr("CPU Times"))
+        label = Common.static_information_label(_("CPU Times"))
         grid.attach(label, 0, 5, 1, 1)
         # Label (CPU Times)
         label = Common.static_information_label(":")
@@ -333,7 +333,7 @@ class ProcessesDetails:
         grid.attach(self.cpu_times_label, 2, 5, 1, 1)
 
         # Label (Context Switches)
-        label = Common.static_information_label(_tr("Context Switches"))
+        label = Common.static_information_label(_("Context Switches"))
         grid.attach(label, 0, 6, 1, 1)
         # Label (Context Switches)
         label = Common.static_information_label(":")
@@ -343,7 +343,7 @@ class ProcessesDetails:
         grid.attach(self.context_switches_label, 2, 6, 1, 1)
 
         # Label (CPU Affinity)
-        label = Common.static_information_label(_tr("CPU Affinity"))
+        label = Common.static_information_label(_("CPU Affinity"))
         grid.attach(label, 0, 7, 1, 1)
         # Label (CPU Affinity)
         label = Common.static_information_label(":")
@@ -372,7 +372,7 @@ class ProcessesDetails:
         grid.attach(drawingarea_grid, 0, 0, 3, 1)
 
         # Label (Memory (RSS))
-        label = Common.da_upper_lower_label(_tr("Memory (RSS)"), Gtk.Align.START)
+        label = Common.da_upper_lower_label(_("Memory (RSS)"), Gtk.Align.START)
         drawingarea_grid.attach(label, 0, 0, 1, 1)
 
         # Label (graphic limit)
@@ -390,7 +390,7 @@ class ProcessesDetails:
         drawingarea_grid.attach(label, 0, 2, 2, 1)
 
         # Label (Memory)
-        label = Common.static_information_label(_tr("Memory"))
+        label = Common.static_information_label(_("Memory"))
         grid.attach(label, 0, 1, 1, 1)
         # Label (Memory)
         label = Common.static_information_label(":")
@@ -400,7 +400,7 @@ class ProcessesDetails:
         grid.attach(self.memory_label, 2, 1, 1, 1)
 
         # Label (Memory (RSS))
-        label = Common.static_information_label(_tr("Memory (RSS)"))
+        label = Common.static_information_label(_("Memory (RSS)"))
         grid.attach(label, 0, 2, 1, 1)
         # Label (Memory (RSS))
         label = Common.static_information_label(":")
@@ -410,7 +410,7 @@ class ProcessesDetails:
         grid.attach(self.memory_rss_label2, 2, 2, 1, 1)
 
         # Label (Memory (VMS))
-        label = Common.static_information_label(_tr("Memory (VMS)"))
+        label = Common.static_information_label(_("Memory (VMS)"))
         grid.attach(label, 0, 3, 1, 1)
         # Label (Memory (VMS))
         label = Common.static_information_label(":")
@@ -420,7 +420,7 @@ class ProcessesDetails:
         grid.attach(self.memory_vms_label, 2, 3, 1, 1)
 
         # Label (Memory (Shared))
-        label = Common.static_information_label(_tr("Memory (Shared)"))
+        label = Common.static_information_label(_("Memory (Shared)"))
         grid.attach(label, 0, 4, 1, 1)
         # Label (Memory (Shared))
         label = Common.static_information_label(":")
@@ -430,7 +430,7 @@ class ProcessesDetails:
         grid.attach(self.memory_shared_label, 2, 4, 1, 1)
 
         # Label (Memory (USS))
-        label = Common.static_information_label(_tr("Memory (USS)"))
+        label = Common.static_information_label(_("Memory (USS)"))
         grid.attach(label, 0, 5, 1, 1)
         # Label (Memory (USS))
         label = Common.static_information_label(":")
@@ -440,7 +440,7 @@ class ProcessesDetails:
         grid.attach(self.memory_uss_label, 2, 5, 1, 1)
 
         # Label (Swap Memory)
-        label = Common.static_information_label(_tr("Swap Memory"))
+        label = Common.static_information_label(_("Swap Memory"))
         grid.attach(label, 0, 6, 1, 1)
         # Label (Swap Memory)
         label = Common.static_information_label(":")
@@ -469,7 +469,7 @@ class ProcessesDetails:
         grid.attach(drawingarea_grid, 0, 0, 3, 1)
 
         # Label (Read Speed (-) & Write Speed (--))
-        label = Common.da_upper_lower_label(_tr("Read Speed") + " (-) & " + _tr("Write Speed") + " (-  -)", Gtk.Align.START)
+        label = Common.da_upper_lower_label(_("Read Speed") + " (-) & " + _("Write Speed") + " (-  -)", Gtk.Align.START)
         drawingarea_grid.attach(label, 0, 0, 1, 1)
 
         # Label (graphic limit)
@@ -487,7 +487,7 @@ class ProcessesDetails:
         drawingarea_grid.attach(label, 0, 2, 2, 1)
 
         # Label (Read Speed)
-        label = Common.static_information_label(_tr("Read Speed"))
+        label = Common.static_information_label(_("Read Speed"))
         grid.attach(label, 0, 1, 1, 1)
         # Label (Read Speed)
         label = Common.static_information_label(":")
@@ -497,7 +497,7 @@ class ProcessesDetails:
         grid.attach(self.read_speed_label2, 2, 1, 1, 1)
 
         # Label (Write Speed)
-        label = Common.static_information_label(_tr("Write Speed"))
+        label = Common.static_information_label(_("Write Speed"))
         grid.attach(label, 0, 2, 1, 1)
         # Label (Write Speed)
         label = Common.static_information_label(":")
@@ -507,7 +507,7 @@ class ProcessesDetails:
         grid.attach(self.write_speed_label2, 2, 2, 1, 1)
 
         # Label (Read Data)
-        label = Common.static_information_label(_tr("Read Data"))
+        label = Common.static_information_label(_("Read Data"))
         grid.attach(label, 0, 3, 1, 1)
         # Label (Read Data)
         label = Common.static_information_label(":")
@@ -517,7 +517,7 @@ class ProcessesDetails:
         grid.attach(self.read_data_label, 2, 3, 1, 1)
 
         # Label (Written Data)
-        label = Common.static_information_label(_tr("Written Data"))
+        label = Common.static_information_label(_("Written Data"))
         grid.attach(label, 0, 4, 1, 1)
         # Label (Written Data)
         label = Common.static_information_label(":")
@@ -527,7 +527,7 @@ class ProcessesDetails:
         grid.attach(self.write_data_label, 2, 4, 1, 1)
 
         # Label (Read Count)
-        label = Common.static_information_label(_tr("Read Count"))
+        label = Common.static_information_label(_("Read Count"))
         grid.attach(label, 0, 5, 1, 1)
         # Label (Read Count)
         label = Common.static_information_label(":")
@@ -537,7 +537,7 @@ class ProcessesDetails:
         grid.attach(self.read_count_label, 2, 5, 1, 1)
 
         # Label (Write Count)
-        label = Common.static_information_label(_tr("Write Count"))
+        label = Common.static_information_label(_("Write Count"))
         grid.attach(label, 0, 6, 1, 1)
         # Label (Write Count)
         label = Common.static_information_label(":")
@@ -561,7 +561,7 @@ class ProcessesDetails:
         viewport.set_child(grid)
 
         # Label (Path)
-        label = Common.static_information_label(_tr("Path"))
+        label = Common.static_information_label(_("Path"))
         grid.attach(label, 0, 0, 1, 1)
         # Label (Path)
         label = Common.static_information_label(":")
@@ -571,7 +571,7 @@ class ProcessesDetails:
         grid.attach(self.path_label2, 2, 0, 1, 1)
 
         # Label (Current Working Directory)
-        label = Common.static_information_label(_tr("Current Working Directory"))
+        label = Common.static_information_label(_("Current Working Directory"))
         grid.attach(label, 0, 1, 1, 1)
         # Label (Current Working Directory)
         label = Common.static_information_label(":")
@@ -581,7 +581,7 @@ class ProcessesDetails:
         grid.attach(self.cwd_label, 2, 1, 1, 1)
 
         # Label (Command Line)
-        label = Common.static_information_label(_tr("Command Line"))
+        label = Common.static_information_label(_("Command Line"))
         label.set_valign(Gtk.Align.START)
         grid.attach(label, 0, 2, 1, 1)
         # Label (Command Line)
@@ -593,7 +593,7 @@ class ProcessesDetails:
         grid.attach(self.commandline_label, 2, 2, 1, 1)
 
         # Label (Opened Files)
-        label = Common.static_information_label(_tr("Opened Files"))
+        label = Common.static_information_label(_("Opened Files"))
         label.set_valign(Gtk.Align.START)
         grid.attach(label, 0, 3, 1, 1)
         # Label (Opened Files)
@@ -723,7 +723,7 @@ class ProcessesDetails:
             return
 
         # Set window title
-        self.process_details_window.set_title(_tr("Process Details") + ": " + process_name + " - (" + _tr("PID") + ": " + str(selected_process_pid) + ")")
+        self.process_details_window.set_title(_("Process Details") + ": " + process_name + " - (" + _("PID") + ": " + str(selected_process_pid) + ")")
 
         # Update data lists for graphs.
         self.process_cpu_usage_list.append(cpu_usage)
@@ -743,7 +743,7 @@ class ProcessesDetails:
         # Show information on labels (Summary tab).
         self.name_label.set_label(process_name)
         self.pid_label.set_label(f'{selected_process_pid}')
-        self.status_label.set_label(_tr(process_data_dict["status"]))
+        self.status_label.set_label(_(process_data_dict["status"]))
         self.user_label.set_label(process_data_dict["username"])
         self.priority_label.set_label(f'{process_data_dict["nice"]}')
         self.cpu_label.set_label(f'{cpu_usage:.{processes_cpu_precision}f} %')
@@ -848,7 +848,7 @@ class ProcessesDetails:
             return
 
         # Generate a new label for the information. This label does not exist in the ".ui" UI file.
-        label_process_end_warning = Gtk.Label(label=_tr("This process is not running anymore."))
+        label_process_end_warning = Gtk.Label(label=_("This process is not running anymore."))
         style_provider = Gtk.CssProvider()
         try:
             css = b"label {background: rgba(100%,0%,0%,1.0);}"
@@ -905,4 +905,3 @@ def process_details_show_process_details():
         except AttributeError:
             return
         processes_details_object_list[-1].process_details_window.set_visible(True)
-

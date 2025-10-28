@@ -10,7 +10,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class SettingsWindow:
@@ -18,20 +18,20 @@ class SettingsWindow:
     def __init__(self):
 
         # Define data lists in order to add them into comboboxes.
-        self.language_dict = {"system":_tr("System"), "cs.UTF-8":"Čeština", "de.UTF-8":"Deutsch",
+        self.language_dict = {"system":_("System"), "cs.UTF-8":"Čeština", "de.UTF-8":"Deutsch",
                               "en_US.UTF-8":"English (US)", "es":"Español", "fa.UTF-8":"فارسی",
                               "fr.UTF-8": "Français", "hu.UTF-8":"Magyar", "pl.UTF-8":"Polski",
                               "pt_BR.UTF-8":"Português do Brasil", "pt_PT.UTF-8":"Português europeu",
                               "ru_RU.UTF-8":"Русский", "tr.UTF-8":"Türkçe", "zh_CN":"简体中文",
                               "zh_TW":"繁體中文"}
-        self.gui_theme_dict = {"system":_tr("System"), "light":_tr("Light"), "dark":_tr("Dark")}
+        self.gui_theme_dict = {"system":_("System"), "light":_("Light"), "dark":_("Dark")}
         self.update_interval_list = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 3.0, 5.0, 10.0]
         self.chart_data_history_list = [30, 60, 90, 120, 150, 180, 300, 600, 1200]
-        self.default_main_tab_list = [_tr("Performance"), _tr("Processes"), _tr("Users"), _tr("Services"), _tr("System")]
-        self.performance_tab_default_sub_tab_list = [_tr("Summary"), _tr("CPU"), _tr("Memory"), _tr("Disk"), _tr("Network"), _tr("GPU"), _tr("Sensors")]
+        self.default_main_tab_list = [_("Performance"), _("Processes"), _("Users"), _("Services"), _("System")]
+        self.performance_tab_default_sub_tab_list = [_("Summary"), _("CPU"), _("Memory"), _("Disk"), _("Network"), _("GPU"), _("Sensors")]
 
         # For translating the text that is used in ".desktop" file.
-        _text = [_tr("System Monitor"), _tr("Task Manager")]
+        _text = [_("System Monitor"), _("Task Manager")]
 
         self.window_gui()
 
@@ -47,7 +47,7 @@ class SettingsWindow:
 
         # Window
         self.settings_window = Gtk.Window()
-        self.settings_window.set_title(_tr("General Settings"))
+        self.settings_window.set_title(_("General Settings"))
         self.settings_window.set_icon_name("system-monitoring-center")
         self.settings_window.set_resizable(False)
         self.settings_window.set_transient_for(MainWindow.main_window)
@@ -66,7 +66,7 @@ class SettingsWindow:
         self.settings_window.set_child(main_grid)
 
         # Label (Language)
-        label = Common.static_information_label_no_ellipsize(_tr("Language (Requires restart)") + ":")
+        label = Common.static_information_label_no_ellipsize(_("Language (Requires restart)") + ":")
         main_grid.attach(label, 0, 0, 1, 1)
         # DropDown (Language)
         item_list = list(self.language_dict.values())
@@ -74,7 +74,7 @@ class SettingsWindow:
         main_grid.attach(self.language_dd, 1, 0, 1, 1)
 
         # Label (Light/Dark theme)
-        label = Common.static_information_label_no_ellipsize(_tr("Light/Dark theme") + ":")
+        label = Common.static_information_label_no_ellipsize(_("Light/Dark theme") + ":")
         main_grid.attach(label, 0, 1, 1, 1)
         # DropDown (Light/Dark theme)
         item_list = list(self.gui_theme_dict.values())
@@ -82,7 +82,7 @@ class SettingsWindow:
         main_grid.attach(self.light_dark_theme_dd, 1, 1, 1, 1)
 
         # Label (Opacity)
-        label = Common.static_information_label_no_ellipsize(_tr("Opacity") + " (0.4 - 1.0)" + ":")
+        label = Common.static_information_label_no_ellipsize(_("Opacity") + " (0.4 - 1.0)" + ":")
         main_grid.attach(label, 0, 2, 1, 1)
         # Adjustment (for SpinButton)
         self.adjustment = Gtk.Adjustment()
@@ -100,7 +100,7 @@ class SettingsWindow:
         main_grid.attach(separator, 0, 3, 2, 1)
 
         # Label (Update interval)
-        label = Common.static_information_label_no_ellipsize(_tr("Update interval (seconds)") + ":")
+        label = Common.static_information_label_no_ellipsize(_("Update interval (seconds)") + ":")
         main_grid.attach(label, 0, 4, 1, 1)
         # DropDown (Update interval)
         item_list = self.update_interval_list
@@ -108,7 +108,7 @@ class SettingsWindow:
         main_grid.attach(self.update_interval_dd, 1, 4, 1, 1)
 
         # Label (Graph data history)
-        label = Common.static_information_label_no_ellipsize(_tr("Graph data history") + ":")
+        label = Common.static_information_label_no_ellipsize(_("Graph data history") + ":")
         main_grid.attach(label, 0, 5, 1, 1)
         # DropDown (Graph data history)
         item_list = self.chart_data_history_list
@@ -120,7 +120,7 @@ class SettingsWindow:
         main_grid.attach(separator, 0, 6, 2, 1)
 
         # CheckButton (Show performance summary on headerbar)
-        self.show_performance_summary_on_hb_cb = Common.checkbutton(_tr("Show performance summary on the headerbar"), None)
+        self.show_performance_summary_on_hb_cb = Common.checkbutton(_("Show performance summary on the headerbar"), None)
         main_grid.attach(self.show_performance_summary_on_hb_cb, 0, 7, 2, 1)
 
         # Separator
@@ -128,7 +128,7 @@ class SettingsWindow:
         main_grid.attach(separator, 0, 8, 2, 1)
 
         # CheckButton (Remember last opened tabs"
-        self.remember_last_opened_tabs_cb = Common.checkbutton(_tr("Remember last opened tabs"), None)
+        self.remember_last_opened_tabs_cb = Common.checkbutton(_("Remember last opened tabs"), None)
         main_grid.attach(self.remember_last_opened_tabs_cb, 0, 9, 2, 1)
 
         # Grid (Default main tab and sub-tab)
@@ -137,7 +137,7 @@ class SettingsWindow:
         default_main_sub_tab_grid.set_column_homogeneous(True)
         main_grid.attach(default_main_sub_tab_grid, 0, 10, 2, 1)
         # Label (Default main tab and sub-tab)
-        label = Common.static_information_label_no_ellipsize(_tr("Default main tab and sub-tab") + ":")
+        label = Common.static_information_label_no_ellipsize(_("Default main tab and sub-tab") + ":")
         default_main_sub_tab_grid.attach(label, 0, 0, 2, 1)
         # DropDown (Default main tab)
         item_list = self.default_main_tab_list
@@ -153,7 +153,7 @@ class SettingsWindow:
         main_grid.attach(separator, 0, 11, 2, 1)
 
         # CheckButton (Remember last selected devices)
-        self.remember_last_selected_devices_cb = Common.checkbutton(_tr("Remember last selected devices"), None)
+        self.remember_last_selected_devices_cb = Common.checkbutton(_("Remember last selected devices"), None)
         main_grid.attach(self.remember_last_selected_devices_cb, 0, 12, 2, 1)
 
         # Separator
@@ -161,7 +161,7 @@ class SettingsWindow:
         main_grid.attach(separator, 0, 13, 2, 1)
 
         # CheckButton (Remember window size)
-        self.remember_window_size_cb = Common.checkbutton(_tr("Remember window size"), None)
+        self.remember_window_size_cb = Common.checkbutton(_("Remember window size"), None)
         main_grid.attach(self.remember_window_size_cb, 0, 14, 2, 1)
 
         # Separator
@@ -179,7 +179,7 @@ class SettingsWindow:
         # Button (Reset all settings of the application)
         self.reset_all_settings_button = Gtk.Button()
         self.reset_all_settings_button.set_halign(Gtk.Align.CENTER)
-        self.reset_all_settings_button.set_label(_tr("Reset all settings of the application"))
+        self.reset_all_settings_button.set_label(_("Reset all settings of the application"))
         self.reset_all_settings_button.add_css_class("destructive-action")
         main_grid.attach(self.reset_all_settings_button, 0, 18, 2, 1)
 
@@ -748,7 +748,7 @@ class SettingsWindow:
                                                title="",
                                                message_type=Gtk.MessageType.WARNING,
                                                buttons=Gtk.ButtonsType.YES_NO,
-                                               text=_tr("Do you want to reset all settings to defaults?"),
+                                               text=_("Do you want to reset all settings to defaults?"),
                                                secondary_text=""
                                                )
 
@@ -756,4 +756,3 @@ class SettingsWindow:
 
 
 SettingsWindow = SettingsWindow()
-

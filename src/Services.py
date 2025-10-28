@@ -15,7 +15,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Services:
@@ -41,7 +41,7 @@ class Services:
         self.tab_info_grid()
 
         # Label (Note: This tab is not reloaded automatically. Manually reload for changes.)
-        label = Common.static_information_label_no_ellipsize(_tr("Note: This tab is not reloaded automatically. Manually reload for changes."))
+        label = Common.static_information_label_no_ellipsize(_("Note: This tab is not reloaded automatically. Manually reload for changes."))
         self.tab_grid.attach(label, 0, 2, 1, 1)
 
         self.gui_signals()
@@ -60,7 +60,7 @@ class Services:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (Services)
-        label = Common.tab_title_label(_tr("Services"))
+        label = Common.tab_title_label(_("Services"))
         grid.attach(label, 0, 0, 1, 1)
 
         # SearchEntry
@@ -164,7 +164,7 @@ class Services:
         # Window
         self.services_help_window = Gtk.Window()
         self.services_help_window.set_default_size(600, 500)
-        self.services_help_window.set_title(_tr("Help") + " (" + _tr("Services") + ")")
+        self.services_help_window.set_title(_("Help") + " (" + _("Services") + ")")
         self.services_help_window.set_icon_name("system-monitoring-center")
         self.services_help_window.set_transient_for(MainWindow.main_window)
         self.services_help_window.set_modal(True)
@@ -184,10 +184,10 @@ class Services:
 
         # Information labels
         # Label (Start)
-        label = Common.static_information_bold_label(_tr("Start") + ":")
+        label = Common.static_information_bold_label(_("Start") + ":")
         main_grid.attach(label, 0, 0, 1, 1)
         # Label (Start - help text)
-        label = Common.static_information_label_wrap_selectable(_tr("Starts a service.") + " " + _tr("This action does not affect a service after system reboot."))
+        label = Common.static_information_label_wrap_selectable(_("Starts a service.") + " " + _("This action does not affect a service after system reboot."))
         main_grid.attach(label, 0, 1, 1, 1)
 
         # Separator
@@ -195,10 +195,10 @@ class Services:
         main_grid.attach(separator, 0, 2, 1, 1)
 
         # Label (Stop)
-        label = Common.static_information_bold_label(_tr("Stop") + ":")
+        label = Common.static_information_bold_label(_("Stop") + ":")
         main_grid.attach(label, 0, 3, 1, 1)
         # Label (Stop - help text)
-        label = Common.static_information_label_wrap_selectable(_tr("Stops a service.") + " " + _tr("This action does not affect a service after system reboot."))
+        label = Common.static_information_label_wrap_selectable(_("Stops a service.") + " " + _("This action does not affect a service after system reboot."))
         main_grid.attach(label, 0, 4, 1, 1)
 
         # Separator
@@ -206,10 +206,10 @@ class Services:
         main_grid.attach(separator, 0, 5, 1, 1)
 
         # Label (Restart)
-        label = Common.static_information_bold_label(_tr("Restart") + ":")
+        label = Common.static_information_bold_label(_("Restart") + ":")
         main_grid.attach(label, 0, 6, 1, 1)
         # Label (Restart - help text)
-        label = Common.static_information_label_wrap_selectable(_tr("Restarts a service."))
+        label = Common.static_information_label_wrap_selectable(_("Restarts a service."))
         main_grid.attach(label, 0, 7, 1, 1)
 
         # Separator
@@ -217,10 +217,10 @@ class Services:
         main_grid.attach(separator, 0, 8, 1, 1)
 
         # Label (Reload)
-        label = Common.static_information_bold_label(_tr("Reload") + ":")
+        label = Common.static_information_bold_label(_("Reload") + ":")
         main_grid.attach(label, 0, 9, 1, 1)
         # Label (Reload - help text)
-        label = Common.static_information_label_wrap_selectable(_tr("Reloads a service.") + " " + _tr("This action is not available for all services.") + " " + _tr("This action does not affect running process of a service."))
+        label = Common.static_information_label_wrap_selectable(_("Reloads a service.") + " " + _("This action is not available for all services.") + " " + _("This action does not affect running process of a service."))
         main_grid.attach(label, 0, 10, 1, 1)
 
         # Separator
@@ -228,10 +228,10 @@ class Services:
         main_grid.attach(separator, 0, 11, 1, 1)
 
         # Label (Enable)
-        label = Common.static_information_bold_label(_tr("Enable") + ":")
+        label = Common.static_information_bold_label(_("Enable") + ":")
         main_grid.attach(label, 0, 12, 1, 1)
         # Label (Enable - help text)
-        label = Common.static_information_label_wrap_selectable(_tr("Enables a service.") + " " + _tr("This action affects a service after system reboot."))
+        label = Common.static_information_label_wrap_selectable(_("Enables a service.") + " " + _("This action affects a service after system reboot."))
         main_grid.attach(label, 0, 13, 1, 1)
 
         # Separator
@@ -239,10 +239,10 @@ class Services:
         main_grid.attach(separator, 0, 14, 1, 1)
 
         # Label (Disable)
-        label = Common.static_information_bold_label(_tr("Disable") + ":")
+        label = Common.static_information_bold_label(_("Disable") + ":")
         main_grid.attach(label, 0, 15, 1, 1)
         # Label (Disable - help text)
-        label = Common.static_information_label_wrap_selectable(_tr("Disables a service.") + " " + _tr("This action affects a service after system reboot.") + " " + _tr("This action does not affect running process of a service."))
+        label = Common.static_information_label_wrap_selectable(_("Disables a service.") + " " + _("This action affects a service after system reboot.") + " " + _("This action does not affect running process of a service."))
         main_grid.attach(label, 0, 16, 1, 1)
 
         # Separator
@@ -250,10 +250,10 @@ class Services:
         main_grid.attach(separator, 0, 17, 1, 1)
 
         # Label (Mask)
-        label = Common.static_information_bold_label(_tr("Mask") + ":")
+        label = Common.static_information_bold_label(_("Mask") + ":")
         main_grid.attach(label, 0, 18, 1, 1)
         # Label (Mask - help text)
-        label = Common.static_information_label_wrap_selectable(_tr("Disables a service completely.") + " " + _tr("A masked service can not be started, restarted, reloaded or enabled."))
+        label = Common.static_information_label_wrap_selectable(_("Disables a service completely.") + " " + _("A masked service can not be started, restarted, reloaded or enabled."))
         main_grid.attach(label, 0, 19, 1, 1)
 
         # Separator
@@ -261,10 +261,10 @@ class Services:
         main_grid.attach(separator, 0, 20, 1, 1)
 
         # Label (Unmask)
-        label = Common.static_information_bold_label(_tr("Unmask") + ":")
+        label = Common.static_information_bold_label(_("Unmask") + ":")
         main_grid.attach(label, 0, 21, 1, 1)
         # Label (Unmask - help text)
-        label = Common.static_information_label_wrap_selectable(_tr("Unmasks a service.") + " " + _tr("A service can be started, restarted, reloaded (if it is available) or enabled after unmasking."))
+        label = Common.static_information_label_wrap_selectable(_("Unmasks a service.") + " " + _("A service can be started, restarted, reloaded (if it is available) or enabled after unmasking."))
         main_grid.attach(label, 0, 22, 1, 1)
 
 
@@ -275,15 +275,15 @@ class Services:
 
         # Menu models
         service_manage_menu_section = Gio.Menu.new()
-        service_manage_menu_section.append(_tr("Start"), "win.services_start_service")
-        service_manage_menu_section.append(_tr("Stop"), "win.services_stop_service")
-        service_manage_menu_section.append(_tr("Restart"), "win.services_restart_service")
-        service_manage_menu_section.append(_tr("Reload"), "win.services_reload_service")
-        service_manage_menu_section.append(_tr("Enable"), "win.services_enable_service")
-        service_manage_menu_section.append(_tr("Disable"), "win.services_disable_service")
+        service_manage_menu_section.append(_("Start"), "win.services_start_service")
+        service_manage_menu_section.append(_("Stop"), "win.services_stop_service")
+        service_manage_menu_section.append(_("Restart"), "win.services_restart_service")
+        service_manage_menu_section.append(_("Reload"), "win.services_reload_service")
+        service_manage_menu_section.append(_("Enable"), "win.services_enable_service")
+        service_manage_menu_section.append(_("Disable"), "win.services_disable_service")
 
         mask_service_menu_item = Gio.MenuItem()
-        mask_service_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _tr("Mask")))
+        mask_service_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _("Mask")))
         mask_service_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_ACTION, GLib.Variant("s", "win.services_mask_service"))
         #mask_service_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_TARGET, GLib.Variant("b", False))
         service_manage_menu_section.append_item(mask_service_menu_item)
@@ -291,12 +291,12 @@ class Services:
         service_manage_menu_section_item.set_section(service_manage_menu_section)
 
         help_menu_section = Gio.Menu.new()
-        help_menu_section.append(_tr("Help"), "win.services_help")
+        help_menu_section.append(_("Help"), "win.services_help")
         help_menu_section_item = Gio.MenuItem.new()
         help_menu_section_item.set_section(help_menu_section)
 
         details_menu_section = Gio.Menu.new()
-        details_menu_section.append(_tr("Details"), "win.services_details")
+        details_menu_section.append(_("Details"), "win.services_details")
         details_menu_section_item = Gio.MenuItem.new()
         details_menu_section_item.set_section(details_menu_section)
 
@@ -361,7 +361,7 @@ class Services:
 
         # Show information dialog if there are errors in the command output.
         if systemctl_error != "-":
-            message_text = _tr("Information")
+            message_text = _("Information")
             secondary_text = systemctl_error
             if secondary_text != "":
                 self.messagedialog_gui(message_text, secondary_text)
@@ -444,7 +444,7 @@ class Services:
 
         # Get right/double clicked row data
         try:
-            path, _, _, _ = self.treeview.get_path_at_pos(int(x_bin), int(y_bin))
+            path, a, b, c = self.treeview.get_path_at_pos(int(x_bin), int(y_bin))
         # Prevent errors when right clicked on an empty area on the treeview.
         except TypeError:
             return
@@ -509,14 +509,14 @@ class Services:
         """
 
         self.row_data_list = [
-                             [0, _tr('Name'), 3, 2, 3, [bool, str, str], ['internal_column', 'CellRendererPixbuf', 'CellRendererText'], ['no_cell_attribute', 'icon_name', 'text'], [0, 1, 2], ['no_cell_alignment', 0.0, 0.0], ['no_set_expand', False, False], ['no_cell_function', 'no_cell_function', 'no_cell_function']],
-                             [1, _tr('State'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [2, _tr('Main PID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [3, _tr('Active State'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [4, _tr('Load State'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [5, _tr('Sub-State'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [6, _tr('Memory (RSS)'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_ram]],
-                             [7, _tr('Description'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']]
+                             [0, _('Name'), 3, 2, 3, [bool, str, str], ['internal_column', 'CellRendererPixbuf', 'CellRendererText'], ['no_cell_attribute', 'icon_name', 'text'], [0, 1, 2], ['no_cell_alignment', 0.0, 0.0], ['no_set_expand', False, False], ['no_cell_function', 'no_cell_function', 'no_cell_function']],
+                             [1, _('State'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [2, _('Main PID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [3, _('Active State'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [4, _('Load State'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [5, _('Sub-State'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [6, _('Memory (RSS)'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_ram]],
+                             [7, _('Description'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']]
                              ]
 
         Common.reset_tab_settings(self)
@@ -534,8 +534,8 @@ class Services:
         self.data_column_order_prev = []
         self.data_column_widths_prev = []
 
-        service_state_translation_list = [_tr("Enabled"), _tr("Disabled"), _tr("Masked"), _tr("Unmasked"), _tr("Static"), _tr("Generated"), _tr("Enabled-runtime"), _tr("Indirect"), _tr("Active"), _tr("Inactive"), _tr("Loaded"), _tr("Dead"), _tr("Exited"), _tr("Running")]
-        services_other_text_translation_list = [_tr("Yes"), _tr("No")]
+        service_state_translation_list = [_("Enabled"), _("Disabled"), _("Masked"), _("Unmasked"), _("Static"), _("Generated"), _("Enabled-runtime"), _("Indirect"), _("Active"), _("Inactive"), _("Loaded"), _("Dead"), _("Exited"), _("Running")]
+        services_other_text_translation_list = [_("Yes"), _("No")]
 
         self.filter_column = self.row_data_list[0][2] - 1
 
@@ -628,7 +628,7 @@ class Services:
 
         deleted_rows, new_rows, updated_existing_row_index = Common.get_new_deleted_updated_rows(service_list, self.service_list_prev)
         Common.update_treestore_rows(self, rows_data_dict, deleted_rows, new_rows, updated_existing_row_index, service_list, self.service_list_prev, 0, 1)
-        Common.searchentry_update_placeholder_text(self, _tr("Services"))
+        Common.searchentry_update_placeholder_text(self, _("Services"))
 
         self.service_list_prev = self.service_list
         self.tab_data_rows_prev = self.tab_data_rows
@@ -649,4 +649,3 @@ def cell_data_function_ram(tree_column, cell, tree_model, iter, data):
 
 
 Services = Services()
-

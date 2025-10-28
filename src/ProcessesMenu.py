@@ -7,7 +7,7 @@ from .Processes import Processes
 from .MainWindow import MainWindow
 from . import Common
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class ProcessesMenu:
@@ -30,7 +30,7 @@ class ProcessesMenu:
         self.menu_po.set_child(main_grid)
 
         # Label - menu title (Processes)
-        label = Common.menu_title_label(_tr("Processes"))
+        label = Common.menu_title_label(_("Processes"))
         main_grid.attach(label, 0, 0, 1, 1)
 
         # Notebook
@@ -42,7 +42,7 @@ class ProcessesMenu:
         # Tab pages and ScrolledWindow
         # "View" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("View"))
+        tab_title_label.set_label(_("View"))
         self.grid_view_tab = Gtk.Grid()
         self.grid_view_tab.set_margin_top(15)
         self.grid_view_tab.set_margin_bottom(5)
@@ -52,7 +52,7 @@ class ProcessesMenu:
         notebook.append_page(self.grid_view_tab, tab_title_label)
         # "Add/Remove Columns" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("Add/Remove Columns"))
+        tab_title_label.set_label(_("Add/Remove Columns"))
         self.grid_add_remove_columns_tab = Gtk.Grid()
         self.grid_add_remove_columns_tab.set_margin_top(15)
         self.grid_add_remove_columns_tab.set_margin_bottom(5)
@@ -62,7 +62,7 @@ class ProcessesMenu:
         notebook.append_page(self.grid_add_remove_columns_tab, tab_title_label)
         # "Numbers" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("Numbers"))
+        tab_title_label.set_label(_("Numbers"))
         self.grid_numbers_tab = Gtk.Grid()
         self.grid_numbers_tab.set_margin_top(15)
         self.grid_numbers_tab.set_margin_bottom(5)
@@ -102,24 +102,24 @@ class ProcessesMenu:
         self.grid_view_tab.attach(grid, 0, 0, 1, 1)
 
         # Label - Tab title
-        label = Common.title_label(_tr("View"))
+        label = Common.title_label(_("View"))
         grid.attach(label, 0, 0, 1, 1)
 
         # CheckButton (Show processes of all users)
-        self.show_processes_of_all_users_cb = Common.checkbutton(_tr("Show processes of all users"), None)
+        self.show_processes_of_all_users_cb = Common.checkbutton(_("Show processes of all users"), None)
         grid.attach(self.show_processes_of_all_users_cb, 0, 1, 1, 1)
 
         # CheckButton (Hide kernel threads)
-        self.hide_kernel_threads_cb = Common.checkbutton(_tr("Hide kernel threads"), None)
+        self.hide_kernel_threads_cb = Common.checkbutton(_("Hide kernel threads"), None)
         self.hide_kernel_threads_cb.set_margin_start(20)
         grid.attach(self.hide_kernel_threads_cb, 0, 2, 1, 1)
 
         # CheckButton (Show processes as tree)
-        self.show_processes_as_tree_cb = Common.checkbutton(_tr("Show processes as tree"), None)
+        self.show_processes_as_tree_cb = Common.checkbutton(_("Show processes as tree"), None)
         grid.attach(self.show_processes_as_tree_cb, 0, 3, 1, 1)
 
         # CheckButton (Show tree lines)
-        self.show_tree_lines_cb = Common.checkbutton(_tr("Show tree lines"), None)
+        self.show_tree_lines_cb = Common.checkbutton(_("Show tree lines"), None)
         self.show_tree_lines_cb.set_margin_start(20)
         grid.attach(self.show_tree_lines_cb, 0, 4, 1, 1)
 
@@ -131,12 +131,12 @@ class ProcessesMenu:
 
         # Button (Expand all)
         self.expand_all_button = Gtk.Button()
-        self.expand_all_button.set_label(_tr("Expand all"))
+        self.expand_all_button.set_label(_("Expand all"))
         grid_buttons.attach(self.expand_all_button, 0, 1, 1, 1)
 
         # Button (Collapse all)
         self.collapse_all_button = Gtk.Button()
-        self.collapse_all_button.set_label(_tr("Collapse all"))
+        self.collapse_all_button.set_label(_("Collapse all"))
         grid_buttons.attach(self.collapse_all_button, 1, 1, 1, 1)
 
 
@@ -156,117 +156,117 @@ class ProcessesMenu:
         self.grid_add_remove_columns_tab.attach(grid, 0, 0, 1, 1)
 
         # Label - title (Add/Remove Columns)
-        label = Common.title_label(_tr("Add/Remove Columns"))
+        label = Common.title_label(_("Add/Remove Columns"))
         grid.attach(label, 0, 0, 2, 1)
 
         # CheckButton (Name)
-        self.name_cb = Common.checkbutton(_tr("Name"), None)
+        self.name_cb = Common.checkbutton(_("Name"), None)
         self.name_cb.set_active(True)
         self.name_cb.set_sensitive(False)
         grid.attach(self.name_cb, 0, 1, 1, 1)
 
         # CheckButton (PID)
-        self.pid_cb = Common.checkbutton(_tr("PID"), None)
+        self.pid_cb = Common.checkbutton(_("PID"), None)
         self.pid_cb.set_active(True)
         self.pid_cb.set_sensitive(False)
         grid.attach(self.pid_cb, 0, 2, 1, 1)
 
         # CheckButton (User)
-        self.user_cb = Common.checkbutton(_tr("User"), None)
+        self.user_cb = Common.checkbutton(_("User"), None)
         grid.attach(self.user_cb, 0, 3, 1, 1)
 
         # CheckButton (Status)
-        self.status_cb = Common.checkbutton(_tr("Status"), None)
+        self.status_cb = Common.checkbutton(_("Status"), None)
         grid.attach(self.status_cb, 0, 4, 1, 1)
 
         # CheckButton (CPU)
-        self.cpu_cb = Common.checkbutton(_tr("CPU"), None)
+        self.cpu_cb = Common.checkbutton(_("CPU"), None)
         grid.attach(self.cpu_cb, 0, 5, 1, 1)
 
         # CheckButton (Memory)
-        self.memory_cb = Common.checkbutton(_tr("Memory"), None)
+        self.memory_cb = Common.checkbutton(_("Memory"), None)
         grid.attach(self.memory_cb, 0, 6, 1, 1)
 
         # CheckButton (Memory (RSS))
-        self.memory_rss_cb = Common.checkbutton(_tr("Memory (RSS)"), None)
+        self.memory_rss_cb = Common.checkbutton(_("Memory (RSS)"), None)
         grid.attach(self.memory_rss_cb, 0, 7, 1, 1)
 
         # CheckButton (Memory (VMS))
-        self.memory_vms_cb = Common.checkbutton(_tr("Memory (VMS)"), None)
+        self.memory_vms_cb = Common.checkbutton(_("Memory (VMS)"), None)
         grid.attach(self.memory_vms_cb, 0, 8, 1, 1)
 
         # CheckButton (Memory (Shared))
-        self.memory_shared_cb = Common.checkbutton(_tr("Memory (Shared)"), None)
+        self.memory_shared_cb = Common.checkbutton(_("Memory (Shared)"), None)
         grid.attach(self.memory_shared_cb, 0, 9, 1, 1)
 
         # CheckButton (Read Data)
-        self.read_data_cb = Common.checkbutton(_tr("Read Data"), None)
+        self.read_data_cb = Common.checkbutton(_("Read Data"), None)
         grid.attach(self.read_data_cb, 0, 10, 1, 1)
 
         # CheckButton (Written Data)
-        self.write_data_cb = Common.checkbutton(_tr("Written Data"), None)
+        self.write_data_cb = Common.checkbutton(_("Written Data"), None)
         grid.attach(self.write_data_cb, 0, 11, 1, 1)
 
         # CheckButton (Read Speed)
-        self.read_speed_cb = Common.checkbutton(_tr("Read Speed"), None)
+        self.read_speed_cb = Common.checkbutton(_("Read Speed"), None)
         grid.attach(self.read_speed_cb, 0, 12, 1, 1)
 
         # CheckButton (Write Speed)
-        self.write_speed_cb = Common.checkbutton(_tr("Write Speed"), None)
+        self.write_speed_cb = Common.checkbutton(_("Write Speed"), None)
         grid.attach(self.write_speed_cb, 1, 1, 1, 1)
 
         # CheckButton (Priority)
-        self.priority_cb = Common.checkbutton(_tr("Priority"), None)
+        self.priority_cb = Common.checkbutton(_("Priority"), None)
         grid.attach(self.priority_cb, 1, 2, 1, 1)
 
         # CheckButton (Threads)
-        self.threads_cb = Common.checkbutton(_tr("Threads"), None)
+        self.threads_cb = Common.checkbutton(_("Threads"), None)
         grid.attach(self.threads_cb, 1, 3, 1, 1)
 
         # CheckButton (PPID)
-        self.ppid_cb = Common.checkbutton(_tr("PPID"), None)
+        self.ppid_cb = Common.checkbutton(_("PPID"), None)
         grid.attach(self.ppid_cb, 1, 4, 1, 1)
 
         # CheckButton (UID)
-        self.uid_cb = Common.checkbutton(_tr("UID"), None)
+        self.uid_cb = Common.checkbutton(_("UID"), None)
         grid.attach(self.uid_cb, 1, 5, 1, 1)
 
         # CheckButton (GID)
-        self.gid_cb = Common.checkbutton(_tr("GID"), None)
+        self.gid_cb = Common.checkbutton(_("GID"), None)
         grid.attach(self.gid_cb, 1, 6, 1, 1)
 
         # CheckButton (Start Time)
-        self.start_time_cb = Common.checkbutton(_tr("Start Time"), None)
+        self.start_time_cb = Common.checkbutton(_("Start Time"), None)
         grid.attach(self.start_time_cb, 1, 7, 1, 1)
 
         # CheckButton (Command Line)
-        self.commandline_cb = Common.checkbutton(_tr("Command Line"), None)
+        self.commandline_cb = Common.checkbutton(_("Command Line"), None)
         grid.attach(self.commandline_cb, 1, 8, 1, 1)
 
         # CheckButton (CPU Time)
-        self.cpu_time_cb = Common.checkbutton(_tr("CPU Time"), None)
+        self.cpu_time_cb = Common.checkbutton(_("CPU Time"), None)
         grid.attach(self.cpu_time_cb, 1, 9, 1, 1)
 
         # CheckButton (CPU - Recursive)
-        self.cpu_recursive_cb = Common.checkbutton(_tr("CPU") + " - " + _tr("Recursive"), None)
+        self.cpu_recursive_cb = Common.checkbutton(_("CPU") + " - " + _("Recursive"), None)
         grid.attach(self.cpu_recursive_cb, 1, 10, 1, 1)
 
         # CheckButton (Memory (RSS) - Recursive)
-        self.memory_rss_recursive_cb = Common.checkbutton(_tr("Memory (RSS)") + " - " + _tr("Recursive"), None)
+        self.memory_rss_recursive_cb = Common.checkbutton(_("Memory (RSS)") + " - " + _("Recursive"), None)
         grid.attach(self.memory_rss_recursive_cb, 1, 11, 1, 1)
 
         # CheckButton (Memory - Recursive)
-        self.memory_recursive_cb = Common.checkbutton(_tr("Memory") + " - " + _tr("Recursive"), None)
+        self.memory_recursive_cb = Common.checkbutton(_("Memory") + " - " + _("Recursive"), None)
         grid.attach(self.memory_recursive_cb, 1, 12, 1, 1)
 
         # CheckButton (GPU Usage)
-        self.gpu_usage_cb = Common.checkbutton(_tr("GPU Usage"), None)
+        self.gpu_usage_cb = Common.checkbutton(_("GPU Usage"), None)
         # Do not attach the CheckButton and hide it. Because this feature is removed.
         #grid.attach(self.gpu_usage_cb, 0, 13, 1, 1)
         self.gpu_usage_cb.set_visible(False)
 
         # CheckButton (GPU Memory)
-        self.gpu_memory_cb = Common.checkbutton(_tr("GPU Memory"), None)
+        self.gpu_memory_cb = Common.checkbutton(_("GPU Memory"), None)
         # Do not attach the CheckButton and hide it. Because this feature is removed.
         #grid.attach(self.gpu_memory_cb, 1, 13, 1, 1)
         self.gpu_memory_cb.set_visible(False)
@@ -296,12 +296,12 @@ class ProcessesMenu:
         grid.attach(precision_grid, 0, 0, 2, 1)
 
         # Label - title (Precision)
-        label = Common.title_label(_tr("Precision"))
+        label = Common.title_label(_("Precision"))
         precision_grid.attach(label, 0, 0, 3, 1)
 
         # Label (CPU)
         label = Gtk.Label()
-        label.set_label(_tr("CPU"))
+        label.set_label(_("CPU"))
         label.set_halign(Gtk.Align.CENTER)
         precision_grid.attach(label, 0, 1, 1, 1)
 
@@ -312,7 +312,7 @@ class ProcessesMenu:
 
         # Label (Memory)
         label = Gtk.Label()
-        label.set_label(_tr("Memory"))
+        label.set_label(_("Memory"))
         label.set_halign(Gtk.Align.CENTER)
         precision_grid.attach(label, 1, 1, 1, 1)
 
@@ -323,7 +323,7 @@ class ProcessesMenu:
 
         # Label (Disk)
         label = Gtk.Label()
-        label.set_label(_tr("Disk"))
+        label.set_label(_("Disk"))
         label.set_halign(Gtk.Align.CENTER)
         precision_grid.attach(label, 2, 1, 1, 1)
 
@@ -337,31 +337,31 @@ class ProcessesMenu:
         grid.attach(separator, 0, 3, 2, 1)
 
         # Label - title (Data Unit)
-        label = Common.title_label(_tr("Data Unit"))
+        label = Common.title_label(_("Data Unit"))
         grid.attach(label, 0, 4, 2, 1)
 
         # Label (CPU)
         label = Gtk.Label()
-        label.set_label(_tr("CPU"))
+        label.set_label(_("CPU"))
         label.set_halign(Gtk.Align.CENTER)
         grid.attach(label, 0, 5, 2, 1)
 
         # CheckButton (Divide CPU usage by core count)
         self.divide_cpu_usage_by_core_count_cb = Gtk.CheckButton()
         self.divide_cpu_usage_by_core_count_cb.set_group(None)
-        self.divide_cpu_usage_by_core_count_cb.set_label(_tr("Divide CPU usage by core count"))
+        self.divide_cpu_usage_by_core_count_cb.set_label(_("Divide CPU usage by core count"))
         self.divide_cpu_usage_by_core_count_cb.set_halign(Gtk.Align.START)
         grid.attach(self.divide_cpu_usage_by_core_count_cb, 0, 6, 2, 1)
 
         # Label (Memory)
         label = Gtk.Label()
-        label.set_label(_tr("Memory"))
+        label.set_label(_("Memory"))
         label.set_halign(Gtk.Align.CENTER)
         grid.attach(label, 0, 7, 2, 1)
 
         # Label - memory (Show data as powers of:)
         label = Gtk.Label()
-        label.set_label(_tr("Show data as powers of") + ":")
+        label.set_label(_("Show data as powers of") + ":")
         label.set_halign(Gtk.Align.START)
         grid.attach(label, 0, 8, 2, 1)
 
@@ -381,13 +381,13 @@ class ProcessesMenu:
 
         # Label (Disk)
         label = Gtk.Label()
-        label.set_label(_tr("Disk"))
+        label.set_label(_("Disk"))
         label.set_halign(Gtk.Align.CENTER)
         grid.attach(label, 0, 10, 2, 1)
 
         # Label - disk (Show data as powers of:)
         label = Gtk.Label()
-        label.set_label(_tr("Show data as powers of") + ":")
+        label.set_label(_("Show data as powers of") + ":")
         label.set_halign(Gtk.Align.START)
         grid.attach(label, 0, 11, 2, 1)
 
@@ -408,7 +408,7 @@ class ProcessesMenu:
         # CheckButton (Show speed units as multiples of bits)
         self.show_speed_units_bytes_cb = Gtk.CheckButton()
         self.show_speed_units_bytes_cb.set_group(None)
-        self.show_speed_units_bytes_cb.set_label(_tr("Show speed units as multiples of bits"))
+        self.show_speed_units_bytes_cb.set_label(_("Show speed units as multiples of bits"))
         self.show_speed_units_bytes_cb.set_halign(Gtk.Align.START)
         grid.attach(self.show_speed_units_bytes_cb, 0, 13, 2, 1)
 
@@ -925,4 +925,3 @@ class ProcessesMenu:
 
 
 ProcessesMenu = ProcessesMenu()
-

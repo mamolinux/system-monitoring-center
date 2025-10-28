@@ -17,7 +17,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Users:
@@ -58,7 +58,7 @@ class Users:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (Users)
-        label = Common.tab_title_label(_tr("Users"))
+        label = Common.tab_title_label(_("Users"))
         grid.attach(label, 0, 0, 1, 1)
 
         # SearchEntry
@@ -125,7 +125,7 @@ class Users:
 
         # Menu models
         right_click_menu_model = Gio.Menu.new()
-        right_click_menu_model.append(_tr("Details"), "win.users_details")
+        right_click_menu_model.append(_("Details"), "win.users_details")
 
         # Popover menu
         self.right_click_menu_po = Gtk.PopoverMenu()
@@ -171,7 +171,7 @@ class Users:
 
         # Get right/double clicked row data
         try:
-            path, _, _, _ = self.treeview.get_path_at_pos(int(x_bin), int(y_bin))
+            path, a, b, c = self.treeview.get_path_at_pos(int(x_bin), int(y_bin))
         # Prevent errors when right clicked on an empty area on the treeview.
         except TypeError:
             return
@@ -227,17 +227,17 @@ class Users:
         """
 
         self.row_data_list = [
-                             [0, _tr('User'), 3, 2, 3, [bool, str, str], ['internal_column', 'CellRendererPixbuf', 'CellRendererText'], ['no_cell_attribute', 'icon_name', 'text'], [0, 1, 2], ['no_cell_alignment', 0.0, 0.0], ['no_set_expand', False, False], ['no_cell_function', 'no_cell_function', 'no_cell_function']],
-                             [1, _tr('Full Name'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [2, _tr('Logged In'), 1, 1, 1, [bool], ['CellRendererToggle'], ['active'], [0], [0.5], [False], ['no_cell_function']],
-                             [3, _tr('UID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [4, _tr('GID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [5, _tr('Processes'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [6, _tr('Home Directory'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [7, _tr('Group'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [8, _tr('Terminal'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [9, _tr('Start Time'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_started]],
-                             [10, _tr('CPU'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_cpu_usage_percent]],
+                             [0, _('User'), 3, 2, 3, [bool, str, str], ['internal_column', 'CellRendererPixbuf', 'CellRendererText'], ['no_cell_attribute', 'icon_name', 'text'], [0, 1, 2], ['no_cell_alignment', 0.0, 0.0], ['no_set_expand', False, False], ['no_cell_function', 'no_cell_function', 'no_cell_function']],
+                             [1, _('Full Name'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [2, _('Logged In'), 1, 1, 1, [bool], ['CellRendererToggle'], ['active'], [0], [0.5], [False], ['no_cell_function']],
+                             [3, _('UID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [4, _('GID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [5, _('Processes'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [6, _('Home Directory'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [7, _('Group'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [8, _('Terminal'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [9, _('Start Time'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_started]],
+                             [10, _('CPU'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_cpu_usage_percent]],
                              ]
 
         Common.reset_tab_settings(self)
@@ -332,7 +332,7 @@ class Users:
 
         deleted_rows, new_rows, updated_existing_row_index = Common.get_new_deleted_updated_rows(human_user_uid_list, self.human_user_uid_list_prev)
         Common.update_treestore_rows(self, rows_data_dict, deleted_rows, new_rows, updated_existing_row_index, human_user_uid_list, self.human_user_uid_list_prev, 0, 1)
-        Common.searchentry_update_placeholder_text(self, _tr("Users"))
+        Common.searchentry_update_placeholder_text(self, _("Users"))
 
         self.human_user_uid_list_prev = self.human_user_uid_list
         self.tab_data_rows_prev = self.tab_data_rows
@@ -356,4 +356,3 @@ def cell_data_function_started(tree_column, cell, tree_model, iter, data):
 
 
 Users = Users()
-

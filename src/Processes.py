@@ -18,7 +18,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Processes:
@@ -85,7 +85,7 @@ class Processes:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (Processes)
-        label = Common.tab_title_label(_tr("Processes"))
+        label = Common.tab_title_label(_("Processes"))
         grid.attach(label, 0, 0, 1, 1)
 
         # Grid (search widgets)
@@ -222,36 +222,36 @@ class Processes:
 
         # Menu models
         process_management_menu_section = Gio.Menu.new()
-        process_management_menu_section.append(_tr("Pause Process"), "win.processes_pause_process")
-        process_management_menu_section.append(_tr("Continue Process"), "win.processes_continue_process")
-        process_management_menu_section.append(_tr("End Process"), "win.processes_end_process")
-        process_management_menu_section.append(_tr("End Process Immediately"), "win.processes_end_process_immediately")
+        process_management_menu_section.append(_("Pause Process"), "win.processes_pause_process")
+        process_management_menu_section.append(_("Continue Process"), "win.processes_continue_process")
+        process_management_menu_section.append(_("End Process"), "win.processes_end_process")
+        process_management_menu_section.append(_("End Process Immediately"), "win.processes_end_process_immediately")
         process_management_menu_section_item = Gio.MenuItem.new()
         process_management_menu_section_item.set_section(process_management_menu_section)
 
         priority_options_submenu_section = Gio.Menu.new()
         priority_very_high_menu_item = Gio.MenuItem()
-        priority_very_high_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _tr("Very High")))
+        priority_very_high_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _("Very High")))
         priority_very_high_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_ACTION, GLib.Variant("s", "win.processes_priority_group"))
         priority_very_high_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_TARGET, GLib.Variant("s", "processes_priority_very_high"))
         priority_options_submenu_section.append_item(priority_very_high_menu_item)
         priority_high_menu_item = Gio.MenuItem()
-        priority_high_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _tr("High")))
+        priority_high_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _("High")))
         priority_high_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_ACTION, GLib.Variant("s", "win.processes_priority_group"))
         priority_high_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_TARGET, GLib.Variant("s", "processes_priority_high"))
         priority_options_submenu_section.append_item(priority_high_menu_item)
         priority_normal_menu_item = Gio.MenuItem()
-        priority_normal_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _tr("Normal")))
+        priority_normal_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _("Normal")))
         priority_normal_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_ACTION, GLib.Variant("s", "win.processes_priority_group"))
         priority_normal_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_TARGET, GLib.Variant("s", "processes_priority_normal"))
         priority_options_submenu_section.append_item(priority_normal_menu_item)
         priority_low_menu_item = Gio.MenuItem()
-        priority_low_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _tr("Low")))
+        priority_low_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _("Low")))
         priority_low_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_ACTION, GLib.Variant("s", "win.processes_priority_group"))
         priority_low_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_TARGET, GLib.Variant("s", "processes_priority_low"))
         priority_options_submenu_section.append_item(priority_low_menu_item)
         priority_very_low_menu_item = Gio.MenuItem()
-        priority_very_low_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _tr("Very Low")))
+        priority_very_low_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_LABEL, GLib.Variant("s", _("Very Low")))
         priority_very_low_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_ACTION, GLib.Variant("s", "win.processes_priority_group"))
         priority_very_low_menu_item.set_attribute_value(Gio.MENU_ATTRIBUTE_TARGET, GLib.Variant("s", "processes_priority_very_low"))
         priority_options_submenu_section.append_item(priority_very_low_menu_item)
@@ -259,7 +259,7 @@ class Processes:
         priority_options_submenu_section_item.set_section(priority_options_submenu_section)
 
         priority_custom_value_submenu_section = Gio.Menu.new()
-        priority_custom_value_submenu_section.append(_tr("Custom Value..."), "win.processes_priority_custom_value")
+        priority_custom_value_submenu_section.append(_("Custom Value..."), "win.processes_priority_custom_value")
         priority_custom_value_submenu_section_item = Gio.MenuItem.new()
         priority_custom_value_submenu_section_item.set_section(priority_custom_value_submenu_section)
 
@@ -268,17 +268,17 @@ class Processes:
         priority_submenu.append_item(priority_custom_value_submenu_section_item)
 
         priority_menu_section = Gio.Menu.new()
-        priority_menu_section.append_submenu(_tr("Change Priority"), priority_submenu)
+        priority_menu_section.append_submenu(_("Change Priority"), priority_submenu)
         priority_menu_section_item = Gio.MenuItem.new()
         priority_menu_section_item.set_section(priority_menu_section)
 
         cpu_affinity_menu_section = Gio.Menu.new()
-        cpu_affinity_menu_section.append(_tr("Set CPU Affinity"), "win.processes_set_cpu_affinity")
+        cpu_affinity_menu_section.append(_("Set CPU Affinity"), "win.processes_set_cpu_affinity")
         cpu_affinity_menu_section_item = Gio.MenuItem.new()
         cpu_affinity_menu_section_item.set_section(cpu_affinity_menu_section)
 
         details_menu_section = Gio.Menu.new()
-        details_menu_section.append(_tr("Details"), "win.processes_details")
+        details_menu_section.append(_("Details"), "win.processes_details")
         details_menu_section_item = Gio.MenuItem.new()
         details_menu_section_item.set_section(details_menu_section)
 
@@ -314,23 +314,23 @@ class Processes:
         self.search_menu_po.set_child(main_grid)
 
         # Label (Search:)
-        label = Common.title_label(_tr("Search...").strip("...") + ":")
+        label = Common.title_label(_("Search...").strip("...") + ":")
         main_grid.attach(label, 0, 0, 1, 1)
 
         # CheckButton (All)
-        self.search_process_all_cb = Common.checkbutton(_tr("All"), None)
+        self.search_process_all_cb = Common.checkbutton(_("All"), None)
         main_grid.attach(self.search_process_all_cb, 0, 1, 1, 1)
 
         # CheckButton (Name)
-        self.search_process_name_cb = Common.checkbutton(_tr("Name"), self.search_process_all_cb)
+        self.search_process_name_cb = Common.checkbutton(_("Name"), self.search_process_all_cb)
         main_grid.attach(self.search_process_name_cb, 0, 2, 1, 1)
 
         # CheckButton (Command Line)
-        self.search_process_command_line_cb = Common.checkbutton(_tr("Command Line"), self.search_process_all_cb)
+        self.search_process_command_line_cb = Common.checkbutton(_("Command Line"), self.search_process_all_cb)
         main_grid.attach(self.search_process_command_line_cb, 0, 3, 1, 1)
 
         # CheckButton (PID)
-        self.search_process_pid_cb = Common.checkbutton(_tr("PID"), self.search_process_all_cb)
+        self.search_process_pid_cb = Common.checkbutton(_("PID"), self.search_process_all_cb)
         main_grid.attach(self.search_process_pid_cb, 0, 4, 1, 1)
 
         # Set Popover of MenuButton
@@ -379,7 +379,7 @@ class Processes:
         # Window
         self.priority_custom_value_window = Gtk.Window()
         self.priority_custom_value_window.set_default_size(400, -1)
-        self.priority_custom_value_window.set_title(_tr("Change Priority"))
+        self.priority_custom_value_window.set_title(_("Change Priority"))
         self.priority_custom_value_window.set_icon_name("system-monitoring-center")
         self.priority_custom_value_window.set_transient_for(MainWindow.main_window)
         self.priority_custom_value_window.set_resizable(False)
@@ -397,7 +397,7 @@ class Processes:
 
         # Label
         label = Gtk.Label()
-        label.set_label(_tr("Change priority of these processes") + ":\n(" + _tr("Smaller value means higher process priority") + ")")
+        label.set_label(_("Change priority of these processes") + ":\n(" + _("Smaller value means higher process priority") + ")")
         label.set_halign(Gtk.Align.START)
         main_grid.attach(label, 0, 0, 1, 1)
 
@@ -452,12 +452,12 @@ class Processes:
 
         # Button (Cancel)
         self.priority_custom_value_cancel_button = Gtk.Button()
-        self.priority_custom_value_cancel_button.set_label(_tr("Cancel"))
+        self.priority_custom_value_cancel_button.set_label(_("Cancel"))
         grid.attach(self.priority_custom_value_cancel_button, 0, 0, 1, 1)
 
         # Button (Change Priority)
         self.priority_custom_value_change_priority_button = Gtk.Button()
-        self.priority_custom_value_change_priority_button.set_label(_tr("Change Priority"))
+        self.priority_custom_value_change_priority_button.set_label(_("Change Priority"))
         grid.attach(self.priority_custom_value_change_priority_button, 1, 0, 1, 1)
 
         # Signals (buttons)
@@ -488,7 +488,7 @@ class Processes:
         # Window
         self.cpu_affinity_window = Gtk.Window()
         self.cpu_affinity_window.set_default_size(400, -1)
-        self.cpu_affinity_window.set_title(_tr("Set CPU Affinity"))
+        self.cpu_affinity_window.set_title(_("Set CPU Affinity"))
         self.cpu_affinity_window.set_icon_name("system-monitoring-center")
         self.cpu_affinity_window.set_transient_for(MainWindow.main_window)
         self.cpu_affinity_window.set_resizable(False)
@@ -506,7 +506,7 @@ class Processes:
 
         # Label
         label = Gtk.Label()
-        label.set_label(_tr("Processes") + ":")
+        label.set_label(_("Processes") + ":")
         label.set_halign(Gtk.Align.START)
         main_grid.attach(label, 0, 0, 1, 1)
 
@@ -553,12 +553,12 @@ class Processes:
         viewport.set_child(grid)
 
         self.cpu_affinity_select_all_button = Gtk.Button()
-        self.cpu_affinity_select_all_button.set_label(_tr("Select All"))
+        self.cpu_affinity_select_all_button.set_label(_("Select All"))
         self.cpu_affinity_select_all_button.set_halign(Gtk.Align.CENTER)
         grid.attach(self.cpu_affinity_select_all_button, 0, 0, 1, 1)
 
         self.cpu_affinity_select_none_button = Gtk.Button()
-        self.cpu_affinity_select_none_button.set_label(_tr("Select None"))
+        self.cpu_affinity_select_none_button.set_label(_("Select None"))
         self.cpu_affinity_select_none_button.set_halign(Gtk.Align.CENTER)
         grid.attach(self.cpu_affinity_select_none_button, 1, 0, 1, 1)
 
@@ -580,12 +580,12 @@ class Processes:
 
         # Button (Cancel)
         self.cpu_affinity_cancel_button = Gtk.Button()
-        self.cpu_affinity_cancel_button.set_label(_tr("Cancel"))
+        self.cpu_affinity_cancel_button.set_label(_("Cancel"))
         grid.attach(self.cpu_affinity_cancel_button, 0, 0, 1, 1)
 
         # Button (Change Priority)
         self.cpu_affinity_set_cpu_affinity_button = Gtk.Button()
-        self.cpu_affinity_set_cpu_affinity_button.set_label(_tr("Set CPU Affinity"))
+        self.cpu_affinity_set_cpu_affinity_button.set_label(_("Set CPU Affinity"))
         grid.attach(self.cpu_affinity_set_cpu_affinity_button, 1, 0, 1, 1)
 
         # Signals (buttons)
@@ -680,15 +680,15 @@ class Processes:
 
         if action.get_name() == "processes_pause_process":
             manage_option = "pause_process"
-            process_dialog_message = _tr("Do you want to pause these processes?")
+            process_dialog_message = _("Do you want to pause these processes?")
         elif action.get_name() == "processes_continue_process":
             manage_option = "continue_process"
         elif action.get_name() == "processes_end_process":
             manage_option = "end_process"
-            process_dialog_message = _tr("Do you want to end these processes?")
+            process_dialog_message = _("Do you want to end these processes?")
         elif action.get_name() == "processes_end_process_immediately":
             manage_option = "end_process_immediately"
-            process_dialog_message = _tr("Do you want to end these processes immediately?")
+            process_dialog_message = _("Do you want to end these processes immediately?")
 
         if action.get_name() in ["processes_continue_process"]:
             Libsysmon.manage_process(self.selected_process_pid_list, manage_option)
@@ -1050,14 +1050,14 @@ class Processes:
         static_information_label = Gtk.Label()
         self.multiple_process_information_grid.attach(static_information_label, summable_column_number, 0, 1, 1)
         static_information_label.set_margin_end(20)
-        static_information_label.set_text(_tr("Processes") + ": " + str(selected_process_count))
+        static_information_label.set_text(_("Processes") + ": " + str(selected_process_count))
 
         # Label (Total:)
         dynamic_information_label = Gtk.Label()
         self.multiple_process_information_grid.attach(dynamic_information_label, summable_column_number, 1, 1, 1)
         dynamic_information_label.set_halign(Gtk.Align.END)
         dynamic_information_label.set_margin_end(20)
-        dynamic_information_label.set_text(_tr("Total") + ":")
+        dynamic_information_label.set_text(_("Total") + ":")
 
         # Labels (Column titles and column value summations)
         for column_shown in self.treeview_columns_shown:
@@ -1214,38 +1214,38 @@ class Processes:
         #                 .
         #                 ]
         self.row_data_list = [
-                             [0, _tr('Name'), 3, 2, 3, [bool, str, str], ['internal_column', 'CellRendererPixbuf', 'CellRendererText'], ['no_cell_attribute', 'icon_name', 'text'], [0, 1, 2], ['no_cell_alignment', 0.0, 0.0], ['no_set_expand', False, False], ['no_cell_function', 'no_cell_function', 'no_cell_function']],
-                             [1, _tr('PID'), 2, 1, 2, [str, int], ['internal_column', 'CellRendererText'], ['no_cell_attribute', 'text'], [0, 1], ['no_cell_alignment', 1.0], [False, False], ['no_cell_function', 'no_cell_function']],
-                             [2, _tr('User'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [3, _tr('Status'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [4, _tr('CPU'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_cpu_usage_percent]],
-                             [5, _tr('Memory (RSS)'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_rss]],
-                             [6, _tr('Memory (VMS)'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_vms]],
-                             [7, _tr('Memory (Shared)'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_shared]],
-                             [8, _tr('Read Data'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_disk_read_data]],
-                             [9, _tr('Written Data'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_disk_write_data]],
-                             [10, _tr('Read Speed'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_disk_read_speed]],
-                             [11, _tr('Write Speed'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_disk_write_speed]],
-                             [12, _tr('Priority'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [13, _tr('Threads'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [14, _tr('PPID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [15, _tr('UID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [16, _tr('GID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [17, _tr('Start Time'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [0.0], [False], [cell_data_function_start_time]],
-                             [18, _tr('Command Line'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [19, _tr('CPU Time'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_cpu_time]],
-                             [20, _tr('Memory'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory]],
-                             [21, _tr('CPU') + " - " + _tr('Recursive'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_cpu_usage_percent_recursive]],
-                             [22, _tr('Memory (RSS)') + " - " + _tr('Recursive'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_rss_recursive]],
-                             [23, _tr('Memory') + " - " + _tr('Recursive'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_recursive]],
-                             [24, _tr('GPU'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_gpu_usage_percent]],
-                             [25, _tr('GPU Memory'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_gpu]]
+                             [0, _('Name'), 3, 2, 3, [bool, str, str], ['internal_column', 'CellRendererPixbuf', 'CellRendererText'], ['no_cell_attribute', 'icon_name', 'text'], [0, 1, 2], ['no_cell_alignment', 0.0, 0.0], ['no_set_expand', False, False], ['no_cell_function', 'no_cell_function', 'no_cell_function']],
+                             [1, _('PID'), 2, 1, 2, [str, int], ['internal_column', 'CellRendererText'], ['no_cell_attribute', 'text'], [0, 1], ['no_cell_alignment', 1.0], [False, False], ['no_cell_function', 'no_cell_function']],
+                             [2, _('User'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [3, _('Status'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [4, _('CPU'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_cpu_usage_percent]],
+                             [5, _('Memory (RSS)'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_rss]],
+                             [6, _('Memory (VMS)'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_vms]],
+                             [7, _('Memory (Shared)'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_shared]],
+                             [8, _('Read Data'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_disk_read_data]],
+                             [9, _('Written Data'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_disk_write_data]],
+                             [10, _('Read Speed'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_disk_read_speed]],
+                             [11, _('Write Speed'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_disk_write_speed]],
+                             [12, _('Priority'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [13, _('Threads'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [14, _('PPID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [15, _('UID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [16, _('GID'), 1, 1, 1, [int], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [17, _('Start Time'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [0.0], [False], [cell_data_function_start_time]],
+                             [18, _('Command Line'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [19, _('CPU Time'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_cpu_time]],
+                             [20, _('Memory'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory]],
+                             [21, _('CPU') + " - " + _('Recursive'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_cpu_usage_percent_recursive]],
+                             [22, _('Memory (RSS)') + " - " + _('Recursive'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_rss_recursive]],
+                             [23, _('Memory') + " - " + _('Recursive'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_recursive]],
+                             [24, _('GPU'), 1, 1, 1, [float], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_gpu_usage_percent]],
+                             [25, _('GPU Memory'), 1, 1, 1, [GObject.TYPE_INT64], ['CellRendererText'], ['text'], [0], [1.0], [False], [cell_data_function_memory_gpu]]
                              ]
 
-        self.summable_column_dict = {_tr('CPU'): "cpu_usage", _tr('Memory (RSS)'): "memory_rss", _tr('Memory (VMS)'): "memory_vms",
-                                     _tr('Memory (Shared)'): "memory_shared", _tr('Read Data'): "read_data",
-                                     _tr('Written Data'): "written_data", _tr('Read Speed'): "read_speed",
-                                     _tr('Write Speed'): "write_speed", _tr('Memory'): "memory"}
+        self.summable_column_dict = {_('CPU'): "cpu_usage", _('Memory (RSS)'): "memory_rss", _('Memory (VMS)'): "memory_vms",
+                                     _('Memory (Shared)'): "memory_shared", _('Read Data'): "read_data",
+                                     _('Written Data'): "written_data", _('Read Speed'): "read_speed",
+                                     _('Write Speed'): "write_speed", _('Memory'): "memory"}
 
         # Prevent errors and empty tab list if a version of the application with less number of columns
         # than the previous one is run.
@@ -1273,7 +1273,7 @@ class Processes:
         application_image_dict = Libsysmon.get_application_name_image_dict()
 
         # Define process status text list for translation
-        process_status_list = [_tr("Running"), _tr("Sleeping"), _tr("Waiting"), _tr("Idle"), _tr("Zombie"), _tr("Stopped")]
+        process_status_list = [_("Running"), _("Sleeping"), _("Waiting"), _("Idle"), _("Zombie"), _("Stopped")]
 
         # Search filter is "Process Name". "-1" is used because "row_data_list" has internal column count and
         # it has to be converted to Python index. For example, if there are 3 internal columns but index is 2 for the last
@@ -1385,7 +1385,7 @@ class Processes:
             if 2 in treeview_columns_shown:
                 tab_data_row.append(row_data_dict["username"])
             if 3 in treeview_columns_shown:
-                tab_data_row.append(_tr(row_data_dict["status"]))
+                tab_data_row.append(_(row_data_dict["status"]))
             if 4 in treeview_columns_shown or 21 in treeview_columns_shown:
                 cpu_usage = row_data_dict["cpu_usage"]
                 cpu_usage_list.append(cpu_usage)
@@ -1507,7 +1507,7 @@ class Processes:
 
         deleted_rows, new_rows, updated_existing_row_index = Common.get_new_deleted_updated_rows(pid_list, self.pid_list_prev)
         Common.update_treestore_rows(self, self.rows_data_dict, deleted_rows, new_rows, updated_existing_row_index, pid_list, self.pid_list_prev, self.show_processes_as_tree, self.show_processes_of_all_users)
-        Common.searchentry_update_placeholder_text(self, _tr("Processes"))
+        Common.searchentry_update_placeholder_text(self, _("Processes"))
 
         # Expand all treeview rows (if treeview items are in tree structured, not list) if this is the first loop
         # of the Processes tab. It expands treeview rows (and children) in all loops if this control is not made.
@@ -1758,4 +1758,3 @@ def cell_backround_color(cell, value, max_value):
 
 
 Processes = Processes()
-

@@ -31,4 +31,3 @@ def main(_localedir):
 if __name__ == '__main__':
     app = SMCApplication()
     app.run(None)
-

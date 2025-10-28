@@ -7,7 +7,7 @@ from .Services import Services
 from .MainWindow import MainWindow
 from . import Common
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class ServicesMenu:
@@ -30,7 +30,7 @@ class ServicesMenu:
         self.menu_po.set_child(main_grid)
 
         # Label - menu title (Services)
-        label = Common.menu_title_label(_tr("Services"))
+        label = Common.menu_title_label(_("Services"))
         main_grid.attach(label, 0, 0, 1, 1)
 
         # Notebook
@@ -42,7 +42,7 @@ class ServicesMenu:
         # Tab pages and ScrolledWindow
         # "Add/Remove Columns" tab
         label = Gtk.Label()
-        label.set_label(_tr("Add/Remove Columns"))
+        label.set_label(_("Add/Remove Columns"))
         self.grid_add_remove_columns_tab = Gtk.Grid()
         self.grid_add_remove_columns_tab.set_margin_top(15)
         self.grid_add_remove_columns_tab.set_margin_bottom(5)
@@ -78,41 +78,41 @@ class ServicesMenu:
         self.grid_add_remove_columns_tab.attach(grid, 0, 0, 1, 1)
 
         # Label - tab title (Add/Remove Columns)
-        label = Common.title_label(_tr("Add/Remove Columns"))
+        label = Common.title_label(_("Add/Remove Columns"))
         grid.attach(label, 0, 0, 2, 1)
 
         # CheckButton (Name)
-        self.name_cb = Common.checkbutton(_tr("Name"), None)
+        self.name_cb = Common.checkbutton(_("Name"), None)
         self.name_cb.set_active(True)
         self.name_cb.set_sensitive(False)
         grid.attach(self.name_cb, 0, 1, 1, 1)
 
         # CheckButton (State)
-        self.state_cb = Common.checkbutton(_tr("State"), None)
+        self.state_cb = Common.checkbutton(_("State"), None)
         grid.attach(self.state_cb, 0, 2, 1, 1)
 
         # CheckButton (Main PID)
-        self.main_pid_cb = Common.checkbutton(_tr("Main PID"), None)
+        self.main_pid_cb = Common.checkbutton(_("Main PID"), None)
         grid.attach(self.main_pid_cb, 0, 3, 1, 1)
 
         # CheckButton (Active State)
-        self.active_state_cb = Common.checkbutton(_tr("Active State"), None)
+        self.active_state_cb = Common.checkbutton(_("Active State"), None)
         grid.attach(self.active_state_cb, 0, 4, 1, 1)
 
         # CheckButton (Load State)
-        self.load_state_cb = Common.checkbutton(_tr("Load State"), None)
+        self.load_state_cb = Common.checkbutton(_("Load State"), None)
         grid.attach(self.load_state_cb, 1, 1, 1, 1)
 
         # CheckButton (Sub-State)
-        self.sub_state_cb = Common.checkbutton(_tr("Sub-State"), None)
+        self.sub_state_cb = Common.checkbutton(_("Sub-State"), None)
         grid.attach(self.sub_state_cb, 1, 2, 1, 1)
 
         # CheckButton (Memory (RSS))
-        self.memory_rss_cb = Common.checkbutton(_tr("Memory (RSS)"), None)
+        self.memory_rss_cb = Common.checkbutton(_("Memory (RSS)"), None)
         grid.attach(self.memory_rss_cb, 1, 3, 1, 1)
 
         # CheckButton (Description)
-        self.description_cb = Common.checkbutton(_tr("Description"), None)
+        self.description_cb = Common.checkbutton(_("Description"), None)
         grid.attach(self.description_cb, 1, 4, 1, 1)
 
 
@@ -259,4 +259,3 @@ class ServicesMenu:
 
 
 ServicesMenu = ServicesMenu()
-

@@ -14,7 +14,7 @@ Common.language_translation_support()
 from .Performance import Performance
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class MainWindow():
@@ -25,7 +25,7 @@ class MainWindow():
         Run initial functions and generate main window.
         """
 
-        Libsysmon.set_translation_func(_tr)
+        Libsysmon.set_translation_func(_)
 
         self.light_dark_theme()
 
@@ -63,7 +63,7 @@ class MainWindow():
 
         # Application window
         self.main_window = Gtk.ApplicationWindow()
-        self.main_window.set_title(_tr("System Monitoring Center"))
+        self.main_window.set_title(_("System Monitoring Center"))
         self.main_window.set_icon_name("system-monitoring-center")
 
         # Set window opacity
@@ -105,7 +105,7 @@ class MainWindow():
         # MenuButton (Tab menus)
         self.tab_menu_menubutton = Gtk.MenuButton()
         self.tab_menu_menubutton.set_icon_name("document-properties-symbolic")
-        self.tab_menu_menubutton.set_tooltip_text(_tr("Customization menu for the current tab"))
+        self.tab_menu_menubutton.set_tooltip_text(_("Customization menu for the current tab"))
         self.tab_menu_menubutton.set_has_frame(False)
         self.tab_menu_menubutton.set_create_popup_func(self.tab_menu_popup_func)
         self.tab_menu_menubutton.set_direction(Gtk.ArrowType.DOWN)
@@ -136,23 +136,23 @@ class MainWindow():
         self.window_headerbar.pack_start(self.performance_summary_hb_grid)
 
         # Label (CPU)
-        label = Common.performance_summary_headerbar_label(_tr("CPU") + ":")
+        label = Common.performance_summary_headerbar_label(_("CPU") + ":")
         self.performance_summary_hb_grid.attach(label, 0, 0, 1, 1)
 
         # Label (RAM)
-        label = Common.performance_summary_headerbar_label(_tr("RAM") + ":")
+        label = Common.performance_summary_headerbar_label(_("RAM") + ":")
         self.performance_summary_hb_grid.attach(label, 0, 1, 1, 1)
 
         # Label (Disk)
-        label = Common.performance_summary_headerbar_label(_tr("Disk") + ":")
+        label = Common.performance_summary_headerbar_label(_("Disk") + ":")
         label.set_margin_start(10)
-        label.set_tooltip_text(f'{_tr("Read Speed")} + {_tr("Write Speed")}')
+        label.set_tooltip_text(f'{_("Read Speed")} + {_("Write Speed")}')
         self.performance_summary_hb_grid.attach(label, 2, 0, 1, 1)
 
         # Label (Network)
-        label = Common.performance_summary_headerbar_label(_tr("Network") + ":")
+        label = Common.performance_summary_headerbar_label(_("Network") + ":")
         label.set_margin_start(10)
-        label.set_tooltip_text(f'{_tr("Download Speed")} + {_tr("Upload Speed")}')
+        label.set_tooltip_text(f'{_("Download Speed")} + {_("Upload Speed")}')
         self.performance_summary_hb_grid.attach(label, 2, 1, 1, 1)
 
         # DrawingArea (CPU)
@@ -194,27 +194,27 @@ class MainWindow():
         self.main_grid.attach(main_tab_tb_grid, 0, 0, 1, 1)
 
         # ToggleButton (Performance tab)
-        self.performance_tb = Common.main_tab_togglebutton(_tr("Performance"), "system-monitoring-center-performance-symbolic")
+        self.performance_tb = Common.main_tab_togglebutton(_("Performance"), "system-monitoring-center-performance-symbolic")
         self.performance_tb.set_group(None)
         main_tab_tb_grid.attach(self.performance_tb, 0, 0, 1, 1)
 
         # ToggleButton (Processes tab)
-        self.processes_tb = Common.main_tab_togglebutton(_tr("Processes"), "system-monitoring-center-process-symbolic")
+        self.processes_tb = Common.main_tab_togglebutton(_("Processes"), "system-monitoring-center-process-symbolic")
         self.processes_tb.set_group(self.performance_tb)
         main_tab_tb_grid.attach(self.processes_tb, 1, 0, 1, 1)
 
         # ToggleButton (Users tab)
-        self.users_tb = Common.main_tab_togglebutton(_tr("Users"), "system-monitoring-center-user-symbolic")
+        self.users_tb = Common.main_tab_togglebutton(_("Users"), "system-monitoring-center-user-symbolic")
         self.users_tb.set_group(self.performance_tb)
         main_tab_tb_grid.attach(self.users_tb, 2, 0, 1, 1)
 
         # ToggleButton (Services tab)
-        self.services_tb = Common.main_tab_togglebutton(_tr("Services"), "system-monitoring-center-services-symbolic")
+        self.services_tb = Common.main_tab_togglebutton(_("Services"), "system-monitoring-center-services-symbolic")
         self.services_tb.set_group(self.performance_tb)
         main_tab_tb_grid.attach(self.services_tb, 3, 0, 1, 1)
 
         # ToggleButton (System tab)
-        self.system_tb = Common.main_tab_togglebutton(_tr("System"), "system-monitoring-center-system-symbolic")
+        self.system_tb = Common.main_tab_togglebutton(_("System"), "system-monitoring-center-system-symbolic")
         self.system_tb.set_group(self.performance_tb)
         main_tab_tb_grid.attach(self.system_tb, 4, 0, 1, 1)
 
@@ -280,37 +280,37 @@ class MainWindow():
         self.paned.set_end_child(grid)
 
         # ToggleButton (Summary tab)
-        self.summary_tb = Common.sub_tab_togglebutton(_tr("Summary"), "system-monitoring-center-performance-symbolic")
+        self.summary_tb = Common.sub_tab_togglebutton(_("Summary"), "system-monitoring-center-performance-symbolic")
         self.summary_tb.set_group(None)
         self.sub_tab_tb_grid.attach(self.summary_tb, 0, 0, 1, 1)
 
         # ToggleButton (CPU tab)
-        self.cpu_tb = Common.sub_tab_togglebutton(_tr("CPU"), "system-monitoring-center-cpu-symbolic")
+        self.cpu_tb = Common.sub_tab_togglebutton(_("CPU"), "system-monitoring-center-cpu-symbolic")
         self.cpu_tb.set_group(self.summary_tb)
         self.sub_tab_tb_grid.attach(self.cpu_tb, 0, 2, 1, 1)
 
         # ToggleButton (Memory tab)
-        self.memory_tb = Common.sub_tab_togglebutton(_tr("Memory"), "system-monitoring-center-ram-symbolic")
+        self.memory_tb = Common.sub_tab_togglebutton(_("Memory"), "system-monitoring-center-ram-symbolic")
         self.memory_tb.set_group(self.summary_tb)
         self.sub_tab_tb_grid.attach(self.memory_tb, 0, 4, 1, 1)
 
         # ToggleButton (Disk tab)
-        self.disk_tb = Common.sub_tab_togglebutton(_tr("Disk"), "system-monitoring-center-disk-hdd-symbolic")
+        self.disk_tb = Common.sub_tab_togglebutton(_("Disk"), "system-monitoring-center-disk-hdd-symbolic")
         self.disk_tb.set_group(self.summary_tb)
         self.sub_tab_tb_grid.attach(self.disk_tb, 0, 6, 1, 1)
 
         # ToggleButton (Network tab)
-        self.network_tb = Common.sub_tab_togglebutton(_tr("Network"), "system-monitoring-center-network-symbolic")
+        self.network_tb = Common.sub_tab_togglebutton(_("Network"), "system-monitoring-center-network-symbolic")
         self.network_tb.set_group(self.summary_tb)
         self.sub_tab_tb_grid.attach(self.network_tb, 0, 8, 1, 1)
 
         # ToggleButton (GPU tab)
-        self.gpu_tb = Common.sub_tab_togglebutton(_tr("GPU"), "system-monitoring-center-graphics-card-symbolic")
+        self.gpu_tb = Common.sub_tab_togglebutton(_("GPU"), "system-monitoring-center-graphics-card-symbolic")
         self.gpu_tb.set_group(self.summary_tb)
         self.sub_tab_tb_grid.attach(self.gpu_tb, 0, 10, 1, 1)
 
         # ToggleButton (Sensors tab)
-        self.sensors_tb = Common.sub_tab_togglebutton(_tr("Sensors"), "system-monitoring-center-temperature-symbolic")
+        self.sensors_tb = Common.sub_tab_togglebutton(_("Sensors"), "system-monitoring-center-temperature-symbolic")
         self.sensors_tb.set_group(self.summary_tb)
         self.sub_tab_tb_grid.attach(self.sensors_tb, 0, 12, 1, 1)
 
@@ -434,11 +434,11 @@ class MainWindow():
 
             messagedialog = Gtk.MessageDialog(transient_for=MainWindow.main_window,
                                               modal=True,
-                                              title=_tr("Information") + " (16.03.2024)",
+                                              title=_("Information") + " (16.03.2024)",
                                               message_type=Gtk.MessageType.INFO,
                                               buttons=Gtk.ButtonsType.CLOSE,
-                                              text=_tr("Information"),
-                                              secondary_text=_tr("This project has been picked up by Mamolinux. We intend to provide minor fixes for now.\nThere will not be any major feature upgrades. This message will be removed in upcoming releases.")
+                                              text=_("Information"),
+                                              secondary_text=_("This project has been picked up by Mamolinux. We intend to provide minor fixes for now.\nThere will not be any major feature upgrades. This message will be removed in upcoming releases.")
                                               )
             messagedialog.connect("response", on_messagedialog_response)
             messagedialog.present()
@@ -469,9 +469,9 @@ class MainWindow():
 
         # Menu model
         main_menu_model = Gio.Menu.new()
-        main_menu_model.append(_tr("Refresh"), "win.refresh_tab")
-        main_menu_model.append(_tr("General Settings"), "win.settings")
-        main_menu_model.append(_tr("About"), "win.about")
+        main_menu_model.append(_("Refresh"), "win.refresh_tab")
+        main_menu_model.append(_("General Settings"), "win.settings")
+        main_menu_model.append(_("About"), "win.about")
 
         # Popover menu
         self.main_menu_po_menu = Gtk.PopoverMenu()
@@ -554,14 +554,14 @@ class MainWindow():
         self.about_dialog = Gtk.AboutDialog()
         self.about_dialog.set_modal(self.main_window)
         self.about_dialog.set_transient_for(self.main_window)
-        self.about_dialog.set_program_name(_tr("System Monitoring Center"))
+        self.about_dialog.set_program_name(_("System Monitoring Center"))
         self.about_dialog.set_logo_icon_name("system-monitoring-center")
-        self.about_dialog.set_comments(_tr("Multi-featured system monitor"))
+        self.about_dialog.set_comments(_("Multi-featured system monitor"))
         self.about_dialog.set_authors(authors)
-        self.about_dialog.add_credit_section(_tr('Maintainer'), mainatainers)
+        self.about_dialog.add_credit_section(_('Maintainer'), mainatainers)
         self.about_dialog.set_version(software_version)
         self.about_dialog.set_copyright(copyrights)
-        self.about_dialog.set_website_label(_tr('Official Website'))
+        self.about_dialog.set_website_label(_('Official Website'))
         self.about_dialog.set_website("https://hsbasu.github.io/system-monitoring-center/")
         self.about_dialog.set_license_type(Gtk.License.GPL_3_0)
         self.about_dialog.set_translator_credits(translators)
@@ -871,7 +871,7 @@ class MainWindow():
         # Define variables for to be used for adding devices to list.
         # Check if Summary tab is selected.
         if Config.performance_tab_current_sub_tab == 0:
-            device_list = [_tr("Summary")]
+            device_list = [_("Summary")]
             selected_device = device_list[0]
             listbox_row_number = 1
             tooltip_text = ""
@@ -881,11 +881,11 @@ class MainWindow():
             device_list = Performance.logical_core_list
             selected_device = Performance.selected_cpu_core
             listbox_row_number = 3
-            tooltip_text = _tr("CPU core selection affects only frequency and cache memory information.")
+            tooltip_text = _("CPU core selection affects only frequency and cache memory information.")
 
         # Check if Memory tab is selected.
         elif Config.performance_tab_current_sub_tab == 2:
-            device_list = [_tr("RAM") + "-" + _tr("Swap Memory")]
+            device_list = [_("RAM") + "-" + _("Swap Memory")]
             selected_device = device_list[0]
             listbox_row_number = 5
             tooltip_text = ""
@@ -1021,10 +1021,10 @@ class MainWindow():
             grid.attach(label, 0, 0, 1, 1)
             # Also add disk usage percentage label next to device name if this is Disk tab.
             if Config.performance_tab_current_sub_tab == 3:
-                _, _, _, _, disk_usage_percentage, disk_mount_point, encrypted_disk_name = Libsysmon.get_disk_file_system_capacity_used_free_used_percent_mount_point(disk_filesystem_information_list, device_list, device)
+                disk_file_system, disk_capacity, disk_used, disk_free, disk_usage_percentage, disk_mount_point, encrypted_disk_name = Libsysmon.get_disk_file_system_capacity_used_free_used_percent_mount_point(disk_filesystem_information_list, device_list, device)
                 label = Gtk.Label()
                 label.add_css_class("dim-label")
-                if disk_mount_point == "[" + _tr("Not mounted") + "]":
+                if disk_mount_point == "[" + _("Not mounted") + "]":
                     label.set_label(f'  (-%)')
                 elif encrypted_disk_name != "":
                     label.set_label(f' - {encrypted_disk_name}  ({disk_usage_percentage:.0f}%)')
@@ -1098,7 +1098,7 @@ class MainWindow():
                 style_provider.load_from_data(css, len(css))
 
             # Generate a new label for the information and attach it to the grid at (0, 0) position.
-            label_root_warning = Gtk.Label(label=_tr("Warning! The application has been run with root privileges, you may harm your system."))
+            label_root_warning = Gtk.Label(label=_("Warning! The application has been run with root privileges, you may harm your system."))
             label_root_warning.get_style_context().add_provider(style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
             self.main_grid.insert_row(0)
             # Attach the label to the grid at (0, 0) position.
@@ -1200,4 +1200,3 @@ class MainWindow():
 
 
 MainWindow = MainWindow()
-

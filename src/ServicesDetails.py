@@ -15,7 +15,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class ServicesDetails:
@@ -33,7 +33,7 @@ class ServicesDetails:
         # Window
         self.service_details_window = Gtk.Window()
         self.service_details_window.set_default_size(500, 460)
-        self.service_details_window.set_title(_tr("Service Details"))
+        self.service_details_window.set_title(_("Service Details"))
         self.service_details_window.set_icon_name("system-monitoring-center")
         self.service_details_window.set_transient_for(MainWindow.main_window)
         self.service_details_window.set_modal(True)
@@ -56,12 +56,12 @@ class ServicesDetails:
         # Tab pages and ScrolledWindow
         # "Summary" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("Summary"))
+        tab_title_label.set_label(_("Summary"))
         self.scrolledwindow_summary_tab = Gtk.ScrolledWindow()
         self.notebook.append_page(self.scrolledwindow_summary_tab, tab_title_label)
         # "Dependencies" tab
         tab_title_label = Gtk.Label()
-        tab_title_label.set_label(_tr("Dependencies"))
+        tab_title_label.set_label(_("Dependencies"))
         self.scrolledwindow_dependencies_tab = Gtk.ScrolledWindow()
         self.notebook.append_page(self.scrolledwindow_dependencies_tab, tab_title_label)
 
@@ -85,7 +85,7 @@ class ServicesDetails:
         viewport.set_child(grid)
 
         # Label (Name)
-        label = Common.static_information_label(_tr("Name"))
+        label = Common.static_information_label(_("Name"))
         grid.attach(label, 0, 0, 1, 1)
         # Label (Name)
         label = Common.static_information_label(":")
@@ -95,7 +95,7 @@ class ServicesDetails:
         grid.attach(self.name_label, 2, 0, 1, 1)
 
         # Label (Description)
-        label = Common.static_information_label(_tr("Description"))
+        label = Common.static_information_label(_("Description"))
         grid.attach(label, 0, 1, 1, 1)
         # Label (Description)
         label = Common.static_information_label(":")
@@ -105,7 +105,7 @@ class ServicesDetails:
         grid.attach(self.description_label, 2, 1, 1, 1)
 
         # Label (Unit File State - Preset)
-        label = Common.static_information_label(_tr("Unit File State") + " - " + _tr("Preset"))
+        label = Common.static_information_label(_("Unit File State") + " - " + _("Preset"))
         grid.attach(label, 0, 2, 1, 1)
         # Label (Unit File State - Preset)
         label = Common.static_information_label(":")
@@ -115,7 +115,7 @@ class ServicesDetails:
         grid.attach(self.unit_file_state_label, 2, 2, 1, 1)
 
         # Label (Load State)
-        label = Common.static_information_label(_tr("Load State"))
+        label = Common.static_information_label(_("Load State"))
         grid.attach(label, 0, 3, 1, 1)
         # Label (Load State)
         label = Common.static_information_label(":")
@@ -125,7 +125,7 @@ class ServicesDetails:
         grid.attach(self.load_state_label, 2, 3, 1, 1)
 
         # Label (Active State)
-        label = Common.static_information_label(_tr("Active State"))
+        label = Common.static_information_label(_("Active State"))
         grid.attach(label, 0, 4, 1, 1)
         # Label (Active State)
         label = Common.static_information_label(":")
@@ -135,7 +135,7 @@ class ServicesDetails:
         grid.attach(self.active_state_label, 2, 4, 1, 1)
 
         # Label (Sub-State)
-        label = Common.static_information_label(_tr("Sub-State"))
+        label = Common.static_information_label(_("Sub-State"))
         grid.attach(label, 0, 5, 1, 1)
         # Label (Sub-State)
         label = Common.static_information_label(":")
@@ -145,7 +145,7 @@ class ServicesDetails:
         grid.attach(self.sub_state_label, 2, 5, 1, 1)
 
         # Label (Path)
-        label = Common.static_information_label(_tr("Path"))
+        label = Common.static_information_label(_("Path"))
         grid.attach(label, 0, 6, 1, 1)
         # Label (Path)
         label = Common.static_information_label(":")
@@ -155,7 +155,7 @@ class ServicesDetails:
         grid.attach(self.path_label, 2, 6, 1, 1)
 
         # Label (Documentation)
-        label = Common.static_information_label(_tr("Documentation"))
+        label = Common.static_information_label(_("Documentation"))
         label.set_valign(Gtk.Align.START)
         grid.attach(label, 0, 7, 1, 1)
         # Label (Documentation)
@@ -167,7 +167,7 @@ class ServicesDetails:
         grid.attach(self.documentation_label, 2, 7, 1, 1)
 
         # Label (Triggered By)
-        label = Common.static_information_label(_tr("Triggered By"))
+        label = Common.static_information_label(_("Triggered By"))
         grid.attach(label, 0, 8, 1, 1)
         # Label (Triggered By)
         label = Common.static_information_label(":")
@@ -177,7 +177,7 @@ class ServicesDetails:
         grid.attach(self.triggered_by_label, 2, 8, 1, 1)
 
         # Label (Main PID)
-        label = Common.static_information_label(_tr("Main PID"))
+        label = Common.static_information_label(_("Main PID"))
         grid.attach(label, 0, 9, 1, 1)
         # Label (Main PID)
         label = Common.static_information_label(":")
@@ -187,7 +187,7 @@ class ServicesDetails:
         grid.attach(self.main_pid_label, 2, 9, 1, 1)
 
         # Label (Main Process Start Time)
-        label = Common.static_information_label(_tr("Main Process Start Time"))
+        label = Common.static_information_label(_("Main Process Start Time"))
         grid.attach(label, 0, 10, 1, 1)
         # Label (Main Process Start Time)
         label = Common.static_information_label(":")
@@ -197,7 +197,7 @@ class ServicesDetails:
         grid.attach(self.main_process_start_time_label, 2, 10, 1, 1)
 
         # Label (Main Process End Time)
-        label = Common.static_information_label(_tr("Main Process End Time"))
+        label = Common.static_information_label(_("Main Process End Time"))
         grid.attach(label, 0, 11, 1, 1)
         # Label (Main Process End Time)
         label = Common.static_information_label(":")
@@ -207,7 +207,7 @@ class ServicesDetails:
         grid.attach(self.main_process_end_time_label, 2, 11, 1, 1)
 
         # Label (Type)
-        label = Common.static_information_label(_tr("Type"))
+        label = Common.static_information_label(_("Type"))
         grid.attach(label, 0, 12, 1, 1)
         # Label (Type)
         label = Common.static_information_label(":")
@@ -217,7 +217,7 @@ class ServicesDetails:
         grid.attach(self.type_label, 2, 12, 1, 1)
 
         # Label (Memory (RSS))
-        label = Common.static_information_label(_tr("Memory (RSS)"))
+        label = Common.static_information_label(_("Memory (RSS)"))
         grid.attach(label, 0, 13, 1, 1)
         # Label (Memory (RSS))
         label = Common.static_information_label(":")
@@ -241,7 +241,7 @@ class ServicesDetails:
         viewport.set_child(grid)
 
         # Label (Requires)
-        label = Common.static_information_label(_tr("Requires"))
+        label = Common.static_information_label(_("Requires"))
         label.set_valign(Gtk.Align.START)
         grid.attach(label, 0, 0, 1, 1)
         # Label (Requires)
@@ -253,7 +253,7 @@ class ServicesDetails:
         grid.attach(self.requires_label, 2, 0, 1, 1)
 
         # Label (Conflicts)
-        label = Common.static_information_label(_tr("Conflicts"))
+        label = Common.static_information_label(_("Conflicts"))
         label.set_valign(Gtk.Align.START)
         grid.attach(label, 0, 1, 1, 1)
         # Label (Conflicts)
@@ -265,7 +265,7 @@ class ServicesDetails:
         grid.attach(self.conflicts_label, 2, 1, 1, 1)
 
         # Label (After)
-        label = Common.static_information_label(_tr("After"))
+        label = Common.static_information_label(_("After"))
         label.set_valign(Gtk.Align.START)
         grid.attach(label, 0, 2, 1, 1)
         # Label (After)
@@ -277,7 +277,7 @@ class ServicesDetails:
         grid.attach(self.after_label, 2, 2, 1, 1)
 
         # Label (Before)
-        label = Common.static_information_label(_tr("Before"))
+        label = Common.static_information_label(_("Before"))
         label.set_valign(Gtk.Align.START)
         grid.attach(label, 0, 3, 1, 1)
         # Label (Before)
@@ -405,4 +405,3 @@ class ServicesDetails:
 
 
 ServicesDetails = ServicesDetails()
-

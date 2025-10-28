@@ -9,7 +9,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Sensors:
@@ -48,7 +48,7 @@ class Sensors:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (Sensors)
-        label = Common.tab_title_label(_tr("Sensors"))
+        label = Common.tab_title_label(_("Sensors"))
         grid.attach(label, 0, 0, 1, 1)
 
         # SearchEntry
@@ -109,11 +109,11 @@ class Sensors:
         """
 
         self.row_data_list = [
-                             [0, _tr('Device'), 3, 2, 3, [bool, str, str], ['internal_column', 'CellRendererPixbuf', 'CellRendererText'], ['no_cell_attribute', 'icon_name', 'text'], [0, 1, 2], ['no_cell_alignment', 0.0, 0.0], ['no_set_expand', False, False], ['no_cell_function', 'no_cell_function', 'no_cell_function']],
-                             [1, _tr('Name'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
-                             [2, _tr('Current Value'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [3, _tr('High'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
-                             [4, _tr('Critical'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']]
+                             [0, _('Device'), 3, 2, 3, [bool, str, str], ['internal_column', 'CellRendererPixbuf', 'CellRendererText'], ['no_cell_attribute', 'icon_name', 'text'], [0, 1, 2], ['no_cell_alignment', 0.0, 0.0], ['no_set_expand', False, False], ['no_cell_function', 'no_cell_function', 'no_cell_function']],
+                             [1, _('Name'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [0.0], [False], ['no_cell_function']],
+                             [2, _('Current Value'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [3, _('High'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']],
+                             [4, _('Critical'), 1, 1, 1, [str], ['CellRendererText'], ['text'], [0], [1.0], [False], ['no_cell_function']]
                              ]
 
         Common.reset_tab_settings(self)
@@ -201,7 +201,7 @@ class Sensors:
         # Update search results.
         self.on_searchentry_changed(self.searchentry)
 
-        Common.searchentry_update_placeholder_text(self, _tr("Sensors"))
+        Common.searchentry_update_placeholder_text(self, _("Sensors"))
 
         self.treeview_columns_shown_prev = self.treeview_columns_shown
         self.data_row_sorting_column_prev = self.data_row_sorting_column
@@ -211,4 +211,3 @@ class Sensors:
 
 
 Sensors = Sensors()
-
