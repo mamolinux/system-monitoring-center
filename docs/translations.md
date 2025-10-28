@@ -20,11 +20,13 @@
 
 # Notes For Translators:
 
-- A translation editor (for example: Poedit) may be used for translating the ```.po``` files.
-
 - Be careful about uppercase and lowercase letters.
 
-- Send only ```.po``` files.
+To help translate **System Monitoring Center** in your favourite language follow these steps:
+1. Go to [translations page](https://translations.launchpad.net/mamolinux/trunk/+pots/system-monitoring-center) on Launchpad.
+2. Click on the language, you want to translate.
+3. Translate strings.
+4. Finally, click on **Save & Continue**.
 
 
 # Details For Some Texts:

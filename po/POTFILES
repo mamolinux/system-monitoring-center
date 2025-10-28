@@ -1,6 +1,6 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
 data/io.github.hakandundar34coding.system-monitoring-center.desktop.in
-
-src/__init__.py
 src/Common.py
 src/Config.py
 src/Cpu.py
@@ -9,6 +9,7 @@ src/Disk.py
 src/DiskMenu.py
 src/Gpu.py
 src/GpuMenu.py
+src/__init__.py
 src/Libsysmon.py
 src/Main.py
 src/MainWindow.py
@@ -33,5 +34,3 @@ src/System.py
 src/Users.py
 src/UsersDetails.py
 src/UsersMenu.py
-src/__version__
-

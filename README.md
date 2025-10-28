@@ -1,49 +1,64 @@
 # [System Monitoring Center](https://hsbasu.github.io/system-monitoring-center)
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/data/icons/apps/system-monitoring-center.svg?sanitize=true" width="128">
+  <img src="https://raw.githubusercontent.com/mamolinux/system-monitoring-center/master/data/icons/apps/system-monitoring-center.svg?sanitize=true" width="128">
+</p>
+
+
+<p align="center">
+  <strong>
+    Multi-featured system monitor
+  </strong>
+</p>
+
+
+<p align="center">
+  <a href="https://github.com/mamolinux/system-monitoring-center/tags">
+    <img alt="Platform (GNU/Linux)" src="https://img.shields.io/badge/platform-GNU/Linux-blue.svg"/>
+  </a>
+	<a href="https://github.com/mamolinux/system-monitoring-center/blob/master/LICENSE">
+		<img src="https://img.shields.io/github/license/mamolinux/system-monitoring-center?label=License" alt="License">
+	</a>
+  <a href="#">
+    <img src="https://img.shields.io/github/repo-size/mamolinux/system-monitoring-center?label=Repo%20size" alt="GitHub repo size">
+  </a>
+	<a href="https://github.com/mamolinux/system-monitoring-center/issues" target="_blank">
+		<img src="https://img.shields.io/github/issues/mamolinux/system-monitoring-center?label=Issues" alt="Open Issues">
+	</a>
+	<a href="https://github.com/mamolinux/system-monitoring-center/pulls" target="_blank">
+		<img src="https://img.shields.io/github/issues-pr/mamolinux/system-monitoring-center?label=PR" alt="Open PRs">
+	</a>
+  <a href="https://github.com/mamolinux/system-monitoring-center/tags/">
+    <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/tag/mamolinux/system-monitoring-center?sort=semver&label=Latest tag">
+  </a>
+  <a href="https://github.com/mamolinux/system-monitoring-center/tags">
+    <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/mamolinux/system-monitoring-center/total?label=Downloads">
+  </a>
+	<a href="https://github.com/mamolinux/system-monitoring-center/releases/download/2.26.2/system-monitoring-center_2.26.2_all.deb">
+		<img src="https://img.shields.io/github/downloads/mamolinux/system-monitoring-center/2.26.2/system-monitoring-center_2.26.2_all.deb?color=blue&label=Downloads%40Latest%20Binary" alt="GitHub release (latest by date and asset)">
+	</a>
+  <!-- <a href="https://pypi.org/project/system-monitoring-center/">
+    <img src="https://static.pepy.tech/personalized-badge/system-monitoring-center?period=total&units=international_system&left_color=grey&right_color=green&left_text=downloads"/>
+  </a> -->
+  <!-- <a href="https://flathub.org/apps/details/io.github.hakandundar34coding.system-monitoring-center">
+    <img alt="Flathub" src="https://img.shields.io/flathub/downloads/io.github.hakandundar34coding.system-monitoring-center">
+  </a> -->
+</p>
+
+
+<p align="center">
+  <a href="https://github.com/mamolinux/system-monitoring-center/tags">
+    <img src="https://img.shields.io/badge/Code-Python3-52a381">
+  </a>
+  <a href="https://github.com/mamolinux/system-monitoring-center/tags">
+    <img src="https://img.shields.io/badge/GUI-GTK4-52a381">
+  </a>
 </p>
 
 
 <p align="center">
     <strong>
-        Multi-featured system monitor
-    </strong>
-</p>
-
-
-<p align="center">
-    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
-        <img alt="Platform (GNU/Linux)" src="https://img.shields.io/badge/platform-GNU/Linux-blue.svg"/>
-    </a>
-    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
-        <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/mamolinux/system-monitoring-center?sort=semver">
-    </a>
-    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
-        <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/mamolinux/system-monitoring-center/total">
-    </a>
-    <a href="https://pypi.org/project/system-monitoring-center/">
-        <img src="https://static.pepy.tech/personalized-badge/system-monitoring-center?period=total&units=international_system&left_color=grey&right_color=green&left_text=downloads"/>
-    </a>
-    <a href="https://flathub.org/apps/details/io.github.hakandundar34coding.system-monitoring-center">
-        <img alt="Flathub" src="https://img.shields.io/flathub/downloads/io.github.hakandundar34coding.system-monitoring-center">
-    </a>
-</p>
-
-
-<p align="center">
-    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
-        <img src="https://img.shields.io/badge/Code-Python3-52a381">
-    </a>
-    <a href="https://github.com/mamolinux/system-monitoring-center/tags">
-        <img src="https://img.shields.io/badge/GUI-GTK4-52a381">
-    </a>
-</p>
-
-
-<p align="center">
-    <strong>
-        Translations:
+      Translations:
     </strong>
     Chinese (Simplified) | Chinese (Traditional) | Czech | German | English | French | Hungarian | Persian | Polish | Portuguese (Brazilian) | Portuguese (Portugal) | Russian | Spanish | Turkish | <a href="docs/translations.md">Notes for translators</a>
 </p>
@@ -100,9 +115,15 @@
     - Installing from application stores (Pardus Application Center, Pi-Apps Store)
     - Installing from repositories of distributions
     - ~~Installing from PyPI as a Python package.~~ There will be no new packages on PyPI ([Details](docs/uninstall_pypi_package.md))
+    - Install from Ubuntu Private Archive:
+      Add the Launchpad PPA
+        ```bash
+        sudo add-apt-repository ppa:mamolinux/gui-apps
+        sudo apt update
+        sudo apt install leaptime-manager
+        ```
     - Running from source code:
-      - For SMC v2: in ```src/``` folder, run: ```python3 ./run_from_source.py```
-      - For SMC v1: in ```src/``` folder, run: ```python3 ./Main.py```
+      - Use the `test` script at the root of the repository.
 
 
 ### Dependencies:
@@ -195,3 +216,41 @@
 
 ![System Monitoring Center](screenshots/process_details__dark_system_theme_2.png)
 
+
+## Issue Tracking and Contributing
+If you are interested to contribute and enrich the code, you are most welcome. You can do it by:
+1. If you find a bug, to open a new issue with details: [Click Here](https://github.com/mamolinux/system-monitoring-center/issues)
+2. If you know how to fix a bug or want to add new feature/documentation to the existing package, please create a [Pull Request](https://github.com/mamolinux/system-monitoring-center/compare).
+
+### For Developers
+I am managing these apps all by myself during my free time. There are times when I can't contribute for months. So a little help is always welcome. If you want to test **System Monitoring Center**,
+1. Get the source package and unzip it using:
+    ```bash
+    wget https://github.com/mamolinux/system-monitoring-center/archive/refs/heads/master.zip
+    unzip master.zip
+    cd system-monitoring-center-master
+    ```
+2. Make desired modifications.
+3. Manually install using `meson`:
+    ```bash
+    rm -rf builddir
+    meson setup -Dprefix=$HOME/.local builddir
+    meson compile -C builddir --verbose
+    meson install -C builddir
+    ```
+    It will install all files under `/home/<yourusername>/.local`. To **remove** the locally (`/home/<yourusername>/.local`) installed files, run:
+    ```bash
+    ninja uninstall -C builddir
+    ```
+4. Test it by running in debug mode from terminal:	
+    ```bash
+    /home/<yourusername>/.local/bin/system-monitoring-center
+    ```
+
+### Translation
+All translations are done using using [Launchpad Translations](https://translations.launchpad.net/mamolinux/trunk/+templates). For detailed instructions visit [translations.md](https://github.com/mamolinux/system-monitoring-center/blob/master/docs/translations.md).
+
+## Contributors
+
+### Author
+[Himadri Sekhar Basu](https://github.com/hsbasu) is the current maintainer.
