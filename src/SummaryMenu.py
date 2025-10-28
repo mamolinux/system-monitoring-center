@@ -6,7 +6,7 @@ from .Config import Config
 from .Summary import Summary
 from . import Common
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class SummaryMenu:
@@ -31,19 +31,19 @@ class SummaryMenu:
         self.menu_po.set_child(main_grid)
 
         # Label - menu title (Summary)
-        label = Common.menu_title_label(_tr("Summary"))
+        label = Common.menu_title_label(_("Summary"))
         main_grid.attach(label, 0, 0, 2, 1)
 
         # Label (Graph - Show)
-        label = Common.title_label(_tr("Graph - Show"))
+        label = Common.title_label(_("Graph - Show"))
         main_grid.attach(label, 0, 1, 2, 1)
 
         # CheckButton (GPU Usage)
-        self.gpu_usage_cb = Common.checkbutton(_tr("GPU Usage"), None)
+        self.gpu_usage_cb = Common.checkbutton(_("GPU Usage"), None)
         main_grid.attach(self.gpu_usage_cb, 0, 2, 2, 1)
 
         # Label (This increases CPU usage.)
-        label = Common.static_information_label(_tr("This increases CPU usage."))
+        label = Common.static_information_label(_("This increases CPU usage."))
         label.set_margin_start(25)
         main_grid.attach(label, 0, 3, 2, 1)
 
@@ -127,4 +127,3 @@ class SummaryMenu:
 
 
 SummaryMenu = SummaryMenu()
-

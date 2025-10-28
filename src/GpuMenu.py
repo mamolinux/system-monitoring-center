@@ -8,7 +8,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class GpuMenu:
@@ -33,7 +33,7 @@ class GpuMenu:
         self.menu_po.set_child(main_grid)
 
         # Label - menu title (GPU)
-        label = Common.menu_title_label(_tr("GPU"))
+        label = Common.menu_title_label(_("GPU"))
         main_grid.attach(label, 0, 0, 2, 1)
 
         # Button (Graph Color)
@@ -68,4 +68,3 @@ class GpuMenu:
 
 
 GpuMenu = GpuMenu()
-

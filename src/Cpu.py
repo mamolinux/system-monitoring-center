@@ -8,7 +8,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Cpu:
@@ -46,17 +46,17 @@ class Cpu:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (CPU)
-        label = Common.tab_title_label(_tr("CPU"))
+        label = Common.tab_title_label(_("CPU"))
         grid.attach(label, 0, 0, 1, 2)
 
         # Label (device vendor-model label)
         self.device_vendor_model_label = Common.device_vendor_model_label()
-        self.device_vendor_model_label.set_tooltip_text(_tr("Vendor") + "-" + _tr("Model"))
+        self.device_vendor_model_label.set_tooltip_text(_("Vendor") + "-" + _("Model"))
         grid.attach(self.device_vendor_model_label, 1, 0, 1, 1)
 
         # Label (device kernel name)
         self.device_kernel_name_label = Common.device_kernel_name_label()
-        self.device_kernel_name_label.set_tooltip_text(_tr("Device Name In Kernel"))
+        self.device_kernel_name_label.set_tooltip_text(_("Device Name In Kernel"))
         grid.attach(self.device_kernel_name_label, 1, 1, 1, 1)
 
 
@@ -72,7 +72,7 @@ class Cpu:
         self.tab_grid.attach(grid, 0, 1, 1, 1)
 
         # Label (drawingarea upper-left)
-        self.da_upper_left_label = Common.da_upper_lower_label(_tr("CPU Usage (Average)"), Gtk.Align.START)
+        self.da_upper_left_label = Common.da_upper_lower_label(_("CPU Usage (Average)"), Gtk.Align.START)
         grid.attach(self.da_upper_left_label, 0, 0, 1, 1)
 
         # Label (drawingarea upper-right)
@@ -99,12 +99,12 @@ class Cpu:
 
         # Styled information widgets (Average Usage and Frequency)
         # ScrolledWindow (Average Usage and Frequency)
-        scrolledwindow, self.average_usage_label, self.frequency_label = Common.styled_information_scrolledwindow(_tr("Average Usage"), _tr("Average CPU usage of all cores"), _tr("Frequency"), None)
+        scrolledwindow, self.average_usage_label, self.frequency_label = Common.styled_information_scrolledwindow(_("Average Usage"), _("Average CPU usage of all cores"), _("Frequency"), None)
         performance_info_grid.attach(scrolledwindow, 0, 0, 1, 1)
 
         # Styled information widgets (Processes-Threads and Up Time)
         # ScrolledWindow (Processes-Threads and Up Time)
-        scrolledwindow, self.processes_threads_label, self.up_time_label = Common.styled_information_scrolledwindow(_tr("Processes") + "-" + _tr("Threads"), None, _tr("Up Time"), None)
+        scrolledwindow, self.processes_threads_label, self.up_time_label = Common.styled_information_scrolledwindow(_("Processes") + "-" + _("Threads"), None, _("Up Time"), None)
         performance_info_grid.attach(scrolledwindow, 0, 1, 1, 1)
 
         # Grid - Right information labels
@@ -113,43 +113,43 @@ class Cpu:
 
         # Labels - Right information labels
         # Label (Min-Max Frequency)
-        label = Common.static_information_label(_tr("Min-Max Frequency") + ":")
+        label = Common.static_information_label(_("Min-Max Frequency") + ":")
         performance_info_right_grid.attach(label, 0, 0, 1, 1)
         # Label (Min-Max Frequency)
         self.min_max_frequency_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.min_max_frequency_label, 1, 0, 1, 1)
 
         # Label (Cache (L1d-L1i))
-        label = Common.static_information_label(_tr("Cache") + "(L1d-L1i)" + ":")
+        label = Common.static_information_label(_("Cache") + "(L1d-L1i)" + ":")
         performance_info_right_grid.attach(label, 0, 1, 1, 1)
         # Label (Cache (L1d-L1i))
         self.cache_l1d_l1i_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.cache_l1d_l1i_label, 1, 1, 1, 1)
 
         # Label (Cache (L2-L3))
-        label = Common.static_information_label(_tr("Cache") + "(L2-L3)" + ":")
+        label = Common.static_information_label(_("Cache") + "(L2-L3)" + ":")
         performance_info_right_grid.attach(label, 0, 2, 1, 1)
         # Label (Cache (L2-L3))
         self.cache_l2_l3_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.cache_l2_l3_label, 1, 2, 1, 1)
 
         # Label (CPU Sockets)
-        label = Common.static_information_label(_tr("CPU Sockets") + ":")
+        label = Common.static_information_label(_("CPU Sockets") + ":")
         performance_info_right_grid.attach(label, 0, 3, 1, 1)
         # Label (CPU Sockets)
         self.cpu_sockets_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.cpu_sockets_label, 1, 3, 1, 1)
 
         # Label (Cores (Physical-Logical))
-        label = Common.static_information_label(_tr("Cores (Physical-Logical)") + ":")
-        label.set_tooltip_text(_tr("Number of online physical and logical CPU cores"))
+        label = Common.static_information_label(_("Cores (Physical-Logical)") + ":")
+        label.set_tooltip_text(_("Number of online physical and logical CPU cores"))
         performance_info_right_grid.attach(label, 0, 4, 1, 1)
         # Label (Cores (Physical-Logical))
         self.cores_phy_log_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.cores_phy_log_label, 1, 4, 1, 1)
 
         # Label (Architecture)
-        label = Common.static_information_label(_tr("Architecture") + ":")
+        label = Common.static_information_label(_("Architecture") + ":")
         performance_info_right_grid.attach(label, 0, 5, 1, 1)
         # Label (Architecture)
         self.architecture_label = Common.dynamic_information_label()
@@ -177,9 +177,9 @@ class Cpu:
         # Show information on labels
         show_cpu_usage_per_core = Config.show_cpu_usage_per_core
         if show_cpu_usage_per_core == 0:
-            self.da_upper_left_label.set_label(_tr("CPU Usage (Average)"))
+            self.da_upper_left_label.set_label(_("CPU Usage (Average)"))
         elif show_cpu_usage_per_core == 1:
-            self.da_upper_left_label.set_label(_tr("CPU Usage (Per Core)"))
+            self.da_upper_left_label.set_label(_("CPU Usage (Per Core)"))
         if isinstance(cpu_core_max_frequency, str) is False:
             self.min_max_frequency_label.set_label(f'{cpu_core_min_frequency:.2f} - {cpu_core_max_frequency:.2f} GHz')
         else:
@@ -233,4 +233,3 @@ class Cpu:
 
 
 Cpu = Cpu()
-

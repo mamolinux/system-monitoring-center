@@ -9,7 +9,7 @@ from .Performance import Performance
 from .MainWindow import MainWindow
 from . import Common
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class CpuMenu:
@@ -34,19 +34,19 @@ class CpuMenu:
         self.menu_po.set_child(main_grid)
 
         # Label - menu title (CPU)
-        label = Common.menu_title_label(_tr("CPU"))
+        label = Common.menu_title_label(_("CPU"))
         main_grid.attach(label, 0, 0, 1, 1)
 
         # Label (Graph - Show)
-        label = Common.title_label(_tr("Graph - Show"))
+        label = Common.title_label(_("Graph - Show"))
         main_grid.attach(label, 0, 1, 1, 1)
 
         # CheckButton (CPU Usage (Average))
-        self.cpu_usage_average_cb = Common.checkbutton(_tr("CPU Usage (Average)"), None)
+        self.cpu_usage_average_cb = Common.checkbutton(_("CPU Usage (Average)"), None)
         main_grid.attach(self.cpu_usage_average_cb, 0, 2, 1, 1)
 
         # CheckButton (CPU Usage (Per Core))
-        self.cpu_usage_per_core_cb = Common.checkbutton(_tr("CPU Usage (Per Core)"), self.cpu_usage_average_cb)
+        self.cpu_usage_per_core_cb = Common.checkbutton(_("CPU Usage (Per Core)"), self.cpu_usage_average_cb)
         main_grid.attach(self.cpu_usage_per_core_cb, 0, 3, 1, 1)
 
         # Separator
@@ -54,11 +54,11 @@ class CpuMenu:
         main_grid.attach(separator, 0, 4, 1, 1)
 
         # CheckButton (Show processes using max CPU)
-        self.show_processes_using_max_cpu_cb = Common.checkbutton(_tr("Show processes using max CPU"), None)
+        self.show_processes_using_max_cpu_cb = Common.checkbutton(_("Show processes using max CPU"), None)
         main_grid.attach(self.show_processes_using_max_cpu_cb, 0, 5, 1, 1)
 
         # Label (This increases CPU usage.)
-        label = Common.static_information_label(_tr("This increases CPU usage.") + "\n" + "(" + _tr("for all tabs") + ")")
+        label = Common.static_information_label(_("This increases CPU usage.") + "\n" + "(" + _("for all tabs") + ")")
         label.set_margin_start(25)
         main_grid.attach(label, 0, 6, 1, 1)
 
@@ -75,12 +75,12 @@ class CpuMenu:
         main_grid.attach(separator, 0, 9, 1, 1)
 
         # Label - title (Precision)
-        label = Common.title_label(_tr("Precision"))
+        label = Common.title_label(_("Precision"))
         main_grid.attach(label, 0, 10, 1, 1)
 
         # Label - precision (CPU)
         label = Gtk.Label()
-        label.set_label(_tr("CPU"))
+        label.set_label(_("CPU"))
         label.set_halign(Gtk.Align.CENTER)
         main_grid.attach(label, 0, 11, 1, 1)
 
@@ -94,15 +94,15 @@ class CpuMenu:
         main_grid.attach(separator, 0, 13, 1, 1)
 
         # Label (Cache)
-        label = Common.title_label(_tr("Cache"))
+        label = Common.title_label(_("Cache"))
         main_grid.attach(label, 0, 14, 1, 1)
 
         # CheckButton (CPU Usage (Average))
-        self.cpu_cache_socket_cb = Common.checkbutton(_tr("CPU Socket"), None)
+        self.cpu_cache_socket_cb = Common.checkbutton(_("CPU Socket"), None)
         main_grid.attach(self.cpu_cache_socket_cb, 0, 15, 1, 1)
 
         # CheckButton (CPU Usage (Per Core))
-        self.cpu_cache_core_cb = Common.checkbutton(_tr("Selected CPU Core"), self.cpu_cache_socket_cb)
+        self.cpu_cache_core_cb = Common.checkbutton(_("Selected CPU Core"), self.cpu_cache_socket_cb)
         main_grid.attach(self.cpu_cache_core_cb, 0, 16, 1, 1)
 
         # Separator
@@ -257,4 +257,3 @@ class CpuMenu:
 
 
 CpuMenu = CpuMenu()
-

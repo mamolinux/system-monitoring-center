@@ -11,7 +11,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class System:
@@ -47,17 +47,17 @@ class System:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (System)
-        label = Common.tab_title_label(_tr("System"))
+        label = Common.tab_title_label(_("System"))
         grid.attach(label, 0, 0, 1, 2)
 
         # Label (OS name-version)
         self.os_name_version_label = Common.device_vendor_model_label()
-        self.os_name_version_label.set_tooltip_text(_tr("Operating System (OS)"))
+        self.os_name_version_label.set_tooltip_text(_("Operating System (OS)"))
         grid.attach(self.os_name_version_label, 1, 0, 1, 1)
 
         # Label (computer vendor-model)
         self.computer_vendor_model_label = Common.device_kernel_name_label()
-        self.computer_vendor_model_label.set_tooltip_text(_tr("Computer"))
+        self.computer_vendor_model_label.set_tooltip_text(_("Computer"))
         grid.attach(self.computer_vendor_model_label, 1, 1, 1, 1)
 
         # Button (tab refresh)
@@ -197,172 +197,172 @@ class System:
 
         # Performance information labels
         """# Label - Title (Hardware)
-        label = Common.title_label(_tr("Hardware"))
+        label = Common.title_label(_("Hardware"))
         self.grid_hardware.attach(label, 0, 0, 2, 1)"""
 
         # Label (CPU)
-        label = Common.static_information_label(_tr("CPU") + ":")
+        label = Common.static_information_label(_("CPU") + ":")
         self.grid_hardware.attach(label, 0, 0, 1, 1)
         # Label (CPU)
         self.cpu_vendor_model_label = Common.dynamic_information_label()
         self.grid_hardware.attach(self.cpu_vendor_model_label, 1, 0, 3, 1)
 
         # Label (Memory)
-        label = Common.static_information_label(_tr("Memory") + ":")
+        label = Common.static_information_label(_("Memory") + ":")
         self.grid_hardware.attach(label, 0, 1, 1, 1)
         # Label (Memory)
         self.memory_capacity_label = Common.dynamic_information_label()
         self.grid_hardware.attach(self.memory_capacity_label, 1, 1, 3, 1)
 
         # Label (GPU)
-        label = Common.static_information_label(_tr("GPU") + ":")
+        label = Common.static_information_label(_("GPU") + ":")
         self.grid_hardware.attach(label, 0, 2, 1, 1)
         # Label (GPU)
         self.gpu_vendor_model_label = Common.dynamic_information_label()
         self.grid_hardware.attach(self.gpu_vendor_model_label, 1, 2, 3, 1)
 
         # Label (GPU (2))
-        self.gpu2_label = Common.static_information_label(_tr("GPU") + " (2)" + ":")
+        self.gpu2_label = Common.static_information_label(_("GPU") + " (2)" + ":")
         # Label (GPU (2))
         self.gpu_vendor_model_label2 = Common.dynamic_information_label()
 
         # Label (Monitors)
-        label = Common.static_information_label(_tr("Resolution") + ":")
+        label = Common.static_information_label(_("Resolution") + ":")
         self.grid_hardware.attach(label, 0, 3, 1, 1)
         # Label (Monitors)
         self.monitors_label = Common.dynamic_information_label()
         self.grid_hardware.attach(self.monitors_label, 1, 3, 3, 1)
 
         # Label - Title (Computer)
-        label = Common.title_label(_tr("Computer"))
+        label = Common.title_label(_("Computer"))
         grid_computer.attach(label, 0, 0, 2, 1)
 
         # Label (Vendor)
-        label = Common.static_information_label(_tr("Vendor") + ":")
+        label = Common.static_information_label(_("Vendor") + ":")
         grid_computer.attach(label, 0, 1, 1, 1)
         # Label (Vendor)
         self.vendor_label = Common.dynamic_information_label()
         grid_computer.attach(self.vendor_label, 1, 1, 1, 1)
 
         # Label (Model)
-        label = Common.static_information_label(_tr("Model") + ":")
+        label = Common.static_information_label(_("Model") + ":")
         grid_computer.attach(label, 0, 2, 1, 1)
         # Label (Model)
         self.model_label = Common.dynamic_information_label()
         grid_computer.attach(self.model_label, 1, 2, 1, 1)
 
         # Label (Computer Type)
-        label = Common.static_information_label(_tr("Computer Type") + ":")
+        label = Common.static_information_label(_("Computer Type") + ":")
         grid_computer.attach(label, 0, 3, 1, 1)
         # Label (Computer Type)
         self.computer_type_label = Common.dynamic_information_label()
         grid_computer.attach(self.computer_type_label, 1, 3, 1, 1)
 
         # Label (Name)
-        label = Common.static_information_label(_tr("Name") + ":")
+        label = Common.static_information_label(_("Name") + ":")
         grid_computer.attach(label, 0, 4, 1, 1)
         # Label (Name)
         self.computer_name_label = Common.dynamic_information_label()
         grid_computer.attach(self.computer_name_label, 1, 4, 1, 1)
 
         # Label (Architecture)
-        label = Common.static_information_label(_tr("Architecture") + ":")
+        label = Common.static_information_label(_("Architecture") + ":")
         grid_computer.attach(label, 0, 5, 1, 1)
         # Label (Architecture)
         self.architecture_label = Common.dynamic_information_label()
         grid_computer.attach(self.architecture_label, 1, 5, 1, 1)
 
         # Label (Number Of Monitors)
-        label = Common.static_information_label(_tr("Number Of Monitors") + ":")
+        label = Common.static_information_label(_("Number Of Monitors") + ":")
         grid_computer.attach(label, 0, 6, 1, 1)
         # Label (Number Of Monitors)
         self.number_of_monitors_label = Common.dynamic_information_label()
         grid_computer.attach(self.number_of_monitors_label, 1, 6, 1, 1)
 
         # Label - Title (Operating System (OS))
-        label = Common.title_label(_tr("Operating System (OS)"))
+        label = Common.title_label(_("Operating System (OS)"))
         grid_operating_system.attach(label, 0, 0, 2, 1)
 
         # Label (Name)
-        label = Common.static_information_label(_tr("Name") + ":")
+        label = Common.static_information_label(_("Name") + ":")
         grid_operating_system.attach(label, 0, 1, 1, 1)
         # Label (Name)
         self.os_name_label = Common.dynamic_information_label()
         grid_operating_system.attach(self.os_name_label, 1, 1, 1, 1)
 
         # Label (Version - Code Name)
-        label = Common.static_information_label(_tr("Version") + " - " + _tr("Code Name") + ":")
+        label = Common.static_information_label(_("Version") + " - " + _("Code Name") + ":")
         grid_operating_system.attach(label, 0, 2, 1, 1)
         # Label (Version - Code Name)
         self.version_codename_label = Common.dynamic_information_label()
         grid_operating_system.attach(self.version_codename_label, 1, 2, 1, 1)
 
         # Label (OS Family)
-        label = Common.static_information_label(_tr("OS Family") + ":")
+        label = Common.static_information_label(_("OS Family") + ":")
         grid_operating_system.attach(label, 0, 3, 1, 1)
         # Label (OS Family)
         self.os_family_label = Common.dynamic_information_label()
         grid_operating_system.attach(self.os_family_label, 1, 3, 1, 1)
 
         # Label (Based On)
-        label = Common.static_information_label(_tr("Based On") + ":")
+        label = Common.static_information_label(_("Based On") + ":")
         grid_operating_system.attach(label, 0, 4, 1, 1)
         # Label (Based On)
         self.based_on_label = Common.dynamic_information_label()
         grid_operating_system.attach(self.based_on_label, 1, 4, 1, 1)
 
         # Label (Kernel Release)
-        label = Common.static_information_label(_tr("Kernel Release") + ":")
+        label = Common.static_information_label(_("Kernel Release") + ":")
         grid_operating_system.attach(label, 0, 5, 1, 1)
         # Label (Kernel Release)
         self.kernel_release_label = Common.dynamic_information_label()
         grid_operating_system.attach(self.kernel_release_label, 1, 5, 1, 1)
 
         # Label (Kernel Version)
-        label = Common.static_information_label(_tr("Kernel Version") + ":")
+        label = Common.static_information_label(_("Kernel Version") + ":")
         grid_operating_system.attach(label, 0, 6, 1, 1)
         # Label (Kernel Version)
         self.kernel_version_label = Common.dynamic_information_label()
         grid_operating_system.attach(self.kernel_version_label, 1, 6, 1, 1)
 
         # Label - Title (Graphical User Interface (GUI))
-        label = Common.title_label(_tr("Graphical User Interface (GUI)"))
+        label = Common.title_label(_("Graphical User Interface (GUI)"))
         grid_graphical_user_interface.attach(label, 0, 0, 2, 1)
 
         # Label (Desktop Environment)
-        label = Common.static_information_label(_tr("Desktop Environment") + ":")
+        label = Common.static_information_label(_("Desktop Environment") + ":")
         grid_graphical_user_interface.attach(label, 0, 1, 1, 1)
         # Label (Desktop Environment)
         self.desktop_environment_label = Common.dynamic_information_label()
         grid_graphical_user_interface.attach(self.desktop_environment_label, 1, 1, 1, 1)
 
         # Label (Windowing System)
-        label = Common.static_information_label(_tr("Windowing System") + ":")
+        label = Common.static_information_label(_("Windowing System") + ":")
         grid_graphical_user_interface.attach(label, 0, 2, 1, 1)
         # Label (Windowing System)
         self.windowing_system_label = Common.dynamic_information_label()
         grid_graphical_user_interface.attach(self.windowing_system_label, 1, 2, 1, 1)
 
         # Label (Window Manager)
-        label = Common.static_information_label(_tr("Window Manager") + ":")
+        label = Common.static_information_label(_("Window Manager") + ":")
         grid_graphical_user_interface.attach(label, 0, 3, 1, 1)
         # Label (Window Manager)
         self.window_manager_label = Common.dynamic_information_label()
         grid_graphical_user_interface.attach(self.window_manager_label, 1, 3, 1, 1)
 
         # Label (Display Manager)
-        label = Common.static_information_label(_tr("Display Manager") + ":")
+        label = Common.static_information_label(_("Display Manager") + ":")
         grid_graphical_user_interface.attach(label, 0, 4, 1, 1)
         # Label (Display Manager)
         self.display_manager_label = Common.dynamic_information_label()
         grid_graphical_user_interface.attach(self.display_manager_label, 1, 4, 1, 1)
 
         # Label - Title (Packages)
-        label = Common.title_label(_tr("Packages"))
+        label = Common.title_label(_("Packages"))
         grid_packages.attach(label, 0, 0, 2, 1)
 
         # Label (System)
-        label = Common.static_information_label(_tr("System") + ":")
+        label = Common.static_information_label(_("System") + ":")
         grid_packages.attach(label, 0, 1, 1, 1)
         # Grid (System)
         system_packages_grid = Gtk.Grid()
@@ -372,14 +372,14 @@ class System:
         self.system_packages_label = Common.dynamic_information_label()
         system_packages_grid.attach(self.system_packages_label, 0, 0, 1, 1)
         # Spinner (System)
-        self.system_packages_spinner_label = Common.static_information_label(_tr("Processing") + "...")
+        self.system_packages_spinner_label = Common.static_information_label(_("Processing") + "...")
         self.system_packages_spinner_label.set_margin_start(10)
         #self.system_packages_spinner.start()
         system_packages_grid.attach(self.system_packages_spinner_label, 1, 0, 1, 1)
 
         # Label (Flatpak)
-        label = Common.static_information_label(_tr("Flatpak/Snap") + ":")
-        label.set_tooltip_text(_tr("Number of installed Flatpak/Snap applications and runtimes"))
+        label = Common.static_information_label(_("Flatpak/Snap") + ":")
+        label.set_tooltip_text(_("Number of installed Flatpak/Snap applications and runtimes"))
         grid_packages.attach(label, 0, 2, 1, 1)
         # Grid (Flatpak)
         flatpak_packages_grid = Gtk.Grid()
@@ -389,23 +389,23 @@ class System:
         self.flatpak_packages_label = Common.dynamic_information_label()
         flatpak_packages_grid.attach(self.flatpak_packages_label, 0, 0, 1, 1)
         # Spinner (Flatpak)
-        self.flatpak_packages_spinner_label = Common.static_information_label(_tr("Processing") + "...")
+        self.flatpak_packages_spinner_label = Common.static_information_label(_("Processing") + "...")
         self.flatpak_packages_spinner_label.set_margin_start(10)
         # Rest of the code is not run and infomation is not shown if Spinner is started on some systems with XFCE DE (GTK4 bug).
         #self.flatpak_packages_spinner_label.start()
         flatpak_packages_grid.attach(self.flatpak_packages_spinner_label, 1, 0, 1, 1)
 
         # Label (GTK Version)
-        label = Common.static_information_label(_tr("GTK Version") + ":")
-        label.set_tooltip_text(_tr("Version for the currently running software"))
+        label = Common.static_information_label(_("GTK Version") + ":")
+        label.set_tooltip_text(_("Version for the currently running software"))
         grid_packages.attach(label, 0, 3, 1, 1)
         # Label (GTK Version)
         self.gtk_version_label = Common.dynamic_information_label()
         grid_packages.attach(self.gtk_version_label, 1, 3, 1, 1)
 
         # Label (Python Version)
-        label = Common.static_information_label(_tr("Python Version") + ":")
-        label.set_tooltip_text(_tr("Version for the currently running software"))
+        label = Common.static_information_label(_("Python Version") + ":")
+        label.set_tooltip_text(_("Version for the currently running software"))
         grid_packages.attach(label, 0, 4, 1, 1)
         # Label (Python Version)
         self.python_version_label = Common.dynamic_information_label()
@@ -530,7 +530,7 @@ class System:
         swap_total = memory_info["swap_total"]
         ram_capacity_text = Libsysmon.data_unit_converter("data", "none", ram_total, performance_memory_data_unit, performance_memory_data_precision)
         swap_capacity_text = Libsysmon.data_unit_converter("data", "none", swap_total, 0, 1)
-        memory_capacity_text = ram_capacity_text + " (" + _tr("RAM") + ")  -  " + swap_capacity_text + " (" + _tr("Swap Memory") + ")"
+        memory_capacity_text = ram_capacity_text + " (" + _("RAM") + ")  -  " + swap_capacity_text + " (" + _("Swap Memory") + ")"
 
         # Get GPU (boot VGA) vendor-model
         try:
@@ -596,4 +596,3 @@ class System:
 
 
 System = System()
-

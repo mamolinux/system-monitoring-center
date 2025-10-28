@@ -26,18 +26,18 @@ def language_translation_support():
     else:
         application_language = Config.language
 
-    global _tr
+    global _
 
     try:
         language = gettext.translation('system-monitoring-center', localedir=localedir, languages=[application_language])
         language.install()
-        _tr = language.gettext
+        _ = language.gettext
     # Prevent errors if there are problems with language installations on the system.
     except Exception:
-        def _tr(text_for_translation):
+        def _(text_for_translation):
             return text_for_translation
 
-    Config._tr = _tr
+    Config._tr = _
 
 
 def save_tab_settings(TabObject):
@@ -194,7 +194,7 @@ def reset_button():
     """
 
     button = Gtk.Button()
-    button.set_label(_tr("Reset"))
+    button.set_label(_("Reset"))
     button.set_halign(Gtk.Align.CENTER)
 
     return button
@@ -206,7 +206,7 @@ def refresh_button(function):
     """
 
     refresh_button = Gtk.Button()
-    refresh_button.set_tooltip_text(_tr("Refresh the data on this tab"))
+    refresh_button.set_tooltip_text(_("Refresh the data on this tab"))
     refresh_button.set_hexpand(True)
     refresh_button.set_halign(Gtk.Align.END)
     refresh_button.set_valign(Gtk.Align.CENTER)
@@ -223,7 +223,7 @@ def graph_color_button(TabMenuObject):
     """
 
     button = Gtk.Button()
-    button.set_label(_tr("Graph Color"))
+    button.set_label(_("Graph Color"))
     button.set_halign(Gtk.Align.CENTER)
 
     button.connect("clicked", on_graph_color_button_clicked, TabMenuObject)
@@ -241,7 +241,7 @@ def on_graph_color_button_clicked(widget, TabMenuObject):
     main_window = widget.get_root()
     if 'colorchooserdialog' not in globals():
         global colorchooserdialog
-        colorchooserdialog = Gtk.ColorChooserDialog().new(title=_tr("Graph Color"), parent=main_window)
+        colorchooserdialog = Gtk.ColorChooserDialog().new(title=_("Graph Color"), parent=main_window)
         colorchooserdialog.set_modal(True)
     # Disconnect and connect ColorChooserDialog response signal to pass current tab object every time.
     try:
@@ -829,7 +829,7 @@ def current_tab_refresh(action, parameter, main_window_object):
 def searchentry(function):
 
     searchentry = Gtk.SearchEntry()
-    searchentry.props.placeholder_text = _tr("Search...")
+    searchentry.props.placeholder_text = _("Search...")
     searchentry.set_max_width_chars(100)
     searchentry.set_hexpand(True)
     searchentry.set_halign(Gtk.Align.CENTER)
@@ -895,7 +895,7 @@ def searchentry_update_placeholder_text(TabObject, row_type):
     searchentry = TabObject.searchentry
     tab_data_rows = TabObject.tab_data_rows
 
-    searchentry.props.placeholder_text = _tr("Search...") + "                    " + "(" + row_type + ": " + str(len(tab_data_rows)) + ")"
+    searchentry.props.placeholder_text = _("Search...") + "                    " + "(" + row_type + ": " + str(len(tab_data_rows)) + ")"
 
 
 def checkbutton(text, group_cb):
@@ -1362,4 +1362,3 @@ def get_process_name_pid_list_text(TabObject, selected_process_name_list):
         selected_process_name_pid_text = selected_process_name_pid_text + f'{selected_process_name_list[i]} - (PID: {selected_process_pid})'
 
     return selected_process_name_pid_text
-

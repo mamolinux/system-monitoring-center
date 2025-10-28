@@ -8,7 +8,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Network:
@@ -46,17 +46,17 @@ class Network:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (Network)
-        label = Common.tab_title_label(_tr("Network"))
+        label = Common.tab_title_label(_("Network"))
         grid.attach(label, 0, 0, 1, 2)
 
         # Label (device vendor-model label)
         self.device_vendor_model_label = Common.device_vendor_model_label()
-        self.device_vendor_model_label.set_tooltip_text(_tr("Vendor") + "-" + _tr("Model"))
+        self.device_vendor_model_label.set_tooltip_text(_("Vendor") + "-" + _("Model"))
         grid.attach(self.device_vendor_model_label, 1, 0, 1, 1)
 
         # Label (device kernel name)
         self.device_kernel_name_label = Common.device_kernel_name_label()
-        self.device_kernel_name_label.set_tooltip_text(_tr("Device Name In Kernel"))
+        self.device_kernel_name_label.set_tooltip_text(_("Device Name In Kernel"))
         grid.attach(self.device_kernel_name_label, 1, 1, 1, 1)
 
 
@@ -72,7 +72,7 @@ class Network:
         self.tab_grid.attach(grid, 0, 1, 1, 1)
 
         # Label (drawingarea upper-left)
-        label = Common.da_upper_lower_label(_tr("Download Speed") + " (-) & " + _tr("Upload Speed") + " (-  -)", Gtk.Align.START)
+        label = Common.da_upper_lower_label(_("Download Speed") + " (-) & " + _("Upload Speed") + " (-  -)", Gtk.Align.START)
         grid.attach(label, 0, 0, 1, 1)
 
         # Label (drawingarea upper-right)
@@ -99,12 +99,12 @@ class Network:
 
         # Styled information widgets (Download Speed and Upload Speed)
         # ScrolledWindow (Download Speed and Upload Speed)
-        scrolledwindow, self.download_speed_label, self.upload_speed_label = Common.styled_information_scrolledwindow(_tr("Download Speed"), None, _tr("Upload Speed"), None)
+        scrolledwindow, self.download_speed_label, self.upload_speed_label = Common.styled_information_scrolledwindow(_("Download Speed"), None, _("Upload Speed"), None)
         performance_info_grid.attach(scrolledwindow, 0, 0, 1, 1)
 
         # Styled information widgets (Downloaded Data and Uploaded Data)
         # ScrolledWindow (Downloaded Data and Uploaded Data)
-        scrolledwindow, self.download_data_label, self.upload_data_label = Common.styled_information_scrolledwindow(_tr("Downloaded Data"), _tr("Measured value since last system start"), _tr("Uploaded Data"), _tr("Measured value since last system start"))
+        scrolledwindow, self.download_data_label, self.upload_data_label = Common.styled_information_scrolledwindow(_("Downloaded Data"), _("Measured value since last system start"), _("Uploaded Data"), _("Measured value since last system start"))
         performance_info_grid.attach(scrolledwindow, 0, 1, 1, 1)
 
         # Grid - Right information labels
@@ -113,42 +113,42 @@ class Network:
 
         # Labels - Right information labels
         # Label (Connection Type)
-        label = Common.static_information_label(_tr("Connection Type") + ":")
+        label = Common.static_information_label(_("Connection Type") + ":")
         performance_info_right_grid.attach(label, 0, 0, 1, 1)
         # Label (Connection Type)
         self.connection_type_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.connection_type_label, 1, 0, 1, 1)
 
         # Label (Connected-SSID)
-        label = Common.static_information_label(_tr("Connected") + "-" + _tr("SSID") + ":")
+        label = Common.static_information_label(_("Connected") + "-" + _("SSID") + ":")
         performance_info_right_grid.attach(label, 0, 1, 1, 1)
         # Label (Connected-SSID)
         self.connected_ssid_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.connected_ssid_label, 1, 1, 1, 1)
 
         # Label (Link Quality)
-        label = Common.static_information_label(_tr("Link Quality") + ":")
+        label = Common.static_information_label(_("Link Quality") + ":")
         performance_info_right_grid.attach(label, 0, 2, 1, 1)
         # Label (Link Quality)
         self.link_quality_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.link_quality_label, 1, 2, 1, 1)
 
         # Label (IPv4 Address)
-        label = Common.static_information_label(_tr("IPv4 Address") + ":")
+        label = Common.static_information_label(_("IPv4 Address") + ":")
         performance_info_right_grid.attach(label, 0, 3, 1, 1)
         # Label (IPv4 Address)
         self.ipv4_address_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.ipv4_address_label, 1, 3, 1, 1)
 
         # Label (IPv6 Address)
-        label = Common.static_information_label(_tr("IPv6 Address") + ":")
+        label = Common.static_information_label(_("IPv6 Address") + ":")
         performance_info_right_grid.attach(label, 0, 4, 1, 1)
         # Label (IPv6 Address)
         self.ipv6_address_label = Common.dynamic_information_label()
         performance_info_right_grid.attach(self.ipv6_address_label, 1, 4, 1, 1)
 
         # Label (MAC Address)
-        label = Common.static_information_label(_tr("MAC Address") + ":")
+        label = Common.static_information_label(_("MAC Address") + ":")
         performance_info_right_grid.attach(label, 0, 5, 1, 1)
         # Label (MAC Address)
         self.mac_address_label = Common.dynamic_information_label()
@@ -239,4 +239,3 @@ class Network:
 
 
 Network = Network()
-

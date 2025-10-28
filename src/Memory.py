@@ -9,7 +9,7 @@ from .MainWindow import MainWindow
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Memory:
@@ -47,7 +47,7 @@ class Memory:
         self.tab_grid.attach(grid, 0, 0, 1, 1)
 
         # Label (Memory)
-        label = Common.tab_title_label(_tr("Memory"))
+        label = Common.tab_title_label(_("Memory"))
         grid.attach(label, 0, 0, 1, 2)
 
         # Label (device vendor-model label)
@@ -71,7 +71,7 @@ class Memory:
         self.tab_grid.attach(grid, 0, 1, 1, 1)
 
         # Label (drawingarea upper-left)
-        self.da_upper_left_label = Common.da_upper_lower_label(_tr("RAM Usage"), Gtk.Align.START)
+        self.da_upper_left_label = Common.da_upper_lower_label(_("RAM Usage"), Gtk.Align.START)
         grid.attach(self.da_upper_left_label, 0, 0, 1, 1)
 
         # Label (drawingarea upper-right)
@@ -99,12 +99,12 @@ class Memory:
         self.tab_grid.attach(performance_info_grid, 0, 2, 1, 1)
 
         # Label - Title (RAM)
-        label = Common.title_label(_tr("RAM"))
+        label = Common.title_label(_("RAM"))
         performance_info_grid.attach(label, 0, 0, 1, 1)
 
         # Styled information widgets (Used and Available)
         # ScrolledWindow (Used and Available)
-        scrolledwindow, self.ram_used_label, self.ram_available_label = Common.styled_information_scrolledwindow(_tr("Used"), None, _tr("Available"), None)
+        scrolledwindow, self.ram_used_label, self.ram_available_label = Common.styled_information_scrolledwindow(_("Used"), None, _("Available"), None)
         performance_info_grid.attach(scrolledwindow, 0, 1, 1, 1)
 
         # Grid - Lower left information labels
@@ -116,40 +116,40 @@ class Memory:
         performance_info_grid.attach(grid, 0, 2, 1, 1)
 
         # Label (Capacity)
-        label = Common.static_information_label(_tr("Capacity") + ":")
+        label = Common.static_information_label(_("Capacity") + ":")
         grid.attach(label, 0, 0, 1, 1)
         # Label (Capacity)
         self.ram_capacity_label = Common.dynamic_information_label()
         grid.attach(self.ram_capacity_label, 1, 0, 1, 1)
 
         # Label (Free)
-        label = Common.static_information_label(_tr("Free") + ":")
+        label = Common.static_information_label(_("Free") + ":")
         grid.attach(label, 0, 1, 1, 1)
         # Label (Free)
         self.ram_free_label = Common.dynamic_information_label()
         grid.attach(self.ram_free_label, 1, 1, 1, 1)
 
         # Label (Cached)
-        label = Common.static_information_label(_tr("Cached") + ":")
+        label = Common.static_information_label(_("Cached") + ":")
         grid.attach(label, 0, 2, 1, 1)
         # Label (Cached)
         self.ram_cached_label = Common.dynamic_information_label()
         grid.attach(self.ram_cached_label, 1, 2, 1, 1)
 
         # Label (Hardware)
-        label = Common.static_information_label(_tr("Hardware") + ":")
+        label = Common.static_information_label(_("Hardware") + ":")
         grid.attach(label, 0, 3, 1, 1)
         # Label (Show...)
-        self.ram_hardware_label = Common.clickable_label(_tr("Show..."), self.on_details_label_released)
+        self.ram_hardware_label = Common.clickable_label(_("Show..."), self.on_details_label_released)
         grid.attach(self.ram_hardware_label, 1, 3, 1, 1)
 
         # Label - Title (Swap Memory)
-        label = Common.title_label(_tr("Swap Memory"))
+        label = Common.title_label(_("Swap Memory"))
         performance_info_grid.attach(label, 1, 0, 1, 1)
 
         # Styled information widgets (Used and Free)
         # ScrolledWindow (Used and Free)
-        scrolledwindow, self.swap_used_label, self.swap_free_label = Common.styled_information_scrolledwindow(_tr("Used"), None, _tr("Free"), None)
+        scrolledwindow, self.swap_used_label, self.swap_free_label = Common.styled_information_scrolledwindow(_("Used"), None, _("Free"), None)
         performance_info_grid.attach(scrolledwindow, 1, 1, 1, 1)
 
         # Grid (lower right information labels)
@@ -161,7 +161,7 @@ class Memory:
         performance_info_grid.attach(grid, 1, 2, 1, 1)
 
         # Label (Used (swap percent))
-        label = Common.static_information_label(_tr("Used") + ":")
+        label = Common.static_information_label(_("Used") + ":")
         grid.attach(label, 0, 0, 1, 1)
         # Label and DrawingArea (Used (swap percent))
         grid_label_and_da = Gtk.Grid()
@@ -176,24 +176,24 @@ class Memory:
         grid_label_and_da.attach(self.swap_used_percent_label, 1, 0, 1, 1)
 
         # Label (Capacity (swap))
-        label = Common.static_information_label(_tr("Capacity") + ":")
+        label = Common.static_information_label(_("Capacity") + ":")
         grid.attach(label, 0, 1, 1, 1)
         # Label (Capacity (swap))
         self.swap_capacity_label = Common.dynamic_information_label()
         grid.attach(self.swap_capacity_label, 1, 1, 1, 1)
 
         # Label (Cached)
-        label = Common.static_information_label(_tr("Cached") + ":")
+        label = Common.static_information_label(_("Cached") + ":")
         grid.attach(label, 0, 2, 1, 1)
         # Label (Cached)
         self.swap_cached_label = Common.dynamic_information_label()
         grid.attach(self.swap_cached_label, 1, 2, 1, 1)
 
         # Label (Details (swap))
-        label = Common.static_information_label(_tr("Details") + ":")
+        label = Common.static_information_label(_("Details") + ":")
         grid.attach(label, 0, 3, 1, 1)
         # Label (Show... (swap))
-        self.swap_details_label = Common.clickable_label(_tr("Show..."), self.on_details_label_released)
+        self.swap_details_label = Common.clickable_label(_("Show..."), self.on_details_label_released)
         grid.attach(self.swap_details_label, 1, 3, 1, 1)
 
 
@@ -236,7 +236,7 @@ class Memory:
         # Window
         self.ram_hardware_window = Gtk.Window()
         self.ram_hardware_window.set_default_size(400, 480)
-        self.ram_hardware_window.set_title(_tr("Physical RAM"))
+        self.ram_hardware_window.set_title(_("Physical RAM"))
         self.ram_hardware_window.set_icon_name("system-monitoring-center")
         self.ram_hardware_window.set_transient_for(MainWindow.main_window)
         self.ram_hardware_window.set_modal(True)
@@ -275,7 +275,7 @@ class Memory:
         # Window
         self.swap_details_window = Gtk.Window()
         self.swap_details_window.set_default_size(320, 280)
-        self.swap_details_window.set_title(_tr("Swap Memory"))
+        self.swap_details_window.set_title(_("Swap Memory"))
         self.swap_details_window.set_icon_name("system-monitoring-center")
         self.swap_details_window.set_transient_for(MainWindow.main_window)
         self.swap_details_window.set_modal(True)
@@ -333,18 +333,18 @@ class Memory:
         """
 
         # List for language translation
-        memory_swap_details_text_list = [_tr("Partition"), _tr("File")]
+        memory_swap_details_text_list = [_("Partition"), _("File")]
 
         total_physical_ram = Libsysmon.get_physical_ram()
 
 
         # Set Memory tab label texts by using information get
         if total_physical_ram != "-":
-            self.device_vendor_model_label.set_label(_tr("Physical RAM") + ": " + str(Libsysmon.data_unit_converter("data", "none", total_physical_ram, 0, 1)))
+            self.device_vendor_model_label.set_label(_("Physical RAM") + ": " + str(Libsysmon.data_unit_converter("data", "none", total_physical_ram, 0, 1)))
         else:
             memory_info = Libsysmon.get_memory_info()
             ram_total = memory_info["ram_total"]
-            self.device_vendor_model_label.set_label(_tr("RAM") + " - " + _tr("Capacity") + ": " + str(Libsysmon.data_unit_converter("data", "none", ram_total, 0, 1)))
+            self.device_vendor_model_label.set_label(_("RAM") + " - " + _("Capacity") + ": " + str(Libsysmon.data_unit_converter("data", "none", ram_total, 0, 1)))
 
         self.initial_already_run = 1
 
@@ -381,7 +381,7 @@ class Memory:
 
 
         # Set and update Memory tab label texts by using information get
-        self.device_kernel_name_label.set_label(_tr("Swap Memory") + ": " + str(Libsysmon.data_unit_converter("data", "none", swap_total, 0, 1)))
+        self.device_kernel_name_label.set_label(_("Swap Memory") + ": " + str(Libsysmon.data_unit_converter("data", "none", swap_total, 0, 1)))
         self.ram_used_label.set_label(f'{Libsysmon.data_unit_converter("data", "none", ram_used, performance_memory_data_unit, performance_memory_data_precision)}  ( {ram_usage_percent[-1]:.0f}% )')
         self.ram_available_label.set_label(Libsysmon.data_unit_converter("data", "none", ram_available, performance_memory_data_unit, performance_memory_data_precision))
         self.ram_capacity_label.set_label(Libsysmon.data_unit_converter("data", "none", ram_total, performance_memory_data_unit, performance_memory_data_precision))
@@ -395,4 +395,3 @@ class Memory:
 
 
 Memory = Memory()
-

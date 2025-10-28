@@ -6,7 +6,7 @@ from .Config import Config
 from .Sensors import Sensors
 from . import Common
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class SensorsMenu:
@@ -31,16 +31,16 @@ class SensorsMenu:
         self.menu_po.set_child(main_grid)
 
         # Label - menu title (Sensors)
-        label = Common.menu_title_label(_tr("Sensors"))
+        label = Common.menu_title_label(_("Sensors"))
         main_grid.attach(label, 0, 0, 2, 1)
 
         # Label (Data Unit)
-        label = Common.title_label(_tr("Data Unit"))
+        label = Common.title_label(_("Data Unit"))
         main_grid.attach(label, 0, 1, 2, 1)
 
         # Label (Temperature)
         label = Gtk.Label()
-        label.set_label(_tr("Temperature"))
+        label.set_label(_("Temperature"))
         label.set_halign(Gtk.Align.CENTER)
         main_grid.attach(label, 0, 2, 1, 1)
 
@@ -135,4 +135,3 @@ class SensorsMenu:
 
 
 SensorsMenu = SensorsMenu()
-

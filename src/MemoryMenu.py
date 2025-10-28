@@ -9,7 +9,7 @@ from .Performance import Performance
 from .MainWindow import MainWindow
 from . import Common
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class MemoryMenu:
@@ -34,19 +34,19 @@ class MemoryMenu:
         self.menu_po.set_child(main_grid)
 
         # Label - menu title (Memory)
-        label = Common.menu_title_label(_tr("Memory"))
+        label = Common.menu_title_label(_("Memory"))
         main_grid.attach(label, 0, 0, 2, 1)
 
         # Label (Graph - Show)
-        label = Common.title_label(_tr("Graph - Show"))
+        label = Common.title_label(_("Graph - Show"))
         main_grid.attach(label, 0, 1, 2, 1)
 
         # CheckButton (RAM)
-        self.ram_usage_cb = Common.checkbutton(_tr("RAM"), None)
+        self.ram_usage_cb = Common.checkbutton(_("RAM"), None)
         main_grid.attach(self.ram_usage_cb, 0, 2, 1, 1)
 
         # CheckButton (Memory)
-        self.memory_usage_cb = Common.checkbutton(_tr("Memory"), self.ram_usage_cb)
+        self.memory_usage_cb = Common.checkbutton(_("Memory"), self.ram_usage_cb)
         main_grid.attach(self.memory_usage_cb, 1, 2, 1, 1)
 
         # Separator
@@ -62,7 +62,7 @@ class MemoryMenu:
         main_grid.attach(separator, 0, 5, 2, 1)
 
         # Label - title (Precision)
-        label = Common.title_label(_tr("Precision"))
+        label = Common.title_label(_("Precision"))
         main_grid.attach(label, 0, 6, 2, 1)
 
         # DropDown - precision (Memory)
@@ -75,12 +75,12 @@ class MemoryMenu:
         main_grid.attach(separator, 0, 8, 2, 1)
 
         # Label - title (Data Unit)
-        label = Common.title_label(_tr("Data Unit"))
+        label = Common.title_label(_("Data Unit"))
         main_grid.attach(label, 0, 9, 2, 1)
 
         # Label (Show data as powers of:)
         label = Gtk.Label()
-        label.set_label(_tr("Show data as powers of") + ":")
+        label.set_label(_("Show data as powers of") + ":")
         label.set_halign(Gtk.Align.START)
         main_grid.attach(label, 0, 10, 2, 1)
 
@@ -214,4 +214,3 @@ class MemoryMenu:
 
 
 MemoryMenu = MemoryMenu()
-

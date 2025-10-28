@@ -14,7 +14,7 @@ from .Performance import Performance
 from . import Common
 from . import Libsysmon
 
-_tr = Config._tr
+_ = Config._tr
 
 
 class Summary:
@@ -36,7 +36,7 @@ class Summary:
         self.tab_grid = Common.tab_grid()
 
         # Label (Summary)
-        label = Common.tab_title_label(_tr("Summary"))
+        label = Common.tab_title_label(_("Summary"))
         self.tab_grid.attach(label, 0, 0, 1, 1)
 
         # Summary tab drawingarea
@@ -443,7 +443,7 @@ class Summary:
             # Draw "GPU" label on the upper-left side of the inner circle of the circular gauge.
             ctx.save()
             ctx.translate(gauge_circular_center_x + gauge_right_move, chart_height / 2)
-            label_text = _tr("GPU")
+            label_text = _("GPU")
             system_font_scaled = f'{system_font_name} {gauge_disk_network_label_text_size}'
             text_length = len(label_text)
             if text_length > 15 and text_length < 19:
@@ -908,7 +908,7 @@ class Summary:
 
 
         # Draw "CPU" label on the upper-left side of the inner circle of the circular gauge.
-        label_text = _tr("CPU")
+        label_text = _("CPU")
         system_font_scaled = f'{system_font_name} {gauge_cpu_ram_label_text_size}'
         if len(label_text) > 9:
             system_font_scaled = f'{system_font_name} {gauge_indicator_text_size_smaller}'
@@ -925,7 +925,7 @@ class Summary:
 
 
         # Draw "RAM" label on the upper-right side of the inner circle of the circular gauge.
-        label_text = _tr("RAM")
+        label_text = _("RAM")
         system_font_scaled = f'{system_font_name} {gauge_cpu_ram_label_text_size}'
         if len(label_text) > 9:
             system_font_scaled = f'{system_font_name} {gauge_indicator_text_size_smaller}'
@@ -942,7 +942,7 @@ class Summary:
 
 
         # Draw "Processes" label on the lower-left side of the inner circle of the circular gauge.
-        label_text = _tr("Processes")
+        label_text = _("Processes")
         system_font_scaled = f'{system_font_name} {gauge_processes_swap_label_text_size}'
         if len(label_text) > 9:
             system_font_scaled = f'{system_font_name} {gauge_indicator_text_size_smaller}'
@@ -959,7 +959,7 @@ class Summary:
 
 
         # Draw "Swap" label on the upper-right side of the inner circle of the circular gauge.
-        label_text = _tr("Swap")
+        label_text = _("Swap")
         system_font_scaled = f'{system_font_name} {gauge_processes_swap_label_text_size}'
         if len(label_text) > 9:
             system_font_scaled = f'{system_font_name} {gauge_indicator_text_size_smaller}'
@@ -1115,7 +1115,7 @@ class Summary:
         # Draw "Read Speed" label on the upper-left side of the inner circle of the circular gauge.
         ctx.save()
         ctx.translate(gauge_circular_center_x + gauge_right_move, chart_height / 2)
-        label_text = _tr("Read Speed")
+        label_text = _("Read Speed")
         system_font_scaled = f'{system_font_name} {gauge_disk_network_label_text_size}'
         text_length = len(label_text)
         if text_length > 15 and text_length < 19:
@@ -1134,7 +1134,7 @@ class Summary:
         PangoCairo.show_layout(ctx, layout)
 
         # Draw "Write Speed" label on the upper-left side of the inner circle of the circular gauge.
-        label_text = _tr("Write Speed")
+        label_text = _("Write Speed")
         system_font_scaled = f'{system_font_name} {gauge_disk_network_label_text_size}'
         text_length = len(label_text)
         if text_length > 15 and text_length < 19:
@@ -1154,7 +1154,7 @@ class Summary:
 
 
         # Draw "Download Speed" label on the upper-left side of the inner circle of the circular gauge.
-        label_text = _tr("Download Speed")
+        label_text = _("Download Speed")
         system_font_scaled = f'{system_font_name} {gauge_disk_network_label_text_size}'
         text_length = len(label_text)
         if text_length > 15 and text_length < 19:
@@ -1174,7 +1174,7 @@ class Summary:
 
 
         # Draw "Upload Speed" label on the upper-left side of the inner circle of the circular gauge.
-        label_text = _tr("Upload Speed")
+        label_text = _("Upload Speed")
         system_font_scaled = f'{system_font_name} {gauge_disk_network_label_text_size}'
         text_length = len(label_text)
         if text_length > 15 and text_length < 19:
@@ -1288,4 +1288,3 @@ class Summary:
 
 
 Summary = Summary()
-

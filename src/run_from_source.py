@@ -14,4 +14,3 @@ if current_folder == "systemmonitoringcenter":
     from systemmonitoringcenter import Main
 localedir = None
 Main.main(localedir)
-
