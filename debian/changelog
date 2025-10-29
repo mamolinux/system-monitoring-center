@@ -1,3 +1,20 @@
+system-monitoring-center (2.26.3) stable; urgency=medium
+
+  * Update readme and appdata (#12)
+  * Update workflows for publishing and stable branch (#13)
+    - The workflows activate when new tag is pushed
+  * Update debian build system (#14)
+    - Update build dependencies
+    - Add python byte-compile
+  * Update localization (#16)
+    - Add translation instructions in README and
+      translation file
+    - Let meson handle compilation of po files
+  * Refactor code to handle translations using meson (#17)
+  * Fix debian lintian errors (#18)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Wed, 29 Oct 2025 11:23:24 +0530
+
 system-monitoring-center (2.26.2) stable; urgency=medium
 
   * Add and update workflows and README (#6)
@@ -5,7 +22,7 @@ system-monitoring-center (2.26.2) stable; urgency=medium
       release on github
     - Activate workflow to update stable branch
     - Add test script
-    - Update README with informations from
+    - Update README with information from
       local fork
   * Add new maintainer (#7)
   * Get version from debian/changelog (#8)
